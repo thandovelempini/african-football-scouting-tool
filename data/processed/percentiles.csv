@@ -1,0 +1,520 @@
+season,player_id,Player,Squad,Age,Pos,role,role_alt,role_confidence,role_source,Min,pct_Gls_p90,pct_G-PK_p90,pct_Ast_p90,pct_Sh_p90,pct_SoT_p90,pct_SoT%,pct_G/Sh,pct_Crs_p90,pct_Fld_p90,pct_Off_p90,pct_TklW_p90,pct_Int_p90,pct_Fls_p90,pct_CrdY_p90,pct_+/-90,pool_size,small_sample
+2024-25,00029b1e,Teboho Mokoena,Sundowns,27.0,MF,W/AM,CM,low,model,1649,30.0,34.0,60.0,72.0,47.0,19.0,22.0,37.0,59.0,97.0,44.0,93.0,32.0,14.0,95.0,94.0,False
+2024-25,0049334a,Sinhle Makhubela,Polokwane City,,DF,FB,CB,high,model,1129,31.0,31.0,19.0,30.0,12.0,,,38.0,79.0,87.0,30.0,18.0,54.0,71.0,18.0,75.0,False
+2024-25,00aa9d66,Somila Ntsundwana,Richards Bay FC,27.0,MFFW,W/AM,CM,high,model,1060,4.0,4.0,37.0,7.0,1.0,4.0,4.0,51.0,94.0,75.0,42.0,64.0,53.0,5.0,6.0,94.0,False
+2024-25,03695186,Mpho Mvelase,TS Galaxy,35.0,MF,DM,CM,high,model,1484,61.0,62.0,77.0,65.0,55.0,36.0,62.0,41.0,75.0,7.0,50.0,99.0,98.0,57.0,46.0,75.0,False
+2024-25,059a3b69,Thamsanqa Mkhize,Cape Town City,35.0,DF,FB,CB,low,model,1561,78.0,78.0,19.0,47.0,57.0,,,26.0,89.0,19.0,38.0,89.0,45.0,30.0,34.0,75.0,False
+2024-25,06cf76ca,Inácio Miguel,Kaizer Chiefs,28.0,DF,CB,FB,high,model,1969,76.0,79.0,41.0,81.0,76.0,43.0,54.0,10.0,87.0,71.0,26.0,7.0,25.0,14.0,32.0,87.0,False
+2024-25,070e8e66,Mokibelo Ramabu,Polokwane City,21.0,MF,W/AM,CM,high,model,1799,43.0,48.0,23.0,23.0,46.0,70.0,53.0,80.0,5.0,77.0,4.0,8.0,87.0,84.0,48.0,94.0,False
+2024-25,0827a24a,Gabriel Amato,Cape Town City,18.0,MF,CM,DM,low,model,1338,44.0,46.0,21.0,39.0,35.0,46.0,49.0,75.0,30.0,85.0,73.0,73.0,63.0,82.0,8.0,42.0,False
+2024-25,084e960b,Raymond Daniels,Polokwane City,,FWMF,W/AM,ST,high,model,994,21.0,24.0,7.0,12.0,18.0,56.0,35.0,12.0,9.0,2.0,5.0,12.0,68.0,59.0,59.0,94.0,False
+2024-25,0aa8954f,Thabo Makhele,Chippa United,29.0,DF,CB,FB,high,model,2430,34.0,34.0,86.0,70.0,48.0,20.0,22.0,34.0,6.0,71.0,6.0,60.0,87.0,93.0,37.0,87.0,False
+2024-25,0b05a63e,Keenan Phillips,Golden Arrows,24.0,DF,FB,FB,high,override,1645,75.0,75.0,19.0,18.0,27.0,,,15.0,14.0,87.0,39.0,50.0,6.0,21.0,14.0,75.0,False
+2024-25,0b27bac3,Keletso Makgalwa,Sekhukhune,27.0,MF,W/AM,CM,high,model,2188,49.0,40.0,98.0,69.0,76.0,61.0,38.0,96.0,64.0,76.0,9.0,5.0,57.0,51.0,71.0,94.0,False
+2024-25,0bde8d3e,Azola Ntsabo,Chippa United,25.0,DF,FB,CB,high,model,928,89.0,90.0,91.0,61.0,86.0,,,73.0,61.0,87.0,98.0,97.0,66.0,5.0,66.0,75.0,False
+2024-25,0d64cd98,Samuel Darpoh,Magesi FC,26.0,MFDF,DM,CM,high,model,1606,22.0,23.0,31.0,18.0,10.0,,,54.0,95.0,68.0,30.0,47.0,15.0,53.0,10.0,75.0,False
+2024-25,0ebbc4f3,Khulumani Ndamane,TS Galaxy,20.0,DF,CB,FB,high,model,2121,34.0,34.0,41.0,94.0,83.0,31.0,22.0,87.0,60.0,71.0,80.0,67.0,13.0,52.0,73.0,87.0,False
+2024-25,106c3477,Sbonelo Cele,Golden Arrows,22.0,DF,FB,CB,high,model,2018,71.0,71.0,74.0,69.0,71.0,48.0,56.0,86.0,85.0,50.0,29.0,73.0,17.0,11.0,42.0,75.0,False
+2024-25,13398d42,Mbekezeli Mbokazi,Orlando Pirates,18.0,DF,CB,FB,high,model,1010,34.0,34.0,98.0,79.0,53.0,,,65.0,89.0,71.0,74.0,45.0,70.0,67.0,86.0,87.0,False
+2024-25,13bf8c17,Lebohang Mabotja,Marumo Gallants,32.0,DF,FB,CB,high,model,1702,31.0,31.0,19.0,5.0,12.0,,,11.0,93.0,87.0,62.0,94.0,98.0,81.0,19.0,75.0,False
+2024-25,147c8bda,Jaedin Rhodes,Cape Town City,21.0,MF,W/AM,CM,high,model,1679,12.0,13.0,26.0,36.0,55.0,61.0,11.0,72.0,75.0,59.0,85.0,27.0,34.0,79.0,14.0,94.0,False
+2024-25,16214d19,Ashley Cupido,Stellenbosch FC,23.0,FWMF,ST,ST,high,override,1259,47.0,56.0,93.0,7.0,44.0,84.0,70.0,81.0,16.0,67.0,4.0,16.0,76.0,70.0,81.0,35.0,False
+2024-25,16b01488,Marks Munyai,TS Galaxy,33.0,DF,FB,CB,high,model,1837,31.0,31.0,81.0,73.0,69.0,28.0,22.0,82.0,53.0,71.0,93.0,23.0,10.0,17.0,77.0,75.0,False
+2024-25,179d97cf,Ethan Brook,AmaZulu,23.0,MF,DM,CM,high,model,1033,77.0,78.0,87.0,30.0,74.0,,,77.0,65.0,22.0,79.0,70.0,41.0,25.0,51.0,75.0,False
+2024-25,190b0d5e,Iqraam Rayners,Sundowns,28.0,FW,ST,W/AM,high,model,1822,96.0,99.0,99.0,36.0,84.0,96.0,99.0,87.0,41.0,1.0,7.0,36.0,99.0,87.0,99.0,35.0,False
+2024-25,1aa2ab66,Aprocius Petrus,Cape Town City,24.0,MFDF,DM,FB,high,model,1548,22.0,23.0,75.0,31.0,37.0,,,91.0,58.0,68.0,75.0,81.0,57.0,23.0,11.0,75.0,False
+2024-25,1bd6825a,Nhlanhla Zwane,Golden Arrows,24.0,MFFW,CM,W/AM,high,model,906,63.0,63.0,21.0,58.0,46.0,28.0,59.0,6.0,46.0,30.0,96.0,85.0,6.0,6.0,18.0,42.0,False
+2024-25,1bf8d743,Thabiso Sesane,Orlando Pirates,24.0,DF,CB,FB,high,model,1045,34.0,34.0,97.0,20.0,14.0,,,39.0,99.0,20.0,47.0,76.0,51.0,18.0,94.0,87.0,False
+2024-25,200d8829,Tashreeq Morris,SuperSport Utd.,30.0,FW,ST,W/AM,low,model,1024,19.0,24.0,23.0,84.0,73.0,30.0,10.0,90.0,67.0,19.0,44.0,56.0,27.0,13.0,24.0,35.0,False
+2024-25,206744e8,Devon Titus,Stellenbosch FC,24.0,MFFW,W/AM,CM,high,model,2159,89.0,89.0,71.0,77.0,84.0,78.0,77.0,60.0,30.0,7.0,57.0,43.0,75.0,49.0,75.0,94.0,False
+2024-25,21de479c,Ramahlwe Mphahlele,AmaZulu,34.0,DF,CB,FB,high,model,1280,34.0,34.0,41.0,18.0,14.0,,,72.0,44.0,26.0,48.0,17.0,20.0,74.0,68.0,87.0,False
+2024-25,22456fc2,Trésor Yamba,Sekhukhune,25.0,DF,CB,FB,high,model,2085,96.0,97.0,41.0,97.0,99.0,76.0,85.0,25.0,66.0,19.0,70.0,81.0,16.0,51.0,82.0,87.0,False
+2024-25,242e4ef9,Deano Van Rooyen,Orlando Pirates,27.0,DF,FB,CB,low,model,1480,79.0,79.0,55.0,66.0,30.0,6.0,72.0,1.0,46.0,34.0,86.0,10.0,22.0,75.0,87.0,75.0,False
+2024-25,25631945,Giovanni Philander,Chippa United,24.0,MF,W/AM,CM,high,model,1144,4.0,4.0,7.0,65.0,37.0,15.0,4.0,98.0,31.0,82.0,86.0,56.0,51.0,71.0,37.0,94.0,False
+2024-25,259affab,Jayden Adams,Sundowns,23.0,MF,CM,DM,low,model,1640,94.0,94.0,87.0,11.0,61.0,99.0,99.0,4.0,44.0,65.0,27.0,54.0,39.0,13.0,99.0,42.0,False
+2024-25,25c3fb97,Relebohile Mofokeng,Orlando Pirates,19.0,MF,W/AM,CM,high,model,2291,60.0,65.0,82.0,59.0,90.0,96.0,51.0,55.0,36.0,31.0,90.0,39.0,77.0,26.0,84.0,94.0,False
+2024-25,279fff25,Taariq Fielies,AmaZulu,32.0,DF,CB,FB,high,model,2340,72.0,74.0,41.0,59.0,50.0,24.0,69.0,35.0,24.0,40.0,22.0,34.0,35.0,32.0,35.0,87.0,False
+2024-25,27b0f61c,Ibraheem Jabaar,Stellenbosch FC,21.0,MFDF,DM,CM,high,model,944,82.0,83.0,31.0,87.0,89.0,83.0,57.0,55.0,90.0,68.0,97.0,46.0,94.0,98.0,75.0,75.0,False
+2024-25,2aba813d,Wandile Duba,Kaizer Chiefs,20.0,MFFW,W/AM,CM,high,model,1169,87.0,88.0,34.0,82.0,87.0,84.0,70.0,14.0,4.0,19.0,62.0,2.0,11.0,38.0,59.0,94.0,False
+2024-25,2b4e8829,Brandon Theron,Golden Arrows,31.0,DFMF,FB,DM,high,model,921,31.0,31.0,19.0,1.0,12.0,,,58.0,33.0,45.0,71.0,78.0,74.0,18.0,2.0,75.0,False
+2024-25,2bb3402d,Lyle Lakay,SuperSport Utd.,32.0,MFDF,FB,CM,high,model,982,31.0,31.0,69.0,98.0,99.0,92.0,22.0,99.0,15.0,47.0,25.0,22.0,61.0,2.0,13.0,75.0,False
+2024-25,2c2f6ea4,Aphiwe Baliti,SuperSport Utd.,22.0,DF,FB,CB,high,model,1254,31.0,31.0,19.0,55.0,34.0,,,94.0,86.0,63.0,54.0,81.0,21.0,51.0,73.0,75.0,False
+2024-25,2ce8122f,Sekela Sithole,Marumo Gallants,27.0,MF,W/AM,CM,high,model,1305,75.0,77.0,70.0,16.0,26.0,47.0,94.0,68.0,45.0,57.0,56.0,57.0,8.0,23.0,12.0,94.0,False
+2024-25,2d9c2d26,Velemseni Ndwandwe,Golden Arrows,28.0,MF,DM,CM,high,model,1929,81.0,82.0,69.0,42.0,58.0,68.0,99.0,67.0,31.0,34.0,38.0,19.0,67.0,69.0,18.0,75.0,False
+2024-25,2f2f9ce3,Thulani Gumede,Richards Bay FC,,MF,W/AM,CM,high,model,1540,31.0,36.0,65.0,26.0,8.0,6.0,38.0,97.0,72.0,90.0,65.0,84.0,4.0,29.0,47.0,94.0,False
+2024-25,2f832832,Bradley Grobler,SuperSport Utd.,36.0,FWMF,ST,W/AM,high,model,938,56.0,64.0,23.0,87.0,90.0,74.0,47.0,70.0,30.0,64.0,19.0,61.0,81.0,64.0,39.0,35.0,False
+2024-25,33e94694,Edgar Manaka,Marumo Gallants,35.0,MF,DM,CM,low,model,2009,87.0,23.0,67.0,78.0,67.0,41.0,95.0,14.0,33.0,68.0,23.0,34.0,90.0,33.0,27.0,75.0,False
+2024-25,34700200,Delano Abrahams,Magesi FC,28.0,DF,FB,CB,high,model,2070,94.0,94.0,19.0,86.0,87.0,70.0,89.0,34.0,59.0,87.0,42.0,7.0,7.0,38.0,37.0,75.0,False
+2024-25,35a42711,Siphelo Baloni,Chippa United,24.0,MF,CM,W/AM,low,model,1021,56.0,56.0,82.0,77.0,32.0,15.0,36.0,94.0,37.0,44.0,63.0,58.0,25.0,8.0,57.0,42.0,False
+2024-25,36015ee8,Tshepo Rikhotso,Marumo Gallants,31.0,DF,CB,FB,high,model,1010,34.0,34.0,41.0,6.0,14.0,,,41.0,1.0,18.0,49.0,64.0,45.0,67.0,33.0,87.0,False
+2024-25,36915ede,Fawaaz Basadien,Stellenbosch FC,27.0,DF,FB,CB,high,model,2199,91.0,86.0,95.0,89.0,94.0,86.0,83.0,89.0,5.0,33.0,21.0,63.0,85.0,58.0,85.0,75.0,False
+2024-25,36f9fe25,Rowan Human,AmaZulu,23.0,MF,W/AM,W/AM,high,override,1562,52.0,56.0,87.0,86.0,59.0,23.0,33.0,43.0,1.0,73.0,93.0,94.0,42.0,30.0,81.0,94.0,False
+2024-25,37098cde,Ashley Du Preez,Kaizer Chiefs,27.0,FWMF,W/AM,ST,high,model,1007,55.0,59.0,7.0,54.0,16.0,9.0,48.0,15.0,14.0,39.0,32.0,77.0,56.0,93.0,30.0,94.0,False
+2024-25,37e6dedf,Nkosikhona Ndaba,Richards Bay FC,21.0,DFMF,FB,DM,high,model,1621,31.0,31.0,19.0,19.0,53.0,,,65.0,29.0,39.0,67.0,75.0,97.0,78.0,47.0,75.0,False
+2024-25,38cc923f,Mlungisi Mbunjana,TS Galaxy,33.0,MFDF,DM,CM,high,model,1371,65.0,66.0,31.0,71.0,82.0,86.0,62.0,29.0,7.0,27.0,77.0,7.0,58.0,45.0,73.0,75.0,False
+2024-25,3a00c763,Nqobeko Dlamini,Golden Arrows,29.0,MF,DM,CM,low,model,990,79.0,81.0,31.0,90.0,54.0,9.0,47.0,15.0,37.0,68.0,67.0,89.0,62.0,81.0,5.0,75.0,False
+2024-25,3a03bf8a,Yanela Mbuthuma,Richards Bay FC,22.0,FW,ST,ST,high,override,1791,33.0,36.0,70.0,67.0,27.0,14.0,39.0,93.0,96.0,56.0,47.0,90.0,79.0,16.0,21.0,35.0,False
+2024-25,3a2f4876,Ben Motshwari,AmaZulu,33.0,MF,DM,CM,high,model,2204,49.0,50.0,31.0,45.0,38.0,26.0,53.0,11.0,14.0,68.0,2.0,97.0,75.0,46.0,35.0,75.0,False
+2024-25,3a3a6f68,Craig Martin,Chippa United,30.0,MFDF,DM,CM,high,model,1635,85.0,86.0,98.0,85.0,66.0,22.0,78.0,87.0,83.0,5.0,54.0,41.0,14.0,54.0,47.0,75.0,False
+2024-25,3b6b3b8d,Bulelani Nikani,Polokwane City,31.0,DF,CB,FB,high,model,2250,90.0,93.0,41.0,65.0,72.0,57.0,91.0,23.0,74.0,37.0,20.0,93.0,47.0,39.0,30.0,87.0,False
+2024-25,3cb58055,Ime Okon,SuperSport Utd.,20.0,DF,CB,FB,high,model,1697,34.0,34.0,41.0,49.0,14.0,,,10.0,51.0,71.0,17.0,10.0,33.0,60.0,22.0,87.0,False
+2024-25,442757e7,Nhlanhla Mgaga,TS Galaxy,28.0,MF,DM,CM,high,model,1223,22.0,23.0,31.0,79.0,14.0,4.0,17.0,99.0,61.0,68.0,69.0,25.0,33.0,67.0,57.0,75.0,False
+2024-25,46285ec9,Etiosa Ighodaro,AmaZulu,23.0,FW,ST,W/AM,high,model,1662,39.0,41.0,23.0,76.0,39.0,10.0,36.0,10.0,7.0,30.0,79.0,84.0,16.0,41.0,27.0,35.0,False
+2024-25,4ba61ff9,Sydney Mobbie,SuperSport Utd.,29.0,DFMF,FB,CB,high,model,2396,63.0,63.0,38.0,41.0,54.0,61.0,72.0,53.0,63.0,38.0,13.0,54.0,67.0,90.0,22.0,75.0,False
+2024-25,4d76d03b,Evidence Makgopa,Orlando Pirates,24.0,FW,ST,W/AM,high,model,911,84.0,87.0,90.0,44.0,21.0,30.0,84.0,33.0,36.0,21.0,90.0,27.0,87.0,61.0,79.0,35.0,False
+2024-25,4fac1197,Sibongiseni Mthethwa,Kaizer Chiefs,30.0,MF,DM,CM,high,model,1088,22.0,23.0,31.0,22.0,4.0,,,2.0,27.0,68.0,98.0,6.0,51.0,85.0,31.0,75.0,False
+2024-25,546d38f9,Tshepang Moremi,AmaZulu,23.0,MF,W/AM,CM,high,model,2219,34.0,39.0,86.0,49.0,30.0,20.0,28.0,11.0,81.0,11.0,43.0,21.0,15.0,52.0,34.0,94.0,False
+2024-25,55eb2bd6,Lwandile Mabuya,Richards Bay FC,24.0,DFMF,FB,DM,high,model,1168,31.0,31.0,82.0,93.0,89.0,44.0,22.0,98.0,42.0,87.0,85.0,14.0,75.0,46.0,7.0,75.0,False
+2024-25,580934cc,Tshepo Kakora,Magesi FC,26.0,MF,DM,CM,high,model,1370,66.0,67.0,31.0,86.0,83.0,49.0,41.0,79.0,51.0,3.0,74.0,86.0,17.0,30.0,33.0,75.0,False
+2024-25,58557b9f,Thabang Monare,Sekhukhune,34.0,MF,CM,DM,low,model,1353,39.0,42.0,58.0,68.0,63.0,41.0,32.0,8.0,85.0,85.0,92.0,99.0,75.0,30.0,57.0,42.0,False
+2024-25,5a916688,Sphiwe Mahlangu,TS Galaxy,29.0,MF,CM,W/AM,low,model,1817,32.0,35.0,96.0,63.0,80.0,77.0,27.0,63.0,51.0,4.0,42.0,75.0,70.0,56.0,85.0,42.0,False
+2024-25,5b29c4c0,Xolani Sithole,Chippa United,25.0,MFDF,DM,FB,high,model,901,22.0,23.0,31.0,74.0,62.0,,,98.0,9.0,11.0,94.0,71.0,26.0,37.0,2.0,75.0,False
+2024-25,5e5e7c9f,Kamohelo Mahlatsi,Marumo Gallants,25.0,MF,W/AM,CM,high,model,1024,16.0,19.0,39.0,1.0,3.0,,,22.0,97.0,97.0,66.0,65.0,91.0,64.0,44.0,94.0,False
+2024-25,601f1c1a,Malibongwe Khoza,Sundowns,20.0,DF,CB,FB,high,model,1358,34.0,34.0,41.0,53.0,14.0,,,10.0,12.0,71.0,89.0,9.0,11.0,76.0,99.0,87.0,False
+2024-25,60551e76,Sinoxolo Kwayiba,Chippa United,27.0,MFFW,W/AM,CM,high,model,1951,76.0,78.0,21.0,56.0,85.0,91.0,74.0,42.0,53.0,15.0,12.0,11.0,39.0,57.0,52.0,94.0,False
+2024-25,6341a5c8,Thapelo Dhludhlu,Marumo Gallants,,MF,W/AM,CM,high,model,976,24.0,27.0,7.0,28.0,20.0,28.0,25.0,75.0,42.0,81.0,38.0,44.0,60.0,13.0,1.0,94.0,False
+2024-25,65a239a9,Chibuike Ohizu,Sekhukhune,27.0,FW,ST,W/AM,high,model,1108,81.0,84.0,59.0,16.0,76.0,99.0,90.0,50.0,50.0,27.0,10.0,21.0,21.0,7.0,76.0,35.0,False
+2024-25,6630e186,Tshegofatso Nyama,Cape Town City,25.0,DF,FB,CB,high,model,2069,70.0,70.0,45.0,35.0,62.0,,,50.0,62.0,74.0,65.0,58.0,5.0,3.0,27.0,75.0,False
+2024-25,69bcc056,Dženan Zajmović,TS Galaxy,29.0,FWMF,ST,W/AM,high,model,1623,59.0,67.0,73.0,61.0,56.0,41.0,59.0,59.0,4.0,84.0,36.0,50.0,73.0,84.0,67.0,35.0,False
+2024-25,6cf6d141,Lindokuhle Zikhali,Richards Bay FC,19.0,MF,DM,CM,high,model,940,90.0,90.0,31.0,89.0,79.0,32.0,95.0,73.0,59.0,14.0,85.0,94.0,6.0,1.0,43.0,75.0,False
+2024-25,6eb589be,Siphesihle Mkhize,Sekhukhune,25.0,MF,DM,CM,high,model,2061,50.0,51.0,66.0,9.0,23.0,,,62.0,45.0,68.0,14.0,62.0,54.0,59.0,77.0,75.0,False
+2024-25,6f25a27e,Wayde Jooste,AmaZulu,31.0,DF,FB,CB,high,model,1419,81.0,81.0,57.0,82.0,82.0,67.0,62.0,95.0,74.0,30.0,70.0,66.0,15.0,10.0,23.0,75.0,False
+2024-25,700daac5,Ismaël Olivier Touré,Stellenbosch FC,26.0,DF,CB,FB,high,model,2012,34.0,34.0,41.0,66.0,75.0,69.0,22.0,66.0,17.0,32.0,67.0,22.0,6.0,16.0,76.0,87.0,False
+2024-25,70b480d3,Samukele Kabini,TS Galaxy,20.0,DF,FB,FB,high,override,1620,97.0,97.0,50.0,67.0,85.0,95.0,98.0,13.0,49.0,7.0,81.0,39.0,14.0,42.0,58.0,75.0,False
+2024-25,73e0a7e4,Makabi Lilepo,Kaizer Chiefs,27.0,MF,W/AM,CM,high,model,1211,96.0,96.0,30.0,94.0,97.0,81.0,77.0,27.0,76.0,78.0,54.0,25.0,73.0,41.0,13.0,94.0,False
+2024-25,75388f92,Khuliso Mudau,Sundowns,29.0,DF,FB,FB,high,override,904,90.0,91.0,98.0,46.0,50.0,,,6.0,65.0,1.0,11.0,33.0,23.0,34.0,97.0,75.0,False
+2024-25,75c6e952,Bonginkosi Dlamini,Polokwane City,33.0,MFFW,ST,W/AM,high,override,1149,4.0,4.0,23.0,24.0,1.0,4.0,4.0,84.0,61.0,50.0,99.0,73.0,67.0,47.0,19.0,35.0,False
+2024-25,7832f692,Kamohelo Mokotjo,Cape Town City,33.0,MF,DM,CM,high,model,1008,22.0,23.0,31.0,1.0,4.0,,,9.0,66.0,68.0,21.0,14.0,91.0,82.0,19.0,75.0,False
+2024-25,79ad3f87,Reeve Frosler,Kaizer Chiefs,26.0,DF,FB,CB,low,model,1215,31.0,31.0,61.0,79.0,12.0,2.0,22.0,37.0,1.0,61.0,35.0,38.0,25.0,13.0,49.0,75.0,False
+2024-25,79be9ee9,Lorenzo Gordinho,Cape Town City,30.0,DF,CB,FB,high,model,1882,34.0,34.0,41.0,24.0,58.0,,,55.0,11.0,3.0,40.0,61.0,9.0,10.0,14.0,87.0,False
+2024-25,7a16efb6,Haashim Domingo,Cape Town City,28.0,MFFW,CM,W/AM,high,model,1468,37.0,39.0,89.0,20.0,58.0,92.0,59.0,27.0,54.0,61.0,51.0,77.0,61.0,96.0,20.0,42.0,False
+2024-25,7ac19436,Mosa Lebusa,Sundowns,31.0,DF,CB,FB,high,model,1016,34.0,34.0,41.0,22.0,14.0,,,10.0,14.0,71.0,5.0,26.0,49.0,17.0,98.0,87.0,False
+2024-25,82171a55,Thapelo Morena,Sundowns,30.0,DFMF,FB,DM,low,model,1368,82.0,82.0,93.0,27.0,31.0,,,18.0,11.0,70.0,33.0,71.0,58.0,55.0,95.0,75.0,False
+2024-25,847d1269,Motsie Matima,Magesi FC,,MFDF,DM,CM,high,model,1009,22.0,23.0,31.0,34.0,25.0,,,7.0,6.0,68.0,39.0,65.0,47.0,43.0,38.0,75.0,False
+2024-25,84f2ac8b,Deon Hotto,Orlando Pirates,33.0,DFMF,FB,FB,high,override,2108,93.0,93.0,86.0,91.0,97.0,89.0,80.0,45.0,39.0,10.0,2.0,11.0,86.0,87.0,89.0,75.0,False
+2024-25,85ce1f4c,Genino Palace,Stellenbosch FC,25.0,MFDF,DM,CM,high,model,946,22.0,23.0,31.0,6.0,27.0,,,35.0,13.0,68.0,65.0,93.0,63.0,98.0,87.0,75.0,False
+2024-25,863007fa,Langelihle Mhlongo,Richards Bay FC,23.0,MF,DM,CM,high,model,1327,22.0,23.0,31.0,3.0,13.0,,,33.0,98.0,68.0,51.0,22.0,97.0,70.0,49.0,75.0,False
+2024-25,86b21784,Keegan Allan,Richards Bay FC,23.0,DF,CB,FB,high,model,2071,75.0,78.0,88.0,86.0,94.0,81.0,46.0,75.0,32.0,33.0,16.0,6.0,36.0,36.0,13.0,87.0,False
+2024-25,89b48fc1,Hendrick Pule Ekstein,AmaZulu,33.0,MF,CM,W/AM,low,model,1261,89.0,89.0,63.0,73.0,96.0,80.0,85.0,39.0,94.0,54.0,32.0,32.0,96.0,96.0,73.0,42.0,False
+2024-25,8a77ded2,Thabang Matuludi,Polokwane City,25.0,DF,FB,CB,high,model,1032,99.0,99.0,65.0,97.0,93.0,55.0,86.0,81.0,94.0,53.0,61.0,95.0,31.0,25.0,74.0,75.0,False
+2024-25,8bbf262e,Kganyane Letsoenyo,TS Galaxy,26.0,DF,FB,CB,low,model,1276,31.0,31.0,79.0,49.0,12.0,,,57.0,6.0,5.0,49.0,85.0,41.0,96.0,61.0,75.0,False
+2024-25,8e092942,Thato Letshedi,Polokwane City,,MF,CM,DM,low,model,1049,13.0,14.0,77.0,87.0,77.0,50.0,11.0,20.0,27.0,18.0,37.0,49.0,4.0,20.0,32.0,42.0,False
+2024-25,8f4c0ee3,Daniel Cardoso,Sekhukhune,35.0,DF,CB,FB,high,model,1606,81.0,83.0,41.0,51.0,82.0,,,58.0,2.0,71.0,79.0,82.0,76.0,37.0,71.0,87.0,False
+2024-25,91d28621,Seun Ndlovu,Chippa United,,DF,FB,FB,high,override,1079,98.0,98.0,19.0,83.0,81.0,61.0,95.0,14.0,30.0,57.0,66.0,55.0,59.0,41.0,54.0,75.0,False
+2024-25,92e00e6b,Angelo Van Rooi,Golden Arrows,27.0,MFFW,CM,W/AM,low,model,1297,13.0,14.0,21.0,70.0,37.0,18.0,11.0,68.0,92.0,56.0,58.0,6.0,68.0,96.0,23.0,42.0,False
+2024-25,932f8e2b,Nkosinathi Sibisi,Orlando Pirates,28.0,DF,CB,FB,high,model,2116,93.0,94.0,41.0,41.0,84.0,,,37.0,48.0,71.0,96.0,56.0,61.0,3.0,87.0,87.0,False
+2024-25,96872342,Daniel Msendami,Marumo Gallants,23.0,MF,W/AM,CM,high,model,2118,36.0,42.0,38.0,92.0,74.0,21.0,21.0,93.0,99.0,74.0,36.0,85.0,41.0,31.0,26.0,94.0,False
+2024-25,96d1bae5,Kambala,Polokwane City,32.0,MF,CM,DM,low,model,2380,13.0,14.0,44.0,37.0,15.0,9.0,11.0,11.0,39.0,85.0,44.0,61.0,32.0,49.0,30.0,42.0,False
+2024-25,975ec450,Mzwandile Buthelezi,Magesi FC,32.0,DF,CB,FB,high,model,1534,34.0,34.0,99.0,44.0,37.0,,,28.0,26.0,71.0,24.0,52.0,19.0,78.0,28.0,87.0,False
+2024-25,977a4378,Andre de Jong,Stellenbosch FC,27.0,FWMF,W/AM,ST,high,model,1690,11.0,12.0,45.0,21.0,35.0,48.0,14.0,6.0,40.0,49.0,1.0,10.0,30.0,80.0,70.0,94.0,False
+2024-25,992dba32,MacBeth Mahlangu,TS Galaxy,22.0,DF,CB,FB,high,model,1014,34.0,34.0,41.0,5.0,14.0,,,40.0,73.0,71.0,95.0,43.0,48.0,93.0,56.0,87.0,False
+2024-25,99a2bc48,Monde Mpambaniso,Marumo Gallants,31.0,MF,CM,W/AM,high,model,912,13.0,14.0,21.0,54.0,42.0,41.0,11.0,58.0,96.0,11.0,11.0,4.0,1.0,35.0,42.0,42.0,False
+2024-25,9af79afc,Thato Khiba,Stellenbosch FC,27.0,MFDF,DM,FB,high,model,1797,54.0,55.0,31.0,23.0,63.0,,,63.0,41.0,19.0,27.0,43.0,69.0,22.0,82.0,75.0,False
+2024-25,9c634692,Edson Khumalo,Marumo Gallants,24.0,DF,FB,CB,high,model,1046,31.0,31.0,19.0,34.0,12.0,,,22.0,2.0,54.0,89.0,3.0,46.0,26.0,10.0,75.0,False
+2024-25,9d0f5194,Christian Saile,SuperSport Utd.,24.0,MFFW,W/AM,CM,high,model,1227,81.0,84.0,7.0,88.0,73.0,31.0,64.0,54.0,23.0,16.0,40.0,15.0,25.0,93.0,27.0,94.0,False
+2024-25,9df63a1b,Bradley Cross,Kaizer Chiefs,23.0,DF,FB,FB,high,override,1332,31.0,31.0,19.0,71.0,33.0,6.0,22.0,2.0,22.0,69.0,53.0,26.0,9.0,22.0,43.0,75.0,False
+2024-25,9f2f3ab8,Andy Boyeli,Sekhukhune,23.0,FW,ST,W/AM,high,model,1315,61.0,50.0,23.0,70.0,61.0,47.0,59.0,4.0,24.0,59.0,41.0,6.0,70.0,79.0,64.0,35.0,False
+2024-25,a2318490,Amadou Soukouna,Cape Town City,32.0,FW,ST,W/AM,low,model,1342,24.0,30.0,23.0,50.0,33.0,36.0,27.0,47.0,53.0,76.0,39.0,30.0,19.0,24.0,30.0,35.0,False
+2024-25,a3938c2a,Victor Letsoalo,TS Galaxy,31.0,FWMF,ST,W/AM,low,model,1392,36.0,39.0,87.0,90.0,67.0,14.0,19.0,41.0,70.0,81.0,53.0,53.0,7.0,81.0,59.0,35.0,False
+2024-25,a4152eda,Sirgio Kammies,Chippa United,26.0,MFDF,DM,FB,high,model,1780,22.0,23.0,70.0,21.0,31.0,,,95.0,94.0,33.0,63.0,45.0,21.0,35.0,61.0,75.0,False
+2024-25,a4c808bb,Onassis Mntambo,Sekhukhune,35.0,MFFW,CM,W/AM,high,model,1028,99.0,99.0,80.0,96.0,92.0,61.0,88.0,46.0,56.0,15.0,6.0,13.0,20.0,11.0,89.0,42.0,False
+2024-25,a5803822,Thulani Hlatshwayo,SuperSport Utd.,34.0,DF,CB,FB,high,model,1260,34.0,34.0,41.0,45.0,45.0,,,10.0,5.0,23.0,21.0,40.0,78.0,72.0,20.0,87.0,False
+2024-25,a62f5680,Matome Mathiane,Marumo Gallants,35.0,DF,CB,FB,high,model,1352,97.0,98.0,41.0,78.0,89.0,,,30.0,7.0,71.0,1.0,49.0,56.0,93.0,17.0,87.0,False
+2024-25,a6c1d523,Simphiwe Mcineka,Richards Bay FC,27.0,DF,CB,FB,high,model,1980,34.0,34.0,41.0,48.0,30.0,,,43.0,18.0,5.0,34.0,84.0,37.0,93.0,24.0,87.0,False
+2024-25,a805e9f3,Mduduzi Shabalala,Kaizer Chiefs,20.0,MF,W/AM,CM,high,model,1706,65.0,69.0,24.0,79.0,78.0,53.0,48.0,41.0,78.0,12.0,74.0,24.0,80.0,37.0,32.0,94.0,False
+2024-25,a8797cf1,Bongani Zungu,AmaZulu,31.0,MF,CM,DM,low,model,1041,49.0,51.0,21.0,13.0,27.0,,,15.0,77.0,85.0,15.0,80.0,42.0,39.0,75.0,42.0,False
+2024-25,a9b6f1de,Mcedi Vandala,Magesi FC,29.0,MFFW,W/AM,CM,high,model,1494,86.0,37.0,48.0,58.0,69.0,67.0,79.0,76.0,39.0,69.0,59.0,36.0,49.0,75.0,35.0,94.0,False
+2024-25,a9d08558,Sihle Nduli,Stellenbosch FC,28.0,MF,DM,CM,high,model,1840,22.0,23.0,31.0,17.0,4.0,,,18.0,19.0,68.0,73.0,83.0,30.0,9.0,89.0,75.0,False
+2024-25,aa6c332c,Patrick Maswanganyi,Orlando Pirates,26.0,MF,W/AM,CM,high,model,1632,51.0,35.0,7.0,43.0,14.0,10.0,45.0,36.0,90.0,63.0,79.0,13.0,27.0,34.0,74.0,94.0,False
+2024-25,ad281b45,Kabelo Dlamini,Orlando Pirates,28.0,MF,W/AM,CM,high,model,1445,35.0,41.0,79.0,68.0,63.0,45.0,23.0,78.0,27.0,88.0,82.0,81.0,85.0,27.0,87.0,94.0,False
+2024-25,ae691c25,Justice Chabalala,Chippa United,32.0,DF,CB,FB,high,model,1277,84.0,87.0,41.0,84.0,44.0,,,10.0,72.0,4.0,3.0,39.0,40.0,27.0,40.0,87.0,False
+2024-25,afd7b0b6,Elmo Kambindu,AmaZulu,31.0,FWMF,ST,ST,high,override,1165,44.0,44.0,23.0,56.0,24.0,19.0,50.0,76.0,99.0,53.0,59.0,67.0,41.0,94.0,44.0,35.0,False
+2024-25,b0042dc3,Marcelo Allende,Sundowns,25.0,MF,W/AM,CM,low,model,1781,28.0,31.0,69.0,2.0,12.0,88.0,68.0,35.0,7.0,97.0,10.0,76.0,65.0,24.0,96.0,94.0,False
+2024-25,b021f725,Pogiso Sanoka,SuperSport Utd.,32.0,DF,CB,FB,high,model,1313,34.0,34.0,41.0,42.0,14.0,,,95.0,41.0,71.0,45.0,45.0,42.0,4.0,12.0,87.0,False
+2024-25,b055c837,Puso Dithejane,TS Galaxy,20.0,MF,W/AM,CM,high,model,1292,38.0,43.0,72.0,27.0,5.0,5.0,48.0,47.0,28.0,10.0,3.0,35.0,58.0,45.0,29.0,94.0,False
+2024-25,b1e7e393,Sanele Barns,Stellenbosch FC,27.0,MFDF,W/AM,CM,high,override,1545,71.0,73.0,64.0,25.0,43.0,61.0,83.0,91.0,46.0,72.0,20.0,75.0,79.0,77.0,85.0,94.0,False
+2024-25,b2732d46,Thabang Sibanyoni,Magesi FC,28.0,FWMF,ST,ST,high,override,1053,16.0,21.0,64.0,4.0,19.0,70.0,31.0,53.0,47.0,96.0,70.0,81.0,64.0,36.0,33.0,35.0,False
+2024-25,b290f930,Bienvenu Eva Nga,Chippa United,31.0,FW,ST,W/AM,high,model,1703,13.0,19.0,23.0,1.0,7.0,66.0,41.0,39.0,27.0,24.0,33.0,59.0,4.0,44.0,50.0,35.0,False
+2024-25,b2d58054,Siphesihle Ndlovu,SuperSport Utd.,27.0,MF,DM,CM,high,model,2299,73.0,74.0,81.0,47.0,45.0,49.0,88.0,81.0,99.0,25.0,70.0,75.0,34.0,34.0,25.0,75.0,False
+2024-25,b498eaa3,Relebogile Mokhuoane,Sekhukhune,29.0,MF,DM,CM,high,model,1009,78.0,79.0,89.0,46.0,25.0,,,30.0,18.0,68.0,47.0,13.0,19.0,2.0,83.0,75.0,False
+2024-25,b4badf3e,Lehlohonolo Mtshali,Magesi FC,29.0,MF,DM,CM,high,model,1177,71.0,73.0,31.0,43.0,43.0,,,23.0,29.0,68.0,62.0,1.0,3.0,18.0,64.0,75.0,False
+2024-25,b76313b0,Thabo Nodada,Cape Town City,29.0,MF,DM,CM,low,model,1003,22.0,23.0,90.0,54.0,77.0,,,93.0,89.0,68.0,57.0,55.0,81.0,19.0,37.0,75.0,False
+2024-25,b7cc3270,Ngoanamello Rammala,Sekhukhune,24.0,MFFW,W/AM,CM,low,model,912,85.0,87.0,43.0,53.0,71.0,76.0,82.0,64.0,2.0,97.0,94.0,52.0,14.0,10.0,49.0,94.0,False
+2024-25,b9e80813,Sandile Mthethwa,AmaZulu,27.0,DF,CB,FB,high,model,908,34.0,34.0,41.0,87.0,87.0,,,10.0,45.0,11.0,27.0,98.0,89.0,93.0,80.0,87.0,False
+2024-25,ba4956cf,Prins Tjiueza,Cape Town City,22.0,FWMF,W/AM,ST,high,model,1524,13.0,14.0,47.0,41.0,45.0,35.0,12.0,18.0,95.0,25.0,16.0,55.0,21.0,16.0,11.0,94.0,False
+2024-25,ba8751f0,Kayden Rademeyer,Magesi FC,25.0,MFFW,CM,W/AM,high,model,985,13.0,14.0,21.0,25.0,4.0,,,99.0,70.0,13.0,82.0,42.0,58.0,37.0,27.0,42.0,False
+2024-25,bb1f97f2,Aubrey Modiba,Sundowns,29.0,DFMF,FB,DM,low,model,1670,31.0,31.0,85.0,77.0,83.0,75.0,22.0,23.0,26.0,13.0,46.0,5.0,18.0,43.0,99.0,75.0,False
+2024-25,bbacaaaa,Makhehleni Makhaula,Orlando Pirates,34.0,MF,DM,CM,high,model,1571,59.0,61.0,31.0,50.0,49.0,49.0,70.0,2.0,87.0,68.0,61.0,95.0,42.0,27.0,91.0,75.0,False
+2024-25,bc02fac6,Pule Mmodi,Kaizer Chiefs,31.0,MF,W/AM,CM,high,model,1145,4.0,4.0,35.0,42.0,22.0,16.0,4.0,31.0,92.0,84.0,71.0,47.0,35.0,18.0,59.0,94.0,False
+2024-25,bc36387a,Ndamulelo Maphangule,Polokwane City,24.0,MF,DM,CM,high,model,1941,51.0,53.0,31.0,69.0,69.0,59.0,43.0,17.0,47.0,68.0,53.0,42.0,38.0,10.0,34.0,75.0,False
+2024-25,bddb9393,Riaan Hanamub,AmaZulu,29.0,DF,FB,CB,high,model,2268,31.0,31.0,83.0,37.0,38.0,,,97.0,82.0,7.0,14.0,6.0,47.0,45.0,41.0,75.0,False
+2024-25,be5fbc2b,Gamphani Lungu,SuperSport Utd.,25.0,MF,W/AM,CM,high,model,983,22.0,25.0,41.0,18.0,36.0,61.0,30.0,56.0,56.0,37.0,22.0,22.0,72.0,28.0,21.0,94.0,False
+2024-25,c0850047,Marvin Sikhosana,Marumo Gallants,28.0,DF,CB,FB,high,model,1440,34.0,34.0,41.0,2.0,39.0,,,10.0,86.0,71.0,30.0,16.0,68.0,53.0,45.0,87.0,False
+2024-25,c105cf1d,Moses Mthembu,Richards Bay FC,23.0,MF,W/AM,CM,high,override,1595,4.0,4.0,7.0,57.0,7.0,2.0,4.0,29.0,54.0,92.0,99.0,96.0,22.0,2.0,18.0,94.0,False
+2024-25,c6931f90,Grant Kekana,Sundowns,31.0,DF,CB,FB,high,model,1534,83.0,86.0,41.0,21.0,37.0,,,28.0,13.0,71.0,11.0,1.0,52.0,9.0,97.0,87.0,False
+2024-25,c7718dfd,Nduduzo Sibiya,Golden Arrows,29.0,MFFW,W/AM,CM,high,model,1993,37.0,23.0,19.0,31.0,44.0,55.0,43.0,48.0,79.0,29.0,53.0,41.0,70.0,60.0,23.0,94.0,False
+2024-25,ca91726e,Vuyo Letlapa,Sekhukhune,20.0,DF,FB,CB,high,model,2026,31.0,31.0,89.0,78.0,70.0,36.0,22.0,30.0,81.0,87.0,97.0,77.0,11.0,85.0,75.0,75.0,False
+2024-25,cc014f7d,Kamogelo Sebelebele,TS Galaxy,22.0,MFDF,DM,CM,high,model,1855,93.0,93.0,91.0,98.0,95.0,76.0,83.0,69.0,77.0,1.0,89.0,82.0,2.0,38.0,42.0,75.0,False
+2024-25,ce41b675,Lehlegonolo Mokone,Magesi FC,30.0,DF,CB,FB,high,model,1873,79.0,81.0,41.0,50.0,59.0,,,56.0,58.0,13.0,9.0,48.0,57.0,93.0,29.0,87.0,False
+2024-25,cef8b921,Rushwin Dortley,Kaizer Chiefs,22.0,DF,CB,FB,high,model,1506,34.0,34.0,41.0,28.0,71.0,,,49.0,67.0,71.0,61.0,14.0,10.0,57.0,47.0,87.0,False
+2024-25,cf49678d,Khumbulani Ncube,Marumo Gallants,24.0,DF,FB,CB,low,model,1002,31.0,31.0,19.0,51.0,73.0,,,41.0,38.0,87.0,50.0,98.0,27.0,69.0,51.0,75.0,False
+2024-25,cf54b018,Brooklyn Poggenpoel,SuperSport Utd.,24.0,MF,DM,CM,low,model,1326,22.0,23.0,97.0,49.0,41.0,26.0,17.0,61.0,17.0,68.0,15.0,63.0,50.0,90.0,23.0,75.0,False
+2024-25,d29e335c,Arthur Sales,Sundowns,22.0,FWMF,W/AM,ST,high,model,1020,98.0,98.0,99.0,62.0,96.0,99.0,99.0,16.0,6.0,41.0,95.0,90.0,74.0,93.0,99.0,94.0,False
+2024-25,d2fc699c,Shaune Mogaila,Sekhukhune,29.0,DFMF,FB,DM,high,model,1296,83.0,83.0,78.0,74.0,75.0,61.0,72.0,42.0,73.0,87.0,57.0,2.0,51.0,96.0,81.0,75.0,False
+2024-25,d31d5544,Kazie Enyinaya,Stellenbosch FC,25.0,DF,FB,CB,high,model,1358,31.0,31.0,73.0,65.0,63.0,,,67.0,87.0,27.0,91.0,65.0,13.0,74.0,78.0,75.0,False
+2024-25,d4ec8d21,Tlakusani Mthethwa,Richards Bay FC,31.0,MF,DM,CM,high,model,1831,53.0,54.0,31.0,55.0,70.0,76.0,53.0,38.0,43.0,68.0,82.0,85.0,66.0,78.0,29.0,75.0,False
+2024-25,d74c6799,Peter Shalulile,Sundowns,31.0,FW,ST,W/AM,high,model,1282,67.0,73.0,53.0,39.0,41.0,51.0,67.0,30.0,19.0,7.0,73.0,99.0,50.0,73.0,90.0,35.0,False
+2024-25,d7584ecc,Malebogo Modise,Chippa United,25.0,DF,FB,CB,high,model,1353,31.0,31.0,58.0,53.0,65.0,,,78.0,77.0,26.0,15.0,59.0,83.0,73.0,55.0,75.0,False
+2024-25,d7812343,Katlego Mkhabela,Sekhukhune,28.0,DF,FB,CB,low,model,915,31.0,31.0,19.0,6.0,12.0,,,29.0,34.0,87.0,6.0,21.0,62.0,65.0,82.0,75.0,False
+2024-25,d7946ab4,Tshegofatso Mabaso,Orlando Pirates,27.0,FW,ST,W/AM,high,model,1321,76.0,70.0,23.0,81.0,79.0,59.0,59.0,13.0,33.0,90.0,64.0,79.0,47.0,4.0,84.0,35.0,False
+2024-25,d8bf7bdc,Justice Figareido,Richards Bay FC,26.0,MFFW,W/AM,CM,high,model,1238,42.0,47.0,29.0,55.0,42.0,25.0,35.0,84.0,37.0,38.0,98.0,40.0,7.0,20.0,22.0,94.0,False
+2024-25,d8c02639,Tshepo Mabua,Richards Bay FC,29.0,DF,CB,FB,low,model,1803,34.0,34.0,41.0,10.0,14.0,,,96.0,94.0,71.0,91.0,75.0,88.0,93.0,43.0,87.0,False
+2024-25,da26b285,Siyanda Mthanti,Golden Arrows,20.0,MFFW,W/AM,CM,high,model,1270,40.0,45.0,73.0,15.0,54.0,92.0,58.0,90.0,57.0,23.0,8.0,53.0,92.0,93.0,45.0,94.0,False
+2024-25,dab5e974,Lucas Ribeiro,Sundowns,25.0,FWMF,W/AM,ST,high,model,1959,99.0,99.0,94.0,98.0,99.0,86.0,97.0,28.0,10.0,34.0,81.0,16.0,45.0,46.0,97.0,94.0,False
+2024-25,dba0b5ba,Lebohang Nkaki,Polokwane City,,DF,CB,FB,high,model,2520,99.0,71.0,83.0,74.0,97.0,94.0,98.0,52.0,28.0,71.0,64.0,83.0,26.0,59.0,39.0,87.0,False
+2024-25,dbb29795,Yusuf Maart,Kaizer Chiefs,29.0,MF,CM,DM,low,model,2012,30.0,32.0,94.0,61.0,49.0,26.0,27.0,49.0,20.0,85.0,75.0,65.0,54.0,25.0,37.0,42.0,False
+2024-25,dcb6fdcf,Ayabulela Magqwaka,Chippa United,28.0,MF,CM,DM,low,model,1346,42.0,44.0,61.0,51.0,51.0,64.0,41.0,54.0,6.0,58.0,54.0,87.0,87.0,85.0,57.0,42.0,False
+2024-25,dcf52217,Thabo Moloisane,Stellenbosch FC,25.0,DF,CB,FB,high,model,2295,89.0,91.0,94.0,33.0,68.0,,,70.0,47.0,71.0,66.0,63.0,14.0,41.0,84.0,87.0,False
+2024-25,de6e307a,Deolin Mekoa,Magesi FC,30.0,MFDF,CM,FB,low,model,1205,13.0,14.0,68.0,35.0,4.0,1.0,11.0,87.0,1.0,51.0,4.0,1.0,94.0,54.0,6.0,42.0,False
+2024-25,e1074b90,John Mokone,Magesi FC,,DF,FB,CB,low,model,2071,69.0,69.0,87.0,26.0,61.0,,,43.0,27.0,18.0,10.0,74.0,82.0,39.0,33.0,75.0,False
+2024-25,e246b0e7,Lebohang Maboe,SuperSport Utd.,29.0,MFFW,CM,CM,high,override,1136,13.0,14.0,73.0,94.0,85.0,53.0,11.0,92.0,73.0,32.0,56.0,39.0,23.0,46.0,57.0,42.0,False
+2024-25,e3adf58f,Gastón Sirino,Kaizer Chiefs,33.0,MF,W/AM,CM,high,model,1014,18.0,20.0,97.0,81.0,51.0,17.0,16.0,89.0,85.0,40.0,96.0,68.0,44.0,1.0,43.0,94.0,False
+2024-25,e5ba7413,Gladwin Shitolo,Golden Arrows,34.0,DF,CB,FB,high,model,2285,73.0,75.0,41.0,63.0,70.0,57.0,69.0,36.0,59.0,71.0,32.0,57.0,97.0,84.0,26.0,87.0,False
+2024-25,e74e7158,Fasika Idumba,Cape Town City,25.0,DF,CB,FB,high,model,1620,34.0,34.0,41.0,93.0,67.0,17.0,22.0,57.0,10.0,71.0,60.0,72.0,29.0,22.0,10.0,87.0,False
+2024-25,e884f94c,Chumani Butsaka,Stellenbosch FC,22.0,MF,CM,DM,low,model,1055,82.0,82.0,99.0,85.0,89.0,66.0,69.0,37.0,99.0,49.0,89.0,96.0,30.0,77.0,92.0,42.0,False
+2024-25,e8933eb0,Oswin Appollis,Polokwane City,22.0,MF,W/AM,CM,high,model,2027,19.0,21.0,18.0,87.0,58.0,22.0,15.0,57.0,86.0,52.0,49.0,49.0,90.0,47.0,31.0,94.0,False
+2024-25,eb9b8c2d,Themba Mantshiyane,Golden Arrows,28.0,DF,CB,FB,high,model,1539,82.0,84.0,91.0,37.0,35.0,,,89.0,35.0,71.0,76.0,70.0,94.0,79.0,64.0,87.0,False
+2024-25,ec31d804,Masindi Nemtajela,Marumo Gallants,22.0,MF,DM,CM,low,model,1404,63.0,65.0,95.0,82.0,73.0,49.0,47.0,70.0,93.0,68.0,87.0,35.0,43.0,17.0,58.0,75.0,False
+2024-25,ed3c3ea0,Langelihle Ndlovu,Polokwane City,,DF,FB,FB,high,override,1260,31.0,31.0,19.0,37.0,12.0,,,3.0,55.0,66.0,74.0,34.0,1.0,19.0,29.0,75.0,False
+2024-25,ee362038,Darwin González,Cape Town City,30.0,MFFW,W/AM,CM,high,model,1736,62.0,49.0,7.0,38.0,40.0,34.0,66.0,87.0,82.0,27.0,14.0,9.0,89.0,82.0,9.0,94.0,False
+2024-25,f12ba819,Vincent Pule,SuperSport Utd.,32.0,MF,W/AM,CM,high,model,1031,4.0,4.0,63.0,84.0,60.0,25.0,4.0,74.0,84.0,43.0,64.0,18.0,37.0,93.0,4.0,94.0,False
+2024-25,f1e90c58,Gabadinho Mhango,Marumo Gallants,31.0,FW,ST,W/AM,high,model,1207,53.0,61.0,23.0,99.0,81.0,7.0,21.0,36.0,90.0,36.0,24.0,19.0,1.0,1.0,1.0,35.0,False
+2024-25,f29ca03e,Tshepo Makgoga,Magesi FC,33.0,DF,CB,FB,high,model,1588,34.0,34.0,41.0,40.0,34.0,,,73.0,90.0,28.0,90.0,95.0,12.0,58.0,36.0,87.0,False
+2024-25,f5febbb3,Abbubaker Mobara,AmaZulu,30.0,DFMF,CB,FB,low,model,964,34.0,34.0,41.0,83.0,14.0,,,97.0,57.0,71.0,63.0,59.0,5.0,33.0,55.0,87.0,False
+2024-25,f6272be9,Thalente Mbatha,Orlando Pirates,24.0,MF,CM,CM,high,override,1822,77.0,77.0,21.0,99.0,94.0,55.0,53.0,23.0,4.0,85.0,85.0,94.0,18.0,32.0,94.0,42.0,False
+2024-25,f6e36aa4,Tlou Nkwe,Polokwane City,,DF,FB,CB,high,model,900,31.0,31.0,94.0,14.0,12.0,,,63.0,90.0,14.0,95.0,86.0,93.0,63.0,67.0,75.0,False
+2024-25,f8a8c580,Mohau Nkota,Orlando Pirates,19.0,MF,W/AM,CM,high,model,1653,48.0,53.0,59.0,90.0,65.0,27.0,30.0,38.0,48.0,48.0,63.0,51.0,62.0,78.0,86.0,94.0,False
+2024-25,f8fc2e83,Thabang Molaoa,Chippa United,24.0,DF,CB,FB,high,model,1331,34.0,34.0,41.0,88.0,90.0,,,78.0,84.0,6.0,82.0,86.0,28.0,28.0,42.0,87.0,False
+2024-25,faa66027,Wonderboy Makhubu,Magesi FC,27.0,FW,W/AM,ST,high,model,1181,70.0,72.0,32.0,22.0,48.0,76.0,82.0,5.0,66.0,21.0,6.0,42.0,3.0,9.0,3.0,94.0,False
+2024-25,fd18e7a1,Tashreeq Matthews,Sundowns,23.0,FWMF,W/AM,ST,high,model,1061,95.0,95.0,95.0,51.0,88.0,97.0,95.0,8.0,15.0,46.0,97.0,73.0,6.0,68.0,98.0,94.0,False
+2025-26,00029b1e,Teboho Mokoena,Sundowns,28.0,MF,DM,W/AM,high,override,1617,97.0,97.0,94.0,99.0,99.0,80.0,78.0,85.0,67.0,30.0,9.0,17.0,73.0,15.0,90.0,75.0,False
+2025-26,0201a348,Realeboga Potsana,Orbit College,,MF,DM,CM,high,model,1203,22.0,23.0,31.0,5.0,4.0,,,39.0,34.0,68.0,58.0,30.0,22.0,3.0,7.0,75.0,False
+2025-26,021d31f2,Igor Salatiel,TS Galaxy,24.0,DF,CB,FB,high,model,1261,86.0,88.0,41.0,96.0,98.0,72.0,54.0,51.0,16.0,25.0,71.0,94.0,2.0,73.0,4.0,87.0,False
+2025-26,0288db37,Sbani Mntungwa,Richards Bay FC,,DF,FB,CB,high,model,2058,31.0,31.0,46.0,1.0,12.0,,,54.0,23.0,51.0,94.0,29.0,79.0,86.0,31.0,75.0,False
+2025-26,03695186,Mpho Mvelase,TS Galaxy,36.0,MFFW,CM,W/AM,high,model,1788,65.0,65.0,21.0,65.0,65.0,46.0,49.0,25.0,25.0,25.0,35.0,51.0,27.0,51.0,57.0,42.0,False
+2025-26,037511b0,Ntandoyenkosi Mabaso,Golden Arrows,21.0,DF,CB,CB,high,override,1669,34.0,34.0,90.0,95.0,66.0,13.0,22.0,99.0,29.0,10.0,7.0,58.0,64.0,82.0,61.0,87.0,False
+2025-26,04aec6b2,Nkosingiphile Ngcobo,Kaizer Chiefs,25.0,MF,CM,DM,low,model,928,61.0,61.0,21.0,6.0,39.0,,,80.0,8.0,85.0,46.0,46.0,73.0,15.0,82.0,42.0,False
+2025-26,06cf76ca,Inácio Miguel,Kaizer Chiefs,29.0,DF,CB,FB,high,model,1667,34.0,34.0,41.0,80.0,33.0,9.0,22.0,10.0,83.0,9.0,37.0,4.0,1.0,2.0,81.0,87.0,False
+2025-26,070e8e66,Mokibelo Ramabu,Polokwane City,22.0,MF,W/AM,CM,high,model,1865,59.0,64.0,7.0,78.0,68.0,41.0,44.0,95.0,24.0,65.0,34.0,78.0,95.0,93.0,62.0,94.0,False
+2025-26,0b27bac3,Keletso Makgalwa,Sekhukhune,28.0,MF,W/AM,CM,high,model,1810,4.0,4.0,91.0,70.0,81.0,80.0,4.0,81.0,21.0,44.0,21.0,3.0,61.0,25.0,59.0,94.0,False
+2025-26,0bbdea11,Ayabulela Maxwele,Golden Arrows,25.0,MFFW,CM,W/AM,high,model,1711,13.0,14.0,49.0,46.0,11.0,4.0,11.0,73.0,80.0,68.0,61.0,82.0,99.0,65.0,57.0,42.0,False
+2025-26,0d64cd98,Samuel Darpoh,Magesi FC,27.0,MF,CM,DM,high,model,1177,46.0,49.0,21.0,49.0,18.0,12.0,55.0,35.0,87.0,35.0,23.0,63.0,8.0,1.0,35.0,42.0,False
+2025-26,0dc1fab6,Ndabayithethwa Ndlondlo,Marumo Gallants,30.0,FWMF,ST,W/AM,low,model,1744,27.0,7.0,23.0,73.0,53.0,24.0,16.0,99.0,93.0,10.0,84.0,93.0,61.0,59.0,10.0,35.0,False
+2025-26,0e5a3343,Asekho Tiwani,Stellenbosch FC,19.0,DF,FB,CB,high,model,1026,31.0,31.0,19.0,10.0,43.0,,,91.0,54.0,87.0,22.0,99.0,2.0,96.0,83.0,75.0,False
+2025-26,0ebbc4f3,Khulumani Ndamane,TS Galaxy,21.0,DF,CB,FB,high,model,2270,34.0,34.0,87.0,76.0,87.0,81.0,22.0,48.0,91.0,39.0,19.0,78.0,18.0,7.0,89.0,87.0,False
+2025-26,106c3477,Sbonelo Cele,Golden Arrows,23.0,DF,FB,CB,high,model,1028,31.0,31.0,66.0,57.0,42.0,,,69.0,35.0,87.0,1.0,51.0,65.0,70.0,63.0,75.0,False
+2025-26,11b4c4ff,Msindisi Ndlovu,Marumo Gallants,23.0,MFFW,W/AM,CM,high,model,914,27.0,30.0,42.0,19.0,29.0,43.0,32.0,59.0,35.0,4.0,68.0,91.0,69.0,93.0,10.0,94.0,False
+2025-26,13398d42,Mbekezeli Mbokazi,Orlando Pirates,19.0,DF,CB,FB,high,model,910,34.0,34.0,41.0,72.0,14.0,,,82.0,68.0,71.0,75.0,33.0,90.0,61.0,91.0,87.0,False
+2025-26,13bf8c17,Lebohang Mabotja,Marumo Gallants,33.0,DF,FB,FB,high,override,1532,31.0,31.0,19.0,11.0,12.0,,,5.0,67.0,87.0,19.0,19.0,94.0,96.0,21.0,75.0,False
+2025-26,190b0d5e,Iqraam Rayners,Sundowns,29.0,FW,ST,W/AM,high,model,1436,99.0,93.0,84.0,93.0,99.0,79.0,80.0,73.0,1.0,4.0,16.0,13.0,93.0,94.0,87.0,35.0,False
+2025-26,19d98933,Kgothatso Mariba,Magesi FC,25.0,MF,DM,CM,high,model,1284,69.0,70.0,79.0,29.0,65.0,,,19.0,53.0,68.0,49.0,9.0,59.0,41.0,30.0,75.0,False
+2025-26,1b866e2b,Edwin Ramaja,Polokwane City,24.0,DF,CB,FB,high,model,900,34.0,34.0,41.0,55.0,63.0,,,45.0,70.0,2.0,94.0,87.0,34.0,29.0,27.0,87.0,False
+2025-26,1bd6825a,Nhlanhla Zwane,Golden Arrows,25.0,MF,DM,CM,low,model,1243,22.0,23.0,31.0,81.0,81.0,63.0,17.0,47.0,63.0,18.0,71.0,5.0,95.0,89.0,69.0,75.0,False
+2025-26,1c87ff37,Fezile Gcaba,Durban City,26.0,DF,CB,FB,high,model,1717,34.0,34.0,41.0,91.0,14.0,2.0,22.0,88.0,21.0,71.0,56.0,29.0,60.0,11.0,41.0,87.0,False
+2025-26,1dda4bf0,Sphesihle Maduna,TS Galaxy,25.0,MF,W/AM,CM,high,override,2226,10.0,10.0,51.0,14.0,10.0,11.0,10.0,46.0,51.0,79.0,76.0,98.0,18.0,53.0,40.0,94.0,False
+2025-26,1e1e6055,Sbangani Zulu,Richards Bay FC,,DFMF,CB,DM,high,model,1760,34.0,34.0,41.0,47.0,79.0,,,26.0,63.0,29.0,87.0,74.0,43.0,42.0,64.0,87.0,False
+2025-26,206744e8,Devon Titus,Stellenbosch FC,25.0,MFFW,W/AM,CM,high,model,2436,9.0,9.0,81.0,44.0,24.0,14.0,8.0,63.0,60.0,13.0,47.0,80.0,47.0,72.0,54.0,94.0,False
+2025-26,22456fc2,Trésor Yamba,Sekhukhune,26.0,DF,CB,FB,high,model,1305,34.0,34.0,41.0,35.0,43.0,,,10.0,96.0,71.0,51.0,24.0,27.0,45.0,51.0,87.0,False
+2025-26,235c823d,Grant Margeman,Siwelele,27.0,MF,CM,DM,low,model,1890,13.0,14.0,21.0,15.0,8.0,7.0,11.0,89.0,63.0,85.0,30.0,92.0,82.0,92.0,39.0,42.0,False
+2025-26,24dd6de9,Yandisa Mfolozi,Siwelele,24.0,DF,FB,CB,high,model,2092,31.0,31.0,63.0,17.0,41.0,,,25.0,10.0,9.0,90.0,13.0,81.0,57.0,57.0,75.0,False
+2025-26,259affab,Jayden Adams,Sundowns,24.0,MF,DM,CM,high,model,1419,62.0,63.0,31.0,58.0,59.0,49.0,70.0,27.0,49.0,68.0,45.0,2.0,18.0,31.0,94.0,75.0,False
+2025-26,25c3fb97,Relebohile Mofokeng,Orlando Pirates,20.0,MF,W/AM,CM,high,model,2131,94.0,94.0,90.0,97.0,92.0,38.0,68.0,58.0,32.0,64.0,77.0,28.0,64.0,69.0,92.0,94.0,False
+2025-26,26feae20,Nkosikhona Radebe,AmaZulu,24.0,MFDF,W/AM,DM,high,override,2371,14.0,15.0,31.0,5.0,9.0,53.0,48.0,66.0,41.0,62.0,91.0,97.0,48.0,39.0,66.0,94.0,False
+2025-26,27388405,Halalisani Vilakazi,Orbit College,27.0,DF,FB,CB,low,model,1675,31.0,31.0,19.0,33.0,51.0,,,33.0,57.0,42.0,23.0,93.0,78.0,79.0,17.0,75.0,False
+2025-26,279fff25,Taariq Fielies,AmaZulu,33.0,DF,CB,FB,high,model,2532,68.0,70.0,41.0,60.0,64.0,43.0,54.0,64.0,27.0,71.0,41.0,27.0,50.0,35.0,70.0,87.0,False
+2025-26,27b0f61c,Ibraheem Jabaar,Stellenbosch FC,22.0,MF,DM,CM,low,model,940,83.0,85.0,99.0,59.0,29.0,,,71.0,70.0,21.0,29.0,57.0,89.0,55.0,50.0,75.0,False
+2025-26,27b6ef42,Kgomotso Mosadi,Magesi FC,26.0,MFFW,W/AM,CM,high,model,1683,29.0,32.0,25.0,40.0,25.0,18.0,25.0,52.0,61.0,35.0,84.0,70.0,59.0,36.0,2.0,94.0,False
+2025-26,28f6b777,Thabo Cele,Kaizer Chiefs,28.0,MF,DM,CM,low,model,909,22.0,23.0,31.0,41.0,30.0,,,50.0,91.0,68.0,18.0,29.0,78.0,98.0,85.0,75.0,False
+2025-26,2aba813d,Wandile Duba,Kaizer Chiefs,21.0,MFFW,W/AM,CM,high,model,952,79.0,81.0,68.0,30.0,38.0,52.0,90.0,10.0,12.0,24.0,72.0,61.0,13.0,11.0,78.0,94.0,False
+2025-26,2ce8122f,Sekela Sithole,Marumo Gallants,28.0,MF,CM,W/AM,high,model,1672,68.0,68.0,51.0,32.0,73.0,96.0,77.0,70.0,65.0,23.0,65.0,8.0,13.0,44.0,25.0,42.0,False
+2025-26,2f2f9ce3,Thulani Gumede,Richards Bay FC,,MFFW,W/AM,W/AM,high,override,1284,39.0,44.0,53.0,71.0,66.0,46.0,30.0,25.0,49.0,86.0,89.0,86.0,16.0,93.0,28.0,94.0,False
+2025-26,2f832832,Bradley Grobler,Sekhukhune,37.0,FW,ST,W/AM,high,model,1486,79.0,76.0,76.0,10.0,16.0,51.0,96.0,24.0,39.0,47.0,27.0,6.0,90.0,33.0,73.0,35.0,False
+2025-26,2f9b46d5,Goodman Mosele,Chippa United,25.0,MF,DM,CM,high,model,2123,22.0,23.0,65.0,37.0,71.0,99.0,17.0,21.0,50.0,68.0,46.0,78.0,86.0,74.0,17.0,75.0,False
+2025-26,2fc2f651,Bright Ndlovu,Sekhukhune,25.0,DFFW,W/AM,FB,high,model,2080,69.0,71.0,16.0,63.0,75.0,65.0,56.0,7.0,52.0,54.0,39.0,88.0,43.0,21.0,55.0,94.0,False
+2025-26,33e94694,Edgar Manaka,Marumo Gallants,36.0,MF,DM,CM,high,model,911,22.0,23.0,31.0,7.0,4.0,,,10.0,74.0,68.0,17.0,90.0,79.0,11.0,54.0,75.0,False
+2025-26,356f80a6,Monnapule Saleng,Orbit College,27.0,FWMF,W/AM,ST,high,model,1113,45.0,18.0,76.0,24.0,27.0,31.0,58.0,45.0,16.0,18.0,2.0,32.0,94.0,93.0,64.0,94.0,False
+2025-26,37e6dedf,Nkosikhona Ndaba,Orlando Pirates,22.0,DF,FB,CB,high,model,946,87.0,89.0,90.0,42.0,47.0,,,31.0,18.0,87.0,99.0,53.0,42.0,66.0,98.0,75.0,False
+2025-26,38cc923f,Mlungisi Mbunjana,TS Galaxy,34.0,MF,CM,DM,low,model,2080,51.0,54.0,21.0,23.0,30.0,72.0,74.0,13.0,11.0,85.0,25.0,35.0,51.0,75.0,44.0,42.0,False
+2025-26,39bdbe28,Eroine Agnikoi,Marumo Gallants,19.0,DF,CB,FB,high,model,1260,99.0,99.0,41.0,74.0,93.0,,,91.0,65.0,23.0,64.0,20.0,86.0,93.0,1.0,87.0,False
+2025-26,3a00c763,Nqobeko Dlamini,Golden Arrows,30.0,MF,CM,DM,low,model,2021,27.0,30.0,92.0,44.0,23.0,23.0,32.0,1.0,15.0,85.0,80.0,89.0,85.0,70.0,57.0,42.0,False
+2025-26,3a03bf8a,Yanela Mbuthuma,Orlando Pirates,23.0,FW,ST,W/AM,high,model,1238,50.0,59.0,81.0,96.0,93.0,56.0,31.0,44.0,87.0,39.0,21.0,64.0,96.0,67.0,93.0,35.0,False
+2025-26,3a2f4876,Ben Motshwari,Orbit College,34.0,MF,DM,CM,high,model,1192,70.0,71.0,31.0,33.0,15.0,,,22.0,35.0,68.0,6.0,21.0,37.0,51.0,26.0,75.0,False
+2025-26,3b314011,Khulekani Shezi,Golden Arrows,24.0,DF,FB,CB,high,model,1215,85.0,85.0,19.0,50.0,35.0,,,55.0,21.0,61.0,79.0,57.0,33.0,13.0,62.0,75.0,False
+2025-26,3b6b3b8d,Bulelani Nikani,Polokwane City,32.0,DF,CB,FB,high,model,996,94.0,95.0,41.0,32.0,55.0,,,42.0,64.0,17.0,59.0,91.0,67.0,65.0,75.0,87.0,False
+2025-26,3bc5341b,Olaoleng Mokgosi,Orbit College,,DF,CB,FB,high,model,990,34.0,34.0,41.0,7.0,14.0,,,10.0,76.0,71.0,84.0,18.0,93.0,64.0,5.0,87.0,False
+2025-26,3e3d513b,Siyabonga Nhlapo,Marumo Gallants,36.0,MFDF,DM,CM,high,model,2242,22.0,23.0,31.0,19.0,46.0,88.0,17.0,46.0,38.0,23.0,19.0,23.0,53.0,39.0,22.0,75.0,False
+2025-26,3e5885a4,Thabang Nhlapo,Orbit College,,DF,CB,FB,high,model,1978,34.0,34.0,41.0,14.0,14.0,,,10.0,19.0,71.0,72.0,19.0,59.0,34.0,6.0,87.0,False
+2025-26,44f85006,Thando Ngwenya,AmaZulu,22.0,FW,ST,W/AM,high,model,1146,73.0,81.0,56.0,27.0,70.0,89.0,87.0,56.0,21.0,33.0,61.0,39.0,24.0,10.0,50.0,35.0,False
+2025-26,461d0800,Thulani Jingana,Orbit College,,DF,FB,CB,high,model,1606,31.0,31.0,51.0,9.0,12.0,,,27.0,17.0,21.0,75.0,47.0,38.0,31.0,1.0,75.0,False
+2025-26,49c013e4,Athini Jodwana,Durban City,31.0,MF,DM,CM,high,model,1525,22.0,23.0,31.0,67.0,11.0,1.0,17.0,75.0,86.0,68.0,93.0,61.0,10.0,75.0,78.0,75.0,False
+2025-26,4a6b9584,Azola Matrose,Chippa United,22.0,MFFW,W/AM,CM,high,model,1561,53.0,57.0,28.0,20.0,41.0,72.0,66.0,70.0,22.0,91.0,35.0,31.0,97.0,93.0,38.0,94.0,False
+2025-26,4ba61ff9,Sydney Mobbie,Siwelele,30.0,DF,CB,FB,high,model,1317,34.0,34.0,41.0,68.0,42.0,,,79.0,40.0,71.0,43.0,2.0,53.0,49.0,59.0,87.0,False
+2025-26,4c993f98,Tebogo Potsane,Siwelele,31.0,MF,W/AM,DM,high,override,1505,56.0,60.0,75.0,4.0,13.0,95.0,96.0,1.0,65.0,89.0,78.0,95.0,29.0,4.0,46.0,94.0,False
+2025-26,4d76d03b,Evidence Makgopa,Orlando Pirates,25.0,FW,ST,ST,high,override,1069,87.0,47.0,96.0,64.0,36.0,21.0,73.0,61.0,10.0,61.0,93.0,70.0,59.0,94.0,96.0,35.0,False
+2025-26,4fac1197,Sibongiseni Mthethwa,Kaizer Chiefs,31.0,MF,DM,CM,high,model,1042,22.0,23.0,86.0,11.0,22.0,,,2.0,25.0,68.0,86.0,33.0,83.0,26.0,81.0,75.0,False
+2025-26,5067f53f,Edmore Chirambadare,Magesi FC,33.0,MFFW,W/AM,CM,high,model,966,25.0,28.0,84.0,93.0,6.0,1.0,10.0,99.0,96.0,68.0,48.0,26.0,2.0,12.0,51.0,94.0,False
+2025-26,50d6a92a,Given Thibedi,Orbit College,27.0,MF,DM,CM,high,model,1350,22.0,23.0,31.0,26.0,39.0,,,57.0,30.0,68.0,55.0,3.0,35.0,91.0,14.0,75.0,False
+2025-26,546d38f9,Tshepang Moremi,Orlando Pirates,24.0,MF,W/AM,CM,high,model,1533,82.0,85.0,74.0,95.0,94.0,61.0,51.0,79.0,63.0,26.0,70.0,7.0,26.0,76.0,93.0,94.0,False
+2025-26,54c75ca3,Lebone Seema,Orlando Pirates,22.0,DF,CB,FB,high,model,2520,87.0,89.0,41.0,74.0,78.0,65.0,85.0,80.0,5.0,71.0,29.0,80.0,66.0,25.0,95.0,87.0,False
+2025-26,55eb2bd6,Lwandile Mabuya,Richards Bay FC,25.0,DF,FB,CB,high,model,1409,31.0,31.0,19.0,43.0,12.0,,,70.0,19.0,87.0,77.0,27.0,91.0,96.0,45.0,75.0,False
+2025-26,57097c4b,Sédé Junior Dion,Golden Arrows,31.0,FW,ST,W/AM,high,model,2035,90.0,90.0,23.0,53.0,87.0,93.0,93.0,1.0,13.0,16.0,13.0,76.0,33.0,53.0,56.0,35.0,False
+2025-26,58557b9f,Thabang Monare,Sekhukhune,35.0,MF,CM,DM,low,model,1941,58.0,58.0,21.0,18.0,20.0,31.0,80.0,18.0,82.0,85.0,39.0,68.0,77.0,68.0,57.0,42.0,False
+2025-26,60551e76,Sinoxolo Kwayiba,Chippa United,28.0,FW,ST,W/AM,high,model,1294,64.0,53.0,50.0,21.0,10.0,30.0,76.0,64.0,84.0,41.0,1.0,47.0,84.0,76.0,16.0,35.0,False
+2025-26,607cf385,Keanu Cupido,Sundowns,27.0,DF,CB,FB,high,model,1366,34.0,34.0,41.0,29.0,40.0,,,76.0,98.0,71.0,50.0,13.0,74.0,30.0,90.0,87.0,False
+2025-26,65a239a9,Chibuike Ohizu,Siwelele,28.0,FWMF,ST,W/AM,high,model,1008,21.0,27.0,23.0,33.0,64.0,81.0,24.0,27.0,44.0,70.0,56.0,87.0,13.0,94.0,41.0,35.0,False
+2025-26,65a36f39,Henri Stanic,Stellenbosch FC,23.0,DF,CB,FB,high,model,1230,34.0,34.0,41.0,26.0,14.0,,,10.0,20.0,71.0,2.0,3.0,3.0,24.0,58.0,87.0,False
+2025-26,67dc5823,Seluleko Mahlambi,TS Galaxy,,MF,W/AM,DM,high,model,2141,84.0,86.0,52.0,34.0,52.0,66.0,91.0,44.0,93.0,8.0,52.0,71.0,54.0,70.0,20.0,94.0,False
+2025-26,68a2d3e8,Siyabonga Ndlozi,Magesi FC,22.0,DF,FB,CB,high,model,1002,31.0,31.0,19.0,39.0,46.0,,,85.0,98.0,49.0,83.0,46.0,35.0,23.0,35.0,75.0,False
+2025-26,6b249705,Samkelo Maseko,Durban City,,MF,W/AM,CM,high,model,1820,61.0,66.0,44.0,9.0,15.0,57.0,85.0,62.0,20.0,55.0,28.0,63.0,40.0,85.0,59.0,94.0,False
+2025-26,6c944140,Thembela Sikhakhane,Richards Bay FC,32.0,DF,FB,FB,high,override,1133,31.0,31.0,19.0,29.0,39.0,,,19.0,37.0,87.0,3.0,17.0,95.0,96.0,39.0,75.0,False
+2025-26,6cc3f231,Aiden McCarthy,Kaizer Chiefs,21.0,DF,CB,FB,high,model,1883,78.0,80.0,41.0,61.0,57.0,,,53.0,39.0,14.0,73.0,53.0,71.0,21.0,83.0,87.0,False
+2025-26,6cf6d141,Lindokuhle Zikhali,Richards Bay FC,20.0,MF,DM,CM,low,model,2250,74.0,75.0,31.0,93.0,90.0,63.0,38.0,34.0,69.0,6.0,35.0,79.0,87.0,95.0,53.0,75.0,False
+2025-26,6eb589be,Siphesihle Mkhize,Sekhukhune,26.0,MF,DM,CM,high,model,2247,46.0,49.0,31.0,27.0,18.0,20.0,70.0,59.0,21.0,35.0,7.0,31.0,70.0,65.0,74.0,75.0,False
+2025-26,6fc57554,Nuno Santos,Sundowns,26.0,MF,W/AM,CM,high,model,1106,46.0,52.0,93.0,52.0,28.0,12.0,42.0,73.0,3.0,97.0,46.0,34.0,31.0,35.0,94.0,94.0,False
+2025-26,72a2dd0b,Unathi Mdaka,Stellenbosch FC,21.0,DF,FB,CB,high,model,1104,31.0,31.0,19.0,22.0,12.0,,,49.0,75.0,59.0,37.0,87.0,39.0,9.0,11.0,75.0,False
+2025-26,73e0a7e4,Makabi Lilepo,Kaizer Chiefs,28.0,MFFW,W/AM,CM,high,model,2096,68.0,55.0,62.0,99.0,93.0,33.0,27.0,23.0,55.0,32.0,15.0,38.0,88.0,66.0,76.0,94.0,False
+2025-26,74778cb7,Tshepho Mashiloane,Sekhukhune,23.0,DFMF,FB,DM,high,model,1321,95.0,95.0,77.0,75.0,66.0,22.0,92.0,74.0,7.0,67.0,55.0,83.0,29.0,53.0,26.0,75.0,False
+2025-26,75388f92,Khuliso Mudau,Sundowns,30.0,DF,FB,FB,high,override,1529,31.0,31.0,54.0,13.0,29.0,,,10.0,97.0,2.0,34.0,25.0,19.0,1.0,93.0,75.0,False
+2025-26,7a16efb6,Haashim Domingo,Durban City,29.0,MF,W/AM,CM,high,model,1488,32.0,38.0,49.0,29.0,57.0,82.0,38.0,86.0,34.0,97.0,41.0,79.0,76.0,74.0,25.0,94.0,False
+2025-26,7ac19436,Mosa Lebusa,Stellenbosch FC,32.0,DF,CB,FB,high,model,1313,34.0,34.0,93.0,16.0,14.0,,,10.0,53.0,71.0,86.0,66.0,58.0,48.0,88.0,87.0,False
+2025-26,7afeed25,Tlou Masegela,Magesi FC,27.0,MF,DM,CM,low,model,1064,22.0,23.0,31.0,70.0,21.0,7.0,17.0,58.0,39.0,68.0,42.0,27.0,77.0,5.0,21.0,75.0,False
+2025-26,7b88c699,Siyabonga Ndebele,Siwelele,,DF,CB,FB,high,model,1070,34.0,34.0,96.0,57.0,14.0,,,59.0,95.0,71.0,13.0,5.0,24.0,70.0,57.0,87.0,False
+2025-26,8297d920,Lehlohonolo Mojela,Sekhukhune,28.0,MFFW,W/AM,CM,high,model,1158,72.0,74.0,7.0,32.0,79.0,98.0,76.0,24.0,80.0,1.0,13.0,1.0,1.0,19.0,16.0,94.0,False
+2025-26,82cbf807,Thabani Zuke,Richards Bay FC,26.0,DFMF,CB,DM,high,model,1530,34.0,34.0,41.0,12.0,14.0,,,29.0,36.0,7.0,4.0,21.0,32.0,93.0,34.0,87.0,False
+2025-26,847d1269,Motsie Matima,Magesi FC,,DFMF,DM,DM,high,override,1005,89.0,89.0,31.0,53.0,51.0,,,31.0,10.0,68.0,1.0,39.0,27.0,58.0,6.0,75.0,False
+2025-26,84f2ac8b,Deon Hotto,Orlando Pirates,34.0,DF,FB,CB,high,model,1775,74.0,74.0,99.0,94.0,98.0,98.0,45.0,90.0,41.0,3.0,18.0,15.0,73.0,82.0,94.0,75.0,False
+2025-26,85ce1f4c,Genino Palace,Stellenbosch FC,26.0,MF,DM,CM,high,model,1054,98.0,98.0,31.0,61.0,93.0,,,53.0,5.0,15.0,59.0,58.0,7.0,83.0,70.0,75.0,False
+2025-26,86a7588c,Mpho Mvundlela,Polokwane City,,DF,CB,FB,high,model,1243,34.0,34.0,41.0,64.0,47.0,,,33.0,30.0,71.0,98.0,97.0,30.0,6.0,50.0,87.0,False
+2025-26,86b21784,Keegan Allan,AmaZulu,24.0,DF,CB,FB,high,model,2103,74.0,76.0,41.0,67.0,91.0,91.0,69.0,63.0,56.0,1.0,68.0,35.0,4.0,26.0,74.0,87.0,False
+2025-26,8880f96f,Mfanafuthi Mkhize,Durban City,27.0,DF,CB,FB,high,model,2508,70.0,72.0,84.0,52.0,65.0,57.0,69.0,86.0,93.0,71.0,36.0,30.0,65.0,44.0,67.0,87.0,False
+2025-26,891cb392,Isaac Cissé,Golden Arrows,18.0,MF,DM,CM,low,model,1342,99.0,99.0,31.0,97.0,98.0,93.0,91.0,90.0,62.0,68.0,10.0,69.0,11.0,71.0,79.0,75.0,False
+2025-26,89a6b0eb,Mbulelo Wagaba,Orbit College,28.0,FWMF,W/AM,ST,low,model,1262,80.0,82.0,54.0,61.0,70.0,58.0,73.0,9.0,69.0,6.0,25.0,20.0,81.0,43.0,5.0,94.0,False
+2025-26,89b48fc1,Hendrick Pule Ekstein,AmaZulu,34.0,FWMF,W/AM,ST,high,model,1873,73.0,63.0,56.0,11.0,31.0,85.0,93.0,19.0,68.0,61.0,7.0,72.0,99.0,93.0,69.0,94.0,False
+2025-26,8a77ded2,Thabang Matuludi,Polokwane City,26.0,DF,FB,CB,high,model,1950,86.0,87.0,19.0,99.0,95.0,39.0,48.0,79.0,91.0,11.0,59.0,91.0,57.0,35.0,65.0,75.0,False
+2025-26,8bbf262e,Kganyane Letsoenyo,TS Galaxy,27.0,DF,FB,CB,high,model,1873,31.0,31.0,47.0,58.0,49.0,22.0,22.0,59.0,13.0,73.0,45.0,67.0,53.0,83.0,38.0,75.0,False
+2025-26,8c483644,Bheki Mabuza,Marumo Gallants,22.0,MFFW,CM,W/AM,high,model,1745,80.0,80.0,46.0,89.0,87.0,58.0,64.0,85.0,18.0,6.0,49.0,20.0,46.0,89.0,15.0,42.0,False
+2025-26,8db47a8e,Ayanda Jiyane,Golden Arrows,22.0,DF,CB,FB,high,model,2355,34.0,34.0,41.0,4.0,29.0,,,68.0,75.0,71.0,39.0,12.0,99.0,86.0,64.0,87.0,False
+2025-26,8f4c0ee3,Daniel Cardoso,Sekhukhune,36.0,DF,CB,FB,high,model,1954,34.0,34.0,41.0,17.0,14.0,,,67.0,55.0,71.0,81.0,90.0,55.0,63.0,78.0,87.0,False
+2025-26,904d8edb,Siyabulela Mabele,Orbit College,,MFFW,CM,W/AM,high,model,1661,35.0,37.0,54.0,92.0,75.0,34.0,23.0,30.0,75.0,8.0,13.0,11.0,44.0,63.0,4.0,42.0,False
+2025-26,90904b10,Diteboho Mofokeng,Magesi FC,,DF,CB,FB,low,model,1204,88.0,90.0,41.0,27.0,49.0,,,10.0,22.0,71.0,99.0,47.0,96.0,93.0,19.0,87.0,False
+2025-26,932f8e2b,Nkosinathi Sibisi,Orlando Pirates,29.0,DF,CB,FB,high,model,1963,34.0,34.0,41.0,34.0,56.0,,,44.0,78.0,16.0,78.0,32.0,73.0,47.0,96.0,87.0,False
+2025-26,96872342,Daniel Msendami,Marumo Gallants,24.0,FWMF,W/AM,ST,high,model,1011,20.0,22.0,7.0,66.0,61.0,39.0,19.0,65.0,91.0,14.0,45.0,19.0,63.0,62.0,24.0,94.0,False
+2025-26,96d1bae5,Kambala,Polokwane City,33.0,MF,DM,CM,low,model,2476,45.0,47.0,31.0,83.0,53.0,17.0,36.0,6.0,22.0,68.0,13.0,37.0,74.0,87.0,64.0,75.0,False
+2025-26,975ec450,Mzwandile Buthelezi,Magesi FC,33.0,DF,CB,FB,high,model,1336,34.0,34.0,41.0,25.0,14.0,,,32.0,61.0,71.0,58.0,55.0,44.0,50.0,3.0,87.0,False
+2025-26,977a4378,Andre de Jong,Stellenbosch FC,28.0,MFFW,W/AM,W/AM,high,override,1021,54.0,58.0,40.0,39.0,32.0,29.0,54.0,2.0,38.0,70.0,31.0,66.0,23.0,63.0,77.0,94.0,False
+2025-26,992dba32,MacBeth Mahlangu,TS Galaxy,23.0,DF,CB,FB,high,model,1620,34.0,34.0,41.0,11.0,14.0,,,10.0,97.0,71.0,53.0,72.0,78.0,80.0,52.0,87.0,False
+2025-26,99a2bc48,Monde Mpambaniso,Marumo Gallants,32.0,MF,W/AM,DM,high,override,1060,4.0,4.0,7.0,3.0,1.0,,,4.0,62.0,45.0,51.0,89.0,19.0,5.0,6.0,94.0,False
+2025-26,9af79afc,Thato Khiba,Stellenbosch FC,28.0,MF,DM,CM,high,model,1300,67.0,69.0,31.0,38.0,78.0,,,74.0,54.0,26.0,81.0,38.0,55.0,6.0,67.0,75.0,False
+2025-26,9df63a1b,Bradley Cross,Kaizer Chiefs,24.0,DF,FB,FB,high,override,1721,31.0,31.0,49.0,3.0,12.0,,,9.0,31.0,43.0,41.0,31.0,43.0,62.0,90.0,75.0,False
+2025-26,9fb0ee5b,Harold Majadibodu,Chippa United,30.0,DF,CB,FB,high,model,1663,80.0,82.0,41.0,30.0,80.0,,,47.0,71.0,71.0,28.0,25.0,95.0,81.0,11.0,87.0,False
+2025-26,a345f290,Atisang Batsi,Orbit College,,MF,DM,CM,high,model,1679,57.0,58.0,31.0,10.0,33.0,,,94.0,57.0,68.0,3.0,74.0,49.0,77.0,3.0,75.0,False
+2025-26,a3938c2a,Victor Letsoalo,TS Galaxy,32.0,FW,ST,W/AM,high,model,1228,41.0,16.0,23.0,41.0,50.0,66.0,53.0,21.0,59.0,79.0,76.0,33.0,10.0,21.0,36.0,35.0,False
+2025-26,a4152eda,Sirgio Kammies,Chippa United,27.0,DFMF,FB,FB,high,override,2137,66.0,66.0,43.0,62.0,77.0,75.0,56.0,7.0,99.0,55.0,17.0,42.0,30.0,15.0,15.0,75.0,False
+2025-26,a5349606,Khaya Mfecane,Chippa United,24.0,MF,DM,CM,high,model,929,91.0,91.0,31.0,63.0,91.0,,,82.0,73.0,13.0,31.0,77.0,99.0,79.0,1.0,75.0,False
+2025-26,a6c1d523,Simphiwe Mcineka,Richards Bay FC,28.0,DF,CB,FB,high,model,2250,34.0,34.0,95.0,82.0,72.0,35.0,22.0,23.0,3.0,71.0,52.0,79.0,80.0,56.0,21.0,87.0,False
+2025-26,a7f7cee0,Emmanuel Jalai,Durban City,26.0,DFMF,FB,DM,low,model,1171,31.0,31.0,19.0,21.0,37.0,,,17.0,95.0,87.0,82.0,62.0,77.0,47.0,30.0,75.0,False
+2025-26,a805e9f3,Mduduzi Shabalala,Kaizer Chiefs,21.0,MFFW,W/AM,CM,high,model,1597,78.0,80.0,61.0,91.0,82.0,41.0,58.0,34.0,58.0,47.0,61.0,60.0,93.0,93.0,80.0,94.0,False
+2025-26,a9b6f1de,Mcedi Vandala,Magesi FC,30.0,MF,W/AM,CM,high,model,1454,88.0,75.0,78.0,76.0,72.0,50.0,73.0,77.0,18.0,36.0,18.0,59.0,52.0,73.0,42.0,94.0,False
+2025-26,aa4115d1,Tshabalala Sibusiso,Polokwane City,,FW,ST,W/AM,low,model,1100,1.0,1.0,23.0,47.0,4.0,1.0,1.0,7.0,73.0,44.0,30.0,6.0,53.0,39.0,61.0,35.0,False
+2025-26,aa6c332c,Patrick Maswanganyi,Orlando Pirates,27.0,MF,W/AM,CM,high,model,1259,97.0,97.0,55.0,89.0,95.0,92.0,98.0,49.0,70.0,22.0,69.0,54.0,24.0,22.0,88.0,94.0,False
+2025-26,afecaab6,Tshepo Mashigo,Magesi FC,,DFMF,DM,FB,low,model,1514,86.0,87.0,31.0,13.0,50.0,,,83.0,82.0,9.0,43.0,51.0,93.0,93.0,15.0,75.0,False
+2025-26,b0042dc3,Marcelo Allende,Sundowns,26.0,MF,CM,W/AM,high,model,2125,87.0,87.0,75.0,8.0,44.0,86.0,96.0,96.0,58.0,85.0,1.0,30.0,80.0,58.0,96.0,42.0,False
+2025-26,b021f725,Pogiso Sanoka,Siwelele,33.0,DF,CB,FB,high,model,1842,34.0,34.0,41.0,9.0,32.0,,,74.0,81.0,71.0,44.0,41.0,84.0,83.0,49.0,87.0,False
+2025-26,b055c837,Puso Dithejane,TS Galaxy,21.0,MF,W/AM,CM,high,model,1025,90.0,91.0,96.0,47.0,86.0,94.0,92.0,39.0,13.0,71.0,30.0,6.0,98.0,65.0,79.0,94.0,False
+2025-26,b1e7e393,Sanele Barns,Richards Bay FC,28.0,MFFW,W/AM,CM,high,model,1868,41.0,46.0,22.0,13.0,34.0,78.0,61.0,94.0,44.0,66.0,27.0,69.0,86.0,42.0,36.0,94.0,False
+2025-26,b2732d46,Thabang Sibanyoni,Magesi FC,29.0,FW,ST,W/AM,high,model,1249,30.0,33.0,23.0,19.0,13.0,39.0,44.0,19.0,81.0,13.0,67.0,6.0,56.0,50.0,7.0,35.0,False
+2025-26,b2d58054,Siphesihle Ndlovu,Kaizer Chiefs,28.0,MF,DM,CM,high,model,922,94.0,94.0,93.0,73.0,85.0,,,65.0,97.0,68.0,34.0,98.0,1.0,14.0,93.0,75.0,False
+2025-26,b3d59a1b,Neo Rapoo,Siwelele,19.0,DF,FB,CB,high,model,2129,31.0,31.0,71.0,63.0,59.0,28.0,22.0,93.0,51.0,31.0,27.0,79.0,34.0,29.0,53.0,75.0,False
+2025-26,b498eaa3,Relebogile Mokhuoane,Siwelele,30.0,MF,DM,CM,high,model,1574,58.0,59.0,74.0,57.0,35.0,14.0,62.0,37.0,3.0,68.0,11.0,54.0,29.0,7.0,59.0,75.0,False
+2025-26,b4badf3e,Lehlohonolo Mtshali,Magesi FC,30.0,MF,DM,CM,high,model,1370,22.0,23.0,78.0,39.0,75.0,,,49.0,2.0,68.0,26.0,15.0,9.0,13.0,9.0,75.0,False
+2025-26,b72acbaf,Jean Lwamba,Durban City,,FW,ST,ST,high,override,969,70.0,79.0,67.0,59.0,59.0,44.0,64.0,79.0,56.0,93.0,50.0,24.0,30.0,27.0,4.0,35.0,False
+2025-26,b76313b0,Thabo Nodada,Durban City,30.0,MF,CM,DM,low,model,1029,54.0,14.0,21.0,42.0,56.0,74.0,66.0,65.0,89.0,46.0,77.0,23.0,35.0,73.0,77.0,42.0,False
+2025-26,b7b01ff6,Athini Maqokola,AmaZulu,,FWMF,W/AM,ST,high,model,1780,74.0,76.0,57.0,45.0,64.0,72.0,71.0,26.0,77.0,53.0,29.0,58.0,20.0,40.0,65.0,94.0,False
+2025-26,b7cc3270,Ngoanamello Rammala,Sekhukhune,25.0,MF,W/AM,CM,high,model,1170,15.0,16.0,58.0,48.0,49.0,31.0,17.0,61.0,11.0,85.0,88.0,4.0,5.0,8.0,73.0,94.0,False
+2025-26,b9e80813,Sandile Mthethwa,AmaZulu,28.0,DF,CB,FB,high,model,2456,71.0,73.0,41.0,56.0,95.0,98.0,69.0,21.0,49.0,41.0,57.0,99.0,75.0,71.0,64.0,87.0,False
+2025-26,bb1f97f2,Aubrey Modiba,Sundowns,30.0,DF,FB,CB,high,model,2009,31.0,31.0,75.0,87.0,90.0,80.0,22.0,87.0,69.0,25.0,73.0,37.0,37.0,37.0,91.0,75.0,False
+2025-26,bbacaaaa,Makhehleni Makhaula,Orlando Pirates,35.0,MF,DM,CM,high,model,1146,22.0,23.0,31.0,51.0,17.0,,,13.0,55.0,68.0,41.0,91.0,5.0,86.0,97.0,75.0,False
+2025-26,bc02fac6,Pule Mmodi,Kaizer Chiefs,32.0,MF,DM,CM,high,model,1062,75.0,77.0,85.0,77.0,87.0,96.0,78.0,89.0,85.0,2.0,95.0,10.0,46.0,62.0,64.0,75.0,False
+2025-26,bc36387a,Ndamulelo Maphangule,Polokwane City,25.0,MF,DM,CM,high,model,2228,47.0,23.0,31.0,14.0,19.0,,,26.0,42.0,68.0,22.0,53.0,39.0,47.0,55.0,75.0,False
+2025-26,bc9c9a82,Mondli Mbanjwa,AmaZulu,27.0,MFFW,CM,W/AM,high,model,1243,92.0,92.0,65.0,30.0,68.0,92.0,92.0,32.0,49.0,27.0,99.0,44.0,11.0,18.0,80.0,42.0,False
+2025-26,bddb9393,Riaan Hanamub,AmaZulu,30.0,MFDF,FB,DM,high,model,2519,62.0,62.0,59.0,31.0,67.0,,,83.0,78.0,65.0,51.0,9.0,69.0,91.0,69.0,75.0,False
+2025-26,be5fbc2b,Gamphani Lungu,Siwelele,26.0,MFFW,W/AM,CM,high,model,2139,64.0,54.0,36.0,8.0,21.0,68.0,89.0,32.0,71.0,28.0,80.0,45.0,71.0,32.0,53.0,94.0,False
+2025-26,c023de34,Saziso Magawana,Durban City,26.0,MF,W/AM,CM,high,model,1279,66.0,70.0,85.0,46.0,53.0,36.0,61.0,88.0,73.0,42.0,60.0,87.0,84.0,44.0,68.0,94.0,False
+2025-26,c0850047,Marvin Sikhosana,Marumo Gallants,29.0,DF,CB,FB,high,model,2127,34.0,34.0,41.0,19.0,14.0,,,61.0,82.0,34.0,14.0,28.0,22.0,68.0,9.0,87.0,False
+2025-26,c105cf1d,Moses Mthembu,Richards Bay FC,24.0,MF,W/AM,DM,high,override,2209,47.0,11.0,15.0,64.0,62.0,44.0,38.0,53.0,47.0,93.0,87.0,99.0,46.0,15.0,39.0,94.0,False
+2025-26,c39e3597,Zitha Kwinika,Kaizer Chiefs,31.0,DF,CB,FB,high,model,1225,34.0,34.0,41.0,3.0,14.0,,,90.0,33.0,71.0,10.0,42.0,83.0,13.0,79.0,87.0,False
+2025-26,c4e6fd0b,Siyanda Hlangabeza,AmaZulu,22.0,MF,CM,DM,high,model,1538,13.0,14.0,21.0,4.0,13.0,,,44.0,13.0,63.0,8.0,70.0,56.0,23.0,87.0,42.0,False
+2025-26,c6931f90,Grant Kekana,Sundowns,32.0,DF,CB,FB,high,model,1322,34.0,34.0,41.0,1.0,14.0,,,10.0,9.0,71.0,12.0,11.0,81.0,75.0,93.0,87.0,False
+2025-26,ca91726e,Vuyo Letlapa,Sekhukhune,21.0,DF,FB,CB,high,model,2365,31.0,31.0,39.0,95.0,91.0,52.0,22.0,35.0,47.0,35.0,63.0,82.0,55.0,61.0,71.0,75.0,False
+2025-26,cbe563fe,Lentswe Motaung,TS Galaxy,,DF,FB,CB,high,model,1638,31.0,31.0,19.0,7.0,12.0,,,21.0,71.0,41.0,87.0,43.0,50.0,7.0,70.0,75.0,False
+2025-26,cc014f7d,Kamogelo Sebelebele,Orlando Pirates,23.0,DFMF,DM,FB,high,model,1774,95.0,95.0,71.0,94.0,97.0,91.0,86.0,78.0,79.0,17.0,99.0,66.0,61.0,66.0,95.0,75.0,False
+2025-26,ce41b675,Lehlegonolo Mokone,Magesi FC,31.0,DF,CB,FB,high,model,1840,95.0,96.0,89.0,71.0,86.0,87.0,94.0,81.0,79.0,30.0,55.0,65.0,17.0,43.0,18.0,87.0,False
+2025-26,cf49678d,Khumbulani Ncube,Marumo Gallants,25.0,DF,FB,CB,high,model,2050,31.0,31.0,67.0,70.0,45.0,11.0,22.0,51.0,50.0,87.0,69.0,35.0,70.0,54.0,6.0,75.0,False
+2025-26,cf54b018,Brooklyn Poggenpoel,Durban City,25.0,MF,DM,CM,high,model,1375,22.0,23.0,31.0,75.0,61.0,32.0,17.0,45.0,1.0,68.0,37.0,26.0,31.0,73.0,71.0,75.0,False
+2025-26,d0c3508b,Lundi Mahala,Richards Bay FC,,FW,ST,ST,high,override,1735,7.0,10.0,47.0,13.0,30.0,61.0,7.0,16.0,76.0,73.0,81.0,44.0,44.0,56.0,50.0,35.0,False
+2025-26,d249c73e,Gomolemo Khoto,Orbit College,,MF,W/AM,DM,high,model,970,77.0,79.0,7.0,35.0,56.0,69.0,86.0,82.0,43.0,3.0,24.0,46.0,96.0,56.0,8.0,94.0,False
+2025-26,d28c8a9b,Vusimuzi Mncube,Sekhukhune,31.0,MFFW,W/AM,CM,high,model,1685,44.0,51.0,46.0,6.0,4.0,8.0,84.0,13.0,74.0,80.0,37.0,37.0,28.0,7.0,82.0,94.0,False
+2025-26,d29e335c,Arthur Sales,Sundowns,23.0,MFFW,W/AM,CM,high,model,1420,58.0,62.0,89.0,80.0,77.0,50.0,41.0,21.0,25.0,87.0,75.0,62.0,55.0,48.0,89.0,94.0,False
+2025-26,d2fc699c,Shaune Mogaila,Sekhukhune,30.0,DFMF,FB,DM,high,model,989,31.0,31.0,97.0,90.0,74.0,17.0,22.0,71.0,25.0,87.0,43.0,1.0,99.0,67.0,50.0,75.0,False
+2025-26,d31d5544,Kazie Enyinaya,Stellenbosch FC,26.0,DF,FB,CB,high,model,2097,67.0,67.0,62.0,85.0,78.0,44.0,52.0,39.0,58.0,29.0,78.0,45.0,3.0,27.0,46.0,75.0,False
+2025-26,d4416c5b,Terrence Mashego,Durban City,29.0,DFMF,FB,DM,high,model,1835,31.0,31.0,19.0,23.0,26.0,,,61.0,43.0,22.0,58.0,61.0,63.0,49.0,79.0,75.0,False
+2025-26,d4ec8d21,Tlakusani Mthethwa,Richards Bay FC,32.0,MF,DM,CM,high,model,1653,22.0,23.0,31.0,15.0,9.0,,,43.0,26.0,31.0,83.0,49.0,85.0,63.0,45.0,75.0,False
+2025-26,d62c06ff,Kyle Jurgens,Durban City,21.0,MF,DM,CM,high,model,2177,22.0,23.0,63.0,35.0,47.0,68.0,17.0,51.0,78.0,68.0,66.0,50.0,45.0,29.0,39.0,75.0,False
+2025-26,d671962a,Katlego Otladisa,Marumo Gallants,28.0,MFFW,W/AM,CM,high,model,942,4.0,4.0,92.0,10.0,23.0,72.0,4.0,69.0,89.0,5.0,26.0,29.0,66.0,3.0,15.0,94.0,False
+2025-26,d6d5f49b,Mthetheleli Mthiyane,Stellenbosch FC,24.0,MF,DM,CM,low,model,1976,22.0,23.0,31.0,62.0,57.0,38.0,17.0,86.0,23.0,68.0,25.0,11.0,65.0,42.0,41.0,75.0,False
+2025-26,d7584ecc,Malebogo Modise,Chippa United,26.0,DFMF,FB,CB,high,model,2346,65.0,65.0,41.0,54.0,55.0,33.0,62.0,75.0,45.0,15.0,9.0,41.0,89.0,89.0,9.0,75.0,False
+2025-26,d7812343,Katlego Mkhabela,Orbit College,29.0,DF,FB,CB,low,model,1304,31.0,31.0,19.0,15.0,12.0,,,47.0,9.0,23.0,26.0,30.0,26.0,6.0,25.0,75.0,False
+2025-26,d8bf7bdc,Justice Figareido,Chippa United,27.0,MFFW,W/AM,CM,high,model,1850,26.0,29.0,77.0,73.0,11.0,3.0,21.0,30.0,19.0,20.0,55.0,14.0,12.0,86.0,41.0,94.0,False
+2025-26,da26b285,Siyanda Mthanti,Golden Arrows,21.0,MFFW,W/AM,CM,high,model,1721,63.0,68.0,88.0,60.0,80.0,83.0,54.0,92.0,88.0,51.0,58.0,74.0,78.0,81.0,63.0,94.0,False
+2025-26,db43459c,Boy Madingwane,Chippa United,,DFMF,FB,DM,high,model,1591,77.0,77.0,53.0,59.0,79.0,83.0,72.0,66.0,70.0,37.0,7.0,49.0,49.0,77.0,3.0,75.0,False
+2025-26,dba0b5ba,Lebohang Nkaki,Polokwane City,,DF,CB,FB,high,model,2244,91.0,34.0,41.0,90.0,74.0,28.0,80.0,50.0,25.0,36.0,83.0,71.0,72.0,55.0,72.0,87.0,False
+2025-26,dcb6fdcf,Ayabulela Magqwaka,Chippa United,29.0,MFDF,CM,DM,high,model,1570,73.0,73.0,56.0,56.0,25.0,20.0,72.0,42.0,35.0,39.0,20.0,56.0,92.0,87.0,13.0,42.0,False
+2025-26,dcf52217,Thabo Moloisane,Stellenbosch FC,26.0,DF,CB,FB,high,model,1829,34.0,34.0,41.0,43.0,61.0,,,84.0,43.0,71.0,18.0,37.0,41.0,12.0,44.0,87.0,False
+2025-26,de66533b,Flávio Silva,Kaizer Chiefs,29.0,FW,ST,W/AM,high,model,1097,93.0,96.0,61.0,79.0,96.0,89.0,80.0,67.0,79.0,87.0,87.0,41.0,39.0,19.0,70.0,35.0,False
+2025-26,e1074b90,John Mokone,Magesi FC,,DF,FB,CB,low,model,1857,73.0,73.0,19.0,45.0,25.0,,,62.0,3.0,46.0,5.0,70.0,87.0,50.0,5.0,75.0,False
+2025-26,e246b0e7,Lebohang Maboe,Kaizer Chiefs,30.0,MF,DM,CM,high,model,1590,22.0,23.0,31.0,66.0,34.0,12.0,17.0,97.0,81.0,68.0,78.0,59.0,23.0,61.0,86.0,75.0,False
+2025-26,e2891a7b,Thabiso Monyane,Kaizer Chiefs,25.0,DF,FB,CB,high,model,1536,31.0,31.0,70.0,81.0,58.0,14.0,22.0,46.0,66.0,17.0,31.0,69.0,71.0,59.0,86.0,75.0,False
+2025-26,e74e7158,Fasika Idumba,Chippa United,26.0,DF,CB,FB,high,model,1068,34.0,34.0,41.0,58.0,52.0,,,60.0,80.0,71.0,25.0,88.0,7.0,19.0,7.0,87.0,False
+2025-26,e884f94c,Chumani Butsaka,Stellenbosch FC,23.0,MFFW,CM,W/AM,low,model,1330,85.0,85.0,21.0,27.0,54.0,82.0,92.0,61.0,68.0,37.0,87.0,25.0,37.0,80.0,70.0,42.0,False
+2025-26,e8933eb0,Oswin Appollis,Orlando Pirates,23.0,MF,W/AM,CM,high,model,2156,92.0,90.0,80.0,96.0,98.0,74.0,65.0,40.0,26.0,60.0,11.0,82.0,82.0,93.0,91.0,94.0,False
+2025-26,eafa3551,Mpho Chabatsane,Marumo Gallants,23.0,DF,CB,FB,high,model,1135,34.0,34.0,41.0,99.0,96.0,43.0,22.0,94.0,37.0,71.0,33.0,68.0,82.0,40.0,25.0,87.0,False
+2025-26,eb9b8c2d,Themba Mantshiyane,Golden Arrows,29.0,DF,CB,FB,high,model,926,34.0,34.0,41.0,36.0,60.0,,,93.0,42.0,12.0,42.0,51.0,63.0,93.0,53.0,87.0,False
+2025-26,ec31d804,Masindi Nemtajela,Orlando Pirates,23.0,MF,DM,CM,high,model,1121,22.0,23.0,83.0,91.0,86.0,57.0,17.0,42.0,71.0,68.0,91.0,73.0,13.0,49.0,99.0,75.0,False
+2025-26,ec48bda1,Bokang Mokwena,Durban City,24.0,FWMF,W/AM,ST,low,model,1957,23.0,26.0,20.0,75.0,19.0,7.0,18.0,3.0,87.0,9.0,19.0,23.0,10.0,58.0,59.0,94.0,False
+2025-26,edde0940,Langelihle Phili,Stellenbosch FC,20.0,MFFW,W/AM,CM,high,model,1638,93.0,93.0,27.0,74.0,89.0,90.0,88.0,71.0,29.0,58.0,23.0,30.0,36.0,54.0,72.0,94.0,False
+2025-26,ef3f88c0,Oumar Farouk Komara,Golden Arrows,24.0,DF,CB,FB,high,model,1362,34.0,34.0,41.0,98.0,41.0,6.0,22.0,83.0,50.0,71.0,97.0,89.0,39.0,1.0,60.0,87.0,False
+2025-26,f12ba819,Vincent Pule,Siwelele,33.0,MFFW,CM,W/AM,high,model,1628,96.0,96.0,21.0,75.0,82.0,69.0,82.0,77.0,61.0,20.0,18.0,15.0,65.0,27.0,57.0,42.0,False
+2025-26,f142a5b1,Bonginkosi Dlamini,Polokwane City,28.0,MF,CM,DM,low,model,2338,75.0,75.0,70.0,82.0,70.0,36.0,45.0,56.0,32.0,1.0,94.0,37.0,89.0,61.0,57.0,42.0,False
+2025-26,f29ca03e,Tshepo Makgoga,Magesi FC,34.0,DF,CB,FB,high,model,1126,34.0,34.0,41.0,39.0,51.0,,,10.0,88.0,21.0,35.0,50.0,21.0,5.0,2.0,87.0,False
+2025-26,f3e767f4,Sammy Seabi,Chippa United,30.0,MFDF,DM,CM,high,model,1772,55.0,57.0,31.0,25.0,42.0,,,5.0,15.0,10.0,33.0,87.0,25.0,21.0,13.0,75.0,False
+2025-26,f5a9d3fe,Liam Bern,AmaZulu,22.0,MF,DM,CM,low,model,1143,22.0,23.0,82.0,2.0,4.0,,,25.0,11.0,68.0,5.0,18.0,71.0,50.0,64.0,75.0,False
+2025-26,f5febbb3,Abbubaker Mobara,Chippa United,31.0,DF,CB,FB,low,model,1349,34.0,34.0,41.0,13.0,14.0,,,98.0,52.0,27.0,93.0,96.0,98.0,93.0,16.0,87.0,False
+2025-26,f6272be9,Thalente Mbatha,Orlando Pirates,25.0,MF,DM,CM,low,model,1596,22.0,23.0,73.0,95.0,94.0,72.0,17.0,66.0,46.0,29.0,90.0,67.0,82.0,94.0,98.0,75.0,False
+2025-26,f692e8f3,Junior Zindoga,TS Galaxy,27.0,MFFW,CM,W/AM,low,model,1651,70.0,70.0,85.0,80.0,99.0,86.0,41.0,51.0,23.0,42.0,68.0,27.0,15.0,42.0,11.0,42.0,False
+2025-26,f6e36aa4,Tlou Nkwe,Polokwane City,,DF,FB,CB,high,model,2172,31.0,31.0,42.0,25.0,12.0,,,77.0,83.0,58.0,47.0,90.0,90.0,33.0,59.0,75.0,False
+2025-26,f792e20b,Wandile Ngema,Richards Bay FC,,MFFW,W/AM,CM,high,model,950,57.0,61.0,7.0,37.0,39.0,40.0,62.0,85.0,98.0,56.0,92.0,48.0,9.0,55.0,19.0,94.0,False
+2025-26,fa85385c,Siphamandla Ncanana,Durban City,25.0,DF,CB,FB,high,model,2158,34.0,34.0,41.0,89.0,81.0,50.0,22.0,71.0,34.0,35.0,88.0,36.0,91.0,20.0,48.0,87.0,False
+2025-26,faa66027,Wonderboy Makhubu,Magesi FC,28.0,MFFW,ST,CM,high,override,1465,10.0,13.0,79.0,30.0,47.0,74.0,13.0,96.0,64.0,99.0,96.0,96.0,36.0,30.0,13.0,35.0,False
+2025-26,fd18e7a1,Tashreeq Matthews,Sundowns,24.0,MFFW,W/AM,CM,low,model,1995,91.0,92.0,66.0,85.0,91.0,89.0,80.0,20.0,8.0,30.0,73.0,92.0,38.0,61.0,90.0,94.0,False
+2025-26,fe8ce375,Gape Moralo,Siwelele,25.0,MF,CM,DM,high,model,1070,13.0,14.0,21.0,1.0,4.0,,,82.0,42.0,85.0,70.0,18.0,49.0,4.0,1.0,42.0,False
+2026-27,00029b1e,Teboho Mokoena,Sundowns,29.0,MF,W/AM,CM,high,model,467,94.0,94.0,68.0,99.0,100.0,89.0,62.0,15.0,13.0,97.0,7.0,63.0,34.0,27.0,98.0,94.0,True
+2026-27,015c522c,Tylo Sanger,Durban City,22.0,MF,DM,CM,low,model,664,22.0,23.0,31.0,92.0,100.0,100.0,17.0,63.0,75.0,68.0,99.0,5.0,51.0,98.0,64.0,75.0,True
+2026-27,03695186,Mpho Mvelase,TS Galaxy,37.0,MFFW,CM,W/AM,low,model,567,13.0,14.0,21.0,60.0,19.0,,,60.0,62.0,24.0,19.0,95.0,76.0,45.0,14.0,42.0,True
+2026-27,037511b0,Ntandoyenkosi Mabaso,Golden Arrows,22.0,DF,FB,CB,low,model,450,31.0,31.0,19.0,88.0,12.0,,,63.0,1.0,87.0,0.0,34.0,99.0,96.0,44.0,75.0,True
+2026-27,06cf76ca,Inácio Miguel,Kaizer Chiefs,30.0,DF,CB,FB,high,model,696,34.0,34.0,41.0,51.0,98.0,,,10.0,6.0,71.0,37.0,60.0,1.0,6.0,86.0,87.0,True
+2026-27,0743e07f,Mlungisi Sikakane,Marumo Gallants,32.0,DF,CB,FB,high,model,591,34.0,34.0,41.0,92.0,78.0,,,10.0,80.0,71.0,2.0,77.0,53.0,1.0,3.0,87.0,True
+2026-27,0b3d828a,Khetukuthula Ndlovu,Kruger United,,FW,W/AM,ST,high,model,482,97.0,97.0,7.0,88.0,85.0,56.0,96.0,71.0,91.0,11.0,49.0,7.0,22.0,28.0,0.0,94.0,True
+2026-27,0bbdea11,Ayabulela Maxwele,Golden Arrows,26.0,MF,CM,W/AM,low,model,702,13.0,14.0,21.0,60.0,26.0,,,93.0,38.0,85.0,55.0,83.0,88.0,57.0,40.0,42.0,True
+2026-27,0bbe16bc,Siyabonga Msomi,Durban City,26.0,DF,CB,FB,high,model,540,34.0,34.0,41.0,18.0,14.0,,,10.0,3.0,71.0,99.0,36.0,2.0,38.0,64.0,87.0,True
+2026-27,0dc1fab6,Ndabayithethwa Ndlondlo,Marumo Gallants,31.0,MFFW,W/AM,CM,high,model,720,4.0,4.0,7.0,100.0,80.0,10.0,4.0,72.0,94.0,34.0,32.0,100.0,44.0,93.0,1.0,94.0,True
+2026-27,118f834c,Lehlogonolo Matlou,Stellenbosch FC,28.0,MF,DM,CM,high,model,632,22.0,23.0,31.0,84.0,79.0,,,57.0,77.0,68.0,93.0,83.0,1.0,68.0,79.0,75.0,True
+2026-27,1190f0e3,Thobani Bhengu,Milford FC,,DF,FB,CB,high,model,558,31.0,31.0,19.0,1.0,12.0,,,48.0,25.0,21.0,89.0,100.0,32.0,44.0,48.0,75.0,True
+2026-27,11b4c4ff,Msindisi Ndlovu,Marumo Gallants,25.0,MFFW,W/AM,CM,high,model,630,81.0,83.0,7.0,34.0,62.0,85.0,88.0,72.0,69.0,5.0,46.0,63.0,91.0,93.0,1.0,94.0,True
+2026-27,156c3266,Veluyeke Zulu,TS Galaxy,31.0,DF,CB,FB,high,model,499,100.0,100.0,41.0,91.0,100.0,,,10.0,3.0,71.0,17.0,66.0,56.0,93.0,64.0,87.0,True
+2026-27,1afb3d37,Cebolenkosi Mthethwa,Milford FC,,MF,DM,CM,high,model,649,22.0,23.0,97.0,39.0,41.0,,,75.0,0.0,68.0,96.0,99.0,33.0,5.0,79.0,75.0,True
+2026-27,1b866e2b,Edwin Ramaja,Polokwane City,25.0,DF,CB,FB,high,model,450,34.0,34.0,41.0,93.0,14.0,,,10.0,99.0,71.0,92.0,99.0,87.0,29.0,43.0,87.0,True
+2026-27,1bd6825a,Nhlanhla Zwane,Golden Arrows,26.0,MF,DM,CM,low,model,686,22.0,23.0,31.0,85.0,93.0,88.0,17.0,56.0,65.0,68.0,85.0,27.0,31.0,72.0,53.0,75.0,True
+2026-27,1bf8d743,Thabiso Sesane,Siwelele,26.0,DF,CB,FB,high,model,538,34.0,34.0,100.0,18.0,14.0,,,10.0,46.0,71.0,61.0,82.0,25.0,10.0,8.0,87.0,True
+2026-27,24dd6de9,Yandisa Mfolozi,Siwelele,25.0,DF,CB,FB,low,model,720,95.0,97.0,41.0,74.0,100.0,,,99.0,23.0,71.0,77.0,7.0,68.0,93.0,8.0,87.0,True
+2026-27,26921cdb,Siviwe Nkwali,Stellenbosch FC,21.0,DF,FB,CB,high,model,595,31.0,31.0,99.0,52.0,12.0,,,73.0,3.0,21.0,63.0,21.0,13.0,12.0,80.0,75.0,True
+2026-27,26feae20,Nkosikhona Radebe,AmaZulu,25.0,MF,W/AM,DM,high,model,720,35.0,41.0,99.0,7.0,4.0,,,89.0,41.0,79.0,100.0,100.0,34.0,93.0,79.0,94.0,True
+2026-27,279fff25,Taariq Fielies,AmaZulu,34.0,DF,CB,FB,high,model,720,34.0,34.0,41.0,49.0,14.0,,,75.0,63.0,71.0,13.0,16.0,6.0,21.0,83.0,87.0,True
+2026-27,2b912add,Thabiso Lebitso,Stellenbosch FC,30.0,MFDF,FB,DM,low,model,543,31.0,31.0,19.0,33.0,12.0,,,57.0,79.0,87.0,73.0,92.0,71.0,43.0,48.0,75.0,True
+2026-27,2c2f6ea4,Aphiwe Baliti,Siwelele,24.0,DF,FB,CB,low,model,720,92.0,92.0,19.0,69.0,80.0,,,11.0,91.0,87.0,64.0,100.0,32.0,96.0,3.0,75.0,True
+2026-27,2f9b46d5,Goodman Mosele,Chippa United,26.0,MF,DM,CM,high,model,720,22.0,23.0,31.0,57.0,4.0,,,12.0,31.0,68.0,93.0,24.0,63.0,19.0,33.0,75.0,True
+2026-27,2fc2f651,Bright Ndlovu,Sekhukhune,26.0,FWDF,FB,W/AM,high,model,475,100.0,100.0,19.0,85.0,75.0,,,0.0,53.0,16.0,63.0,4.0,8.0,5.0,45.0,75.0,True
+2026-27,36015ee8,Tshepo Rikhotso,Marumo Gallants,33.0,DF,CB,FB,high,model,629,34.0,34.0,41.0,36.0,14.0,,,53.0,29.0,71.0,8.0,79.0,74.0,45.0,0.0,87.0,True
+2026-27,390c4f9e,Sphesihle Jeza,Siwelele,,FWMF,ST,W/AM,low,model,572,11.0,17.0,23.0,51.0,46.0,41.0,14.0,74.0,60.0,100.0,94.0,40.0,91.0,9.0,0.0,35.0,True
+2026-27,39e60292,Sifiso Mdluli,Milford FC,,DF,FB,CB,high,model,795,31.0,31.0,69.0,88.0,89.0,,,96.0,44.0,0.0,49.0,71.0,95.0,96.0,77.0,75.0,True
+2026-27,3a00c763,Nqobeko Dlamini,Golden Arrows,31.0,MF,DM,CM,high,model,654,22.0,23.0,31.0,80.0,77.0,,,51.0,17.0,68.0,95.0,23.0,48.0,41.0,53.0,75.0,True
+2026-27,3b314011,Khulekani Shezi,Golden Arrows,25.0,DF,CB,FB,high,model,630,34.0,34.0,41.0,36.0,14.0,,,99.0,87.0,0.0,49.0,79.0,3.0,93.0,51.0,87.0,True
+2026-27,3bbd3412,Sipho Sibiya,Kruger United,35.0,DFMF,CB,DM,high,model,630,99.0,99.0,41.0,100.0,99.0,,,52.0,74.0,3.0,64.0,40.0,1.0,45.0,1.0,87.0,True
+2026-27,3be0555a,D'Angelo Kazeem,Sekhukhune,,DF,FB,CB,high,model,454,31.0,31.0,99.0,45.0,12.0,,,51.0,21.0,87.0,23.0,72.0,7.0,35.0,85.0,75.0,True
+2026-27,440cd215,Luyanda Khumalo,Richards Bay FC,,MFFW,CM,W/AM,high,model,473,13.0,14.0,21.0,100.0,100.0,76.0,11.0,12.0,98.0,21.0,95.0,81.0,19.0,96.0,0.0,42.0,True
+2026-27,44f85006,Thando Ngwenya,AmaZulu,23.0,FW,ST,W/AM,high,model,599,100.0,100.0,83.0,74.0,100.0,100.0,100.0,77.0,43.0,34.0,37.0,37.0,46.0,11.0,77.0,35.0,True
+2026-27,461a5a51,Ebrahim Seedat,Kruger United,33.0,DFMF,FB,DM,high,model,565,31.0,31.0,19.0,95.0,97.0,,,92.0,8.0,21.0,48.0,73.0,0.0,0.0,0.0,75.0,True
+2026-27,4a6b9584,Azola Matrose,Chippa United,23.0,FW,W/AM,ST,high,model,573,44.0,50.0,7.0,79.0,70.0,43.0,32.0,72.0,57.0,26.0,15.0,47.0,88.0,93.0,59.0,94.0,True
+2026-27,4fac1197,Sibongiseni Mthethwa,Kaizer Chiefs,32.0,MF,DM,CM,high,model,517,22.0,23.0,31.0,3.0,4.0,,,56.0,68.0,68.0,87.0,100.0,15.0,25.0,89.0,75.0,True
+2026-27,54c75ca3,Lebone Seema,Orlando Pirates,23.0,DF,CB,FB,low,model,720,100.0,100.0,100.0,89.0,97.0,,,10.0,6.0,71.0,99.0,30.0,100.0,93.0,100.0,87.0,True
+2026-27,55eb2bd6,Lwandile Mabuya,Richards Bay FC,26.0,DFMF,FB,DM,high,model,495,100.0,100.0,19.0,40.0,73.0,,,87.0,40.0,87.0,32.0,9.0,7.0,36.0,0.0,75.0,True
+2026-27,57097c4b,Sédé Junior Dion,Golden Arrows,32.0,FW,ST,W/AM,high,model,550,46.0,46.0,23.0,11.0,51.0,81.0,63.0,0.0,17.0,44.0,37.0,6.0,97.0,39.0,34.0,35.0,True
+2026-27,5acabda6,Tshepo Mokoane,Sekhukhune,,MF,W/AM,CM,high,model,582,87.0,88.0,7.0,39.0,90.0,100.0,88.0,21.0,93.0,77.0,51.0,16.0,21.0,93.0,83.0,94.0,True
+2026-27,5d600325,Imraan Jones,Chippa United,24.0,DF,FB,CB,high,model,710,31.0,31.0,19.0,56.0,59.0,,,21.0,100.0,87.0,57.0,3.0,77.0,57.0,28.0,75.0,True
+2026-27,601f1c1a,Malibongwe Khoza,Sundowns,22.0,DF,CB,FB,high,model,573,100.0,100.0,41.0,38.0,79.0,,,10.0,2.0,71.0,2.0,94.0,0.0,11.0,100.0,87.0,True
+2026-27,60551e76,Sinoxolo Kwayiba,Stellenbosch FC,29.0,FWMF,ST,W/AM,high,model,600,43.0,43.0,23.0,69.0,66.0,49.0,46.0,97.0,94.0,14.0,9.0,37.0,11.0,49.0,34.0,35.0,True
+2026-27,61fdedec,Thapelo Mokobodi,Orlando Pirates,23.0,MF,CM,W/AM,low,model,569,13.0,14.0,100.0,52.0,93.0,,,86.0,86.0,85.0,95.0,98.0,76.0,48.0,100.0,42.0,True
+2026-27,653d8f33,Katlego Mohamme,Kruger United,28.0,DF,CB,FB,high,model,602,34.0,34.0,41.0,97.0,78.0,,,10.0,33.0,71.0,10.0,83.0,2.0,1.0,0.0,87.0,True
+2026-27,65bca463,Mvelo Zikakayo,Milford FC,,MF,CM,W/AM,low,model,563,100.0,100.0,21.0,83.0,93.0,74.0,95.0,12.0,98.0,31.0,5.0,60.0,88.0,96.0,57.0,42.0,True
+2026-27,6602b8eb,Surprise Manthosi,Polokwane City,21.0,DF,CB,FB,low,model,585,100.0,100.0,41.0,92.0,99.0,,,92.0,99.0,71.0,99.0,100.0,0.0,1.0,26.0,87.0,True
+2026-27,667b5248,Menzi Chili,Milford FC,34.0,MF,W/AM,CM,high,model,525,51.0,54.0,90.0,69.0,12.0,4.0,40.0,0.0,54.0,97.0,89.0,17.0,14.0,93.0,85.0,94.0,True
+2026-27,67dc5823,Seluleko Mahlambi,TS Galaxy,,MF,W/AM,CM,high,model,470,4.0,4.0,7.0,5.0,0.0,,,59.0,97.0,97.0,76.0,94.0,51.0,27.0,18.0,94.0,True
+2026-27,6b249705,Samkelo Maseko,Durban City,,MF,W/AM,DM,high,model,510,4.0,4.0,7.0,35.0,61.0,,,80.0,84.0,5.0,67.0,76.0,83.0,29.0,24.0,94.0,True
+2026-27,6c944140,Thembela Sikhakhane,Richards Bay FC,33.0,DF,CB,FB,low,model,540,34.0,34.0,41.0,18.0,14.0,,,99.0,68.0,71.0,13.0,22.0,94.0,93.0,3.0,87.0,True
+2026-27,6e56a7f7,Siphosethu Ndlabi,Milford FC,,FWMF,ST,W/AM,low,model,556,46.0,20.0,83.0,54.0,74.0,77.0,53.0,57.0,97.0,46.0,66.0,89.0,83.0,94.0,66.0,35.0,True
+2026-27,6eb589be,Siphesihle Mkhize,Sekhukhune,27.0,MF,CM,DM,low,model,687,13.0,14.0,21.0,19.0,17.0,,,17.0,29.0,38.0,33.0,95.0,88.0,57.0,76.0,42.0,True
+2026-27,6f9849ee,Boitumelo Malatjie,Kruger United,,MFDF,FB,DM,high,model,540,31.0,31.0,19.0,88.0,12.0,,,79.0,55.0,87.0,99.0,67.0,4.0,42.0,0.0,75.0,True
+2026-27,6fb2bfdd,Vusumuzi Mthabela,Milford FC,,DFMF,CB,DM,high,model,744,34.0,34.0,41.0,100.0,14.0,,,10.0,41.0,71.0,63.0,97.0,93.0,93.0,80.0,87.0,True
+2026-27,72a2dd0b,Unathi Mdaka,AmaZulu,23.0,DFMF,DM,CB,high,model,501,22.0,23.0,31.0,36.0,52.0,,,92.0,11.0,0.0,88.0,100.0,99.0,98.0,89.0,75.0,True
+2026-27,766fbbb9,Olwethu Cele,Milford FC,,DF,CB,FB,high,model,786,34.0,34.0,41.0,86.0,68.0,,,10.0,33.0,71.0,56.0,48.0,46.0,93.0,76.0,87.0,True
+2026-27,7b88c699,Siyabonga Ndebele,Siwelele,,DF,CB,FB,high,model,630,34.0,34.0,41.0,36.0,14.0,,,10.0,28.0,71.0,49.0,11.0,39.0,93.0,7.0,87.0,True
+2026-27,7f6559c8,Nqaba Xulu,Richards Bay FC,,FW,ST,W/AM,high,model,668,94.0,97.0,23.0,86.0,91.0,81.0,77.0,77.0,74.0,80.0,0.0,6.0,86.0,51.0,0.0,35.0,True
+2026-27,8044e53e,Osborn Maluleke,Golden Arrows,27.0,DF,FB,CB,high,model,537,31.0,31.0,19.0,71.0,12.0,,,27.0,1.0,87.0,99.0,96.0,8.0,7.0,47.0,75.0,True
+2026-27,8f4c0ee3,Daniel Cardoso,Sekhukhune,38.0,DF,CB,FB,high,model,539,34.0,34.0,41.0,1.0,14.0,,,10.0,3.0,71.0,13.0,53.0,94.0,93.0,47.0,87.0,True
+2026-27,90141290,Bandile Shandu,Durban City,31.0,DF,CB,FB,high,model,557,34.0,34.0,41.0,94.0,79.0,,,92.0,99.0,71.0,37.0,34.0,45.0,38.0,64.0,87.0,True
+2026-27,932f8e2b,Nkosinathi Sibisi,Orlando Pirates,31.0,DF,CB,FB,high,model,530,100.0,100.0,41.0,39.0,84.0,,,10.0,3.0,71.0,99.0,55.0,39.0,93.0,99.0,87.0,True
+2026-27,95cb2c63,Luthando Vena,Stellenbosch FC,19.0,DF,CB,FB,low,model,720,34.0,34.0,41.0,29.0,75.0,,,97.0,99.0,71.0,51.0,95.0,92.0,6.0,72.0,87.0,True
+2026-27,96d1bae5,Kambala,Polokwane City,35.0,MF,CM,DM,low,model,720,13.0,14.0,21.0,43.0,17.0,,,7.0,36.0,38.0,19.0,81.0,51.0,60.0,26.0,42.0,True
+2026-27,9954639d,Ntandoyenkosi Nkosi,TS Galaxy,21.0,MF,DM,CM,high,model,576,22.0,23.0,31.0,0.0,4.0,,,63.0,87.0,68.0,93.0,69.0,77.0,35.0,25.0,75.0,True
+2026-27,9bf74581,Mfundo Vilakazi,Kaizer Chiefs,20.0,FWMF,W/AM,ST,high,model,498,56.0,61.0,67.0,100.0,100.0,36.0,15.0,59.0,63.0,97.0,4.0,1.0,94.0,93.0,80.0,94.0,True
+2026-27,9c250d40,Ntsako Makhubela,Kruger United,32.0,MFFW,CM,W/AM,high,model,508,13.0,14.0,21.0,100.0,19.0,5.0,11.0,43.0,95.0,24.0,2.0,62.0,7.0,38.0,0.0,42.0,True
+2026-27,9d68842d,Brayan Léon,Sundowns,26.0,FW,ST,W/AM,high,model,555,80.0,46.0,83.0,94.0,100.0,89.0,51.0,0.0,17.0,83.0,83.0,69.0,83.0,9.0,86.0,35.0,True
+2026-27,9fb0ee5b,Harold Majadibodu,Chippa United,31.0,DF,CB,FB,high,model,720,95.0,97.0,41.0,29.0,75.0,,,10.0,87.0,71.0,7.0,30.0,98.0,93.0,18.0,87.0,True
+2026-27,a3938c2a,Victor Letsoalo,TS Galaxy,33.0,FW,ST,W/AM,low,model,719,86.0,34.0,23.0,69.0,83.0,86.0,71.0,94.0,43.0,97.0,97.0,29.0,23.0,54.0,9.0,35.0,True
+2026-27,a6c1d523,Simphiwe Mcineka,Richards Bay FC,30.0,DF,CB,FB,high,model,720,95.0,97.0,41.0,74.0,97.0,,,10.0,2.0,71.0,7.0,79.0,99.0,93.0,0.0,87.0,True
+2026-27,b0042dc3,Marcelo Allende,Sundowns,27.0,MF,CM,W/AM,high,model,694,13.0,14.0,21.0,5.0,17.0,,,74.0,74.0,85.0,5.0,43.0,79.0,57.0,100.0,42.0,True
+2026-27,b0700b1b,Sedwyn George,TS Galaxy,35.0,FW,ST,W/AM,low,model,510,20.0,26.0,83.0,71.0,6.0,6.0,14.0,63.0,20.0,11.0,97.0,43.0,94.0,94.0,50.0,35.0,True
+2026-27,b13adaac,Tsepo Matsimbi,Sekhukhune,27.0,DF,FB,CB,low,model,720,31.0,31.0,19.0,25.0,12.0,,,0.0,47.0,87.0,97.0,1.0,16.0,57.0,72.0,75.0,True
+2026-27,b72acbaf,Jean Lwamba,Durban City,,FWMF,ST,W/AM,high,model,589,11.0,17.0,23.0,74.0,40.0,11.0,9.0,54.0,86.0,6.0,57.0,89.0,97.0,49.0,23.0,35.0,True
+2026-27,b7b01ff6,Athini Maqokola,AmaZulu,,FWMF,W/AM,ST,high,model,667,36.0,43.0,93.0,43.0,35.0,25.0,35.0,35.0,93.0,18.0,82.0,12.0,34.0,47.0,82.0,94.0,True
+2026-27,b7cc3270,Ngoanamello Rammala,Sekhukhune,26.0,MFDF,FB,DM,high,model,542,100.0,100.0,85.0,97.0,95.0,,,80.0,28.0,87.0,41.0,33.0,0.0,7.0,73.0,75.0,True
+2026-27,b9e80813,Sandile Mthethwa,AmaZulu,29.0,DF,CB,FB,high,model,630,34.0,34.0,41.0,91.0,14.0,,,10.0,2.0,0.0,91.0,71.0,99.0,45.0,83.0,87.0,True
+2026-27,bc9c9a82,Mondli Mbanjwa,AmaZulu,28.0,MF,CM,DM,high,model,631,98.0,98.0,21.0,71.0,88.0,74.0,86.0,45.0,0.0,5.0,74.0,31.0,19.0,57.0,93.0,42.0,True
+2026-27,bddb9393,Riaan Hanamub,AmaZulu,31.0,DF,FB,CB,high,model,630,31.0,31.0,19.0,28.0,67.0,,,71.0,55.0,87.0,0.0,3.0,81.0,96.0,80.0,75.0,True
+2026-27,c105cf1d,Moses Mthembu,Richards Bay FC,25.0,MFFW,W/AM,CM,high,model,715,35.0,4.0,91.0,72.0,30.0,9.0,23.0,62.0,91.0,97.0,100.0,95.0,34.0,49.0,1.0,94.0,True
+2026-27,c39e3597,Zitha Kwinika,Kaizer Chiefs,32.0,DF,CB,FB,high,model,474,34.0,34.0,41.0,1.0,14.0,,,10.0,1.0,71.0,99.0,31.0,74.0,32.0,86.0,87.0,True
+2026-27,c4e6fd0b,Siyanda Hlangabeza,AmaZulu,24.0,MF,DM,CM,low,model,598,22.0,23.0,31.0,83.0,41.0,,,55.0,35.0,68.0,44.0,48.0,68.0,67.0,89.0,75.0,True
+2026-27,c6931f90,Grant Kekana,Sundowns,33.0,DF,CB,FB,high,model,495,34.0,34.0,100.0,48.0,85.0,,,10.0,3.0,71.0,0.0,79.0,15.0,6.0,93.0,87.0,True
+2026-27,cb1e2e1e,Mlondi Mncwango,TS Galaxy,,DF,CB,FB,low,model,630,34.0,34.0,41.0,36.0,14.0,,,52.0,100.0,3.0,100.0,94.0,3.0,2.0,9.0,87.0,True
+2026-27,cbe563fe,Lentswe Motaung,TS Galaxy,,DFMF,DM,CB,low,model,630,22.0,23.0,31.0,0.0,4.0,,,53.0,53.0,68.0,73.0,24.0,29.0,39.0,44.0,75.0,True
+2026-27,cc014f7d,Kamogelo Sebelebele,Orlando Pirates,24.0,DF,FB,CB,high,model,587,31.0,31.0,81.0,89.0,69.0,,,9.0,81.0,87.0,99.0,92.0,59.0,96.0,100.0,75.0,True
+2026-27,cd606f1a,Cassius Mailula,Sundowns,25.0,MF,CM,W/AM,high,model,460,98.0,98.0,21.0,100.0,100.0,89.0,77.0,21.0,2.0,19.0,48.0,69.0,21.0,36.0,100.0,42.0,True
+2026-27,cf49678d,Khumbulani Ncube,Marumo Gallants,26.0,DFMF,FB,DM,high,model,583,31.0,31.0,19.0,89.0,69.0,,,73.0,7.0,3.0,56.0,40.0,75.0,45.0,0.0,75.0,True
+2026-27,d4416c5b,Terrence Mashego,Stellenbosch FC,30.0,DFMF,FB,DM,high,model,629,31.0,31.0,97.0,75.0,12.0,,,83.0,56.0,23.0,96.0,97.0,89.0,19.0,79.0,75.0,True
+2026-27,d62c06ff,Kyle Jurgens,Durban City,23.0,MF,DM,CM,high,model,465,22.0,23.0,31.0,84.0,93.0,,,64.0,100.0,68.0,72.0,95.0,12.0,55.0,49.0,75.0,True
+2026-27,d7584ecc,Malebogo Modise,Polokwane City,27.0,DF,FB,CB,high,model,585,31.0,31.0,19.0,9.0,12.0,,,91.0,24.0,87.0,7.0,23.0,95.0,96.0,21.0,75.0,True
+2026-27,d84e1b4f,Sphamandla Gwele,Richards Bay FC,,DF,FB,CB,high,model,462,31.0,31.0,19.0,79.0,91.0,,,100.0,5.0,87.0,51.0,31.0,51.0,96.0,0.0,75.0,True
+2026-27,d8aa65bb,Aphiwe Mpothwe,Kruger United,,FW,ST,W/AM,high,model,465,1.0,1.0,23.0,49.0,74.0,81.0,1.0,77.0,86.0,6.0,89.0,6.0,97.0,94.0,0.0,35.0,True
+2026-27,d8bf7bdc,Justice Figareido,Chippa United,28.0,FW,W/AM,ST,high,model,651,4.0,4.0,52.0,59.0,4.0,1.0,4.0,44.0,3.0,56.0,76.0,1.0,71.0,93.0,59.0,94.0,True
+2026-27,db43459c,Boy Madingwane,Chippa United,,DF,CB,FB,low,model,629,34.0,34.0,41.0,91.0,78.0,,,92.0,94.0,71.0,77.0,53.0,85.0,93.0,15.0,87.0,True
+2026-27,dba0b5ba,Lebohang Nkaki,Polokwane City,,DF,CB,FB,high,model,720,34.0,34.0,41.0,49.0,14.0,,,75.0,46.0,71.0,77.0,30.0,36.0,93.0,18.0,87.0,True
+2026-27,dcf52217,Thabo Moloisane,Kaizer Chiefs,27.0,DF,CB,FB,high,model,540,34.0,34.0,41.0,18.0,14.0,,,10.0,46.0,71.0,2.0,1.0,41.0,0.0,74.0,87.0,True
+2026-27,e1074b90,John Mokone,Durban City,,DF,FB,CB,high,model,651,31.0,31.0,19.0,73.0,12.0,,,68.0,35.0,23.0,95.0,31.0,89.0,96.0,24.0,75.0,True
+2026-27,e246b0e7,Lebohang Maboe,Kaizer Chiefs,32.0,MF,W/AM,CM,low,model,576,88.0,50.0,87.0,53.0,51.0,31.0,84.0,24.0,87.0,97.0,85.0,99.0,27.0,93.0,82.0,94.0,True
+2026-27,e38a5d91,Tidimalo Molokwane,Polokwane City,,FW,ST,W/AM,high,model,703,34.0,37.0,80.0,80.0,74.0,49.0,24.0,9.0,43.0,3.0,0.0,6.0,66.0,94.0,23.0,35.0,True
+2026-27,e7cbc41b,Siphosakhe Ntiya-Ntiya,Marumo Gallants,29.0,DF,FB,CB,high,model,524,31.0,31.0,19.0,9.0,12.0,,,63.0,100.0,87.0,51.0,15.0,7.0,40.0,0.0,75.0,True
+2026-27,f12ba819,Vincent Pule,Siwelele,34.0,MFFW,W/AM,CM,high,model,514,53.0,57.0,7.0,57.0,80.0,85.0,45.0,80.0,16.0,71.0,20.0,76.0,94.0,30.0,1.0,94.0,True
+2026-27,f142a5b1,Bonginkosi Dlamini,Polokwane City,30.0,MF,DM,W/AM,high,model,489,89.0,89.0,99.0,76.0,84.0,,,72.0,51.0,0.0,69.0,60.0,61.0,19.0,35.0,75.0,True
+2026-27,f3e767f4,Sammy Seabi,Chippa United,31.0,MF,DM,CM,high,model,451,22.0,23.0,31.0,41.0,4.0,,,75.0,15.0,68.0,84.0,16.0,1.0,11.0,15.0,75.0,True
+2026-27,f5febbb3,Abbubaker Mobara,Chippa United,32.0,DF,FB,CB,low,model,720,31.0,31.0,71.0,9.0,12.0,,,33.0,5.0,87.0,8.0,41.0,79.0,29.0,28.0,75.0,True
+2026-27,fa85385c,Siphamandla Ncanana,Durban City,26.0,DF,CB,FB,high,model,658,34.0,34.0,41.0,95.0,98.0,,,84.0,97.0,5.0,44.0,66.0,8.0,48.0,10.0,87.0,True
+2026-27,fd18e7a1,Tashreeq Matthews,Sundowns,26.0,MFFW,W/AM,CM,high,model,616,96.0,96.0,99.0,99.0,80.0,16.0,70.0,23.0,93.0,79.0,65.0,63.0,20.0,41.0,91.0,94.0,True
