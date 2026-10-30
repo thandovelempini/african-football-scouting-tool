@@ -62,7 +62,7 @@ def explain(row: pd.Series, role: str, priorities: dict[str, float]) -> str:
                          + ", ".join(METRIC_LABELS.get(m, m) for m in core) + ")")
     else:
         parts.append(f"balanced profile with no single standout metric among {ROLE_NAMES[role]}")
-        
+
     if pd.notna(row.get("other_score")):
         if abs(row["score"] - row["other_score"]) <= CONSISTENT_GAP:
             parts.append(f"consistent across both seasons ({row['other_score']:.0f} the other year)")
@@ -128,10 +128,11 @@ if __name__ == "__main__":
 
     show("Young ball-winning DMs (U25), excluding Sundowns and Pirates",
          build_shortlist(pct, "DM", priorities={"TklW_p90": 2, "Int_p90": 2, "Fls_p90": 0.5},
-                         max_age=25, exclude_clubs=["Sundowns", "Orlando Pirates"], top_n=5))
+                         max_age=24, exclude_clubs=["Sundowns", "Orlando Pirates"], top_n=5))
+    
     show("Strikers, scoring-first",
          build_shortlist(pct, "ST", priorities={"G-PK_p90": 2, "SoT_p90": 1, "G/Sh": 1}, top_n=5))
 
     show("Creative wide players (U24)",
          build_shortlist(pct, "W/AM", priorities={"Ast_p90": 2, "Crs_p90": 1, "Fld_p90": 1},
-                         max_age=24, top_n=5))
+                         max_age=23, top_n=5))
