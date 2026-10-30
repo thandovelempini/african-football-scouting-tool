@@ -1,0 +1,24 @@
+player_id,season,decision,evidence
+259affab,2024-25,keep,Transfermarkt: central midfield is the main position
+58557b9f,2024-25,keep,Transfermarkt: central midfielder
+60551e76,2025-26,keep,Transfermarkt: centre-forward
+3a00c763,2024-25,keep,Transfermarkt: defensive midfield
+99a2bc48,2024-25,keep,Transfermarkt: attacking midfield
+96d1bae5,2024-25,keep,Transfermarkt: defensive midfield
+96d1bae5,2025-26,keep,Transfermarkt: defensive midfield
+4ba61ff9,2024-25,keep,Transfermarkt: right-back
+e1074b90,2024-25,keep,Transfermarkt: left-back
+60551e76,2024-25,keep,Transfermarkt: attacking midfield 20 appearances and left wing 4; retain W/AM for this season
+a4152eda,2024-25,keep,Transfermarkt: defensive midfield 12 appearances and right-back 8; retain DM for this season
+4ba61ff9,2025-26,keep,Transfermarkt: centre-back 10 appearances and right-back 4; retain CB for this season
+33e94694,2024-25,keep,"Transfermarkt lists 17 defensive-midfield appearances and 5 central-midfield appearances; retain DM as the primary role"
+d8c02639,2024-25,keep,"Transfermarkt lists 11 centre-back appearances, 8 left-back appearances and 1 left-midfield appearance; retain CB as the primary role"
+2ce8122f,2025-26,keep,"Transfermarkt lists attacking midfield as the main position, with left winger and right winger as other positions; retain W/AM"
+0dc1fab6,2025-26,keep,"Centre-forward most frequent position this season; model now agrees (ST) after v1.0 forward rule"
+242e4ef9,2024-25,keep,"Transfermarkt lists 8 right-back appearances and 2 right-midfield appearances; retain FB as the primary role"
+f5febbb3,2025-26,keep,"Transfermarkt lists 15 centre-back appearances; retain CB as the primary role"
+200d8829,2024-25,keep,"Centre-forward main position; model now agrees (ST) after v1.0 forward rule"
+b0042dc3,2024-25,keep,"Transfermarkt CAF Champions League data lists 7 attacking-midfield, 5 central-midfield and 1 defensive-midfield appearance; retain W/AM provisionally"
+13bf8c17,2024-25,keep,"Model agrees after v1.0 weight changes"
+bb1f97f2,2024-25,keep,"Model agrees after v1.0 weight changes"
+fd18e7a1,2025-26,keep,"Model agrees after v1.0 weight changes"
