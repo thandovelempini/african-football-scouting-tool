@@ -17,20 +17,21 @@ st.markdown(
 
 st.subheader("What you can do")
 st.markdown(
-    "- **Shortlist**: pick a role, set what matters most, and get a ranked list with a "
+    "- **Shortlist**: Pick a role, set what matters most, and get a ranked list with a "
     "plain-language reason for every player.\n"
-    "- More pages (player profiles, comparisons, similar players) are on the way."
+    "- **Player profile**: Percentiles, role history, current form and the most similar players.\n"
+    "- **Compare**: Put two or three players side by side."
 )
 
 st.subheader("How it works")
 st.markdown(
     "- **Seasons**: 2024-25 and 2025-26 (full seasons, 900+ minutes) drive the rankings. "
     "2026-27 is shown separately as current form (450+ minutes).\n"
-    "- **Roles**: assigned from FBref positions plus several stats together, validated "
+    "- **Roles**: Assigned from FBref positions plus several stats together, validated "
     "against independently checked positions and corrected with documented overrides.\n"
-    "- **Percentiles**: each player is ranked only against players in the same role, "
+    "- **Percentiles**: Each player is ranked only against players in the same role, "
     "pooled across both full seasons.\n"
-    "- **Fit score**: a weighted average of those percentiles on the stats you choose."
+    "- **Fit score**: A weighted average of those percentiles on the stats you choose."
 )
 
 st.subheader("Limitations")

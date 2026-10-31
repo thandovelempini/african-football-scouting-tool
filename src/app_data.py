@@ -16,7 +16,7 @@ ROLE_LABELS = {
 
 SHORT_LABELS = {
     "Gls_p90": "Goals", "G-PK_p90": "Non-penalty goals", "Ast_p90": "Assists",
-    "Sh_p90": "Shots", "SoT_p90": "Shots on target", "SoT%": "Shot accuracy",
+    "Sh_p90": "Shots", "SoT_p90": "Shots on target", "SoT%": "Shot accuracy (%)",
     "G/Sh": "Finishing", "Crs_p90": "Crosses", "Fld_p90": "Fouls drawn",
     "Off_p90": "Offsides", "TklW_p90": "Tackles won", "Int_p90": "Interceptions",
     "Fls_p90": "Few fouls", "CrdY_p90": "Few cards", "+/-90": "Goal difference",

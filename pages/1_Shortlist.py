@@ -12,7 +12,7 @@ from config import PROFILE_SEASONS  # noqa: E402
 from shortlist import METRIC_LABELS, build_shortlist, default_priorities  # noqa: E402
 
 st.set_page_config(page_title="Shortlist", layout="wide")
-st.title("Recruitment shortlist")
+st.title("Recruitment Shortlist")
 
 pct = load_percentiles()
 latest_season = max(PROFILE_SEASONS)

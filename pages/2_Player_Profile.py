@@ -79,7 +79,7 @@ st.caption("Compared with players in the same role across 2024-25 and 2025-26. "
 
 if season != CURRENT_SEASON and CURRENT_SEASON in rows["season"].values:
     form = rows[rows["season"] == CURRENT_SEASON].iloc[0]
-    st.subheader("This season so far ⚠ small sample")
+    st.subheader("This season so far")
     st.caption(FORM_HELP)
     form_col = f"{CURRENT_SEASON} ({int(form['Min'])} min)"
     st.dataframe(pd.DataFrame({
