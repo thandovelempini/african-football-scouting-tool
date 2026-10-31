@@ -27,6 +27,7 @@ OUT = ROOT / "data" / "processed" / "similar_players.csv"
 
 TOP_N = 10
 SIMILARITY_EXCLUDE = {"+/-90"}
+DISCIPLINE_WEIGHT = 0.25
 CLOSEST_SHOWN = 3
 EXAMPLES = [("Iqraam Rayners", "2025-26"), ("Kamogelo Sebelebele", "2025-26"),
             ("Riaan Hanamub", "2025-26"), ("Relebohile Mofokeng", "2025-26")]
@@ -52,15 +53,18 @@ def similar_to(df: pd.DataFrame, player_id: str, season: str, n: int = TOP_N) ->
 
     q = query[cols].astype(float).fillna(50).to_numpy() / 100
     c = candidates[cols].astype(float).fillna(50).to_numpy() / 100
+    weights = np.array([DISCIPLINE_WEIGHT if col in ("pct_Fls_p90", "pct_CrdY_p90") else 1.0
+                        for col in cols])
     diffs = np.abs(c - q)
-    distance = np.sqrt((diffs ** 2).sum(axis=1))
-    similarity = 100 * (1 - distance / np.sqrt(len(cols)))
+    distance = np.sqrt((weights * diffs ** 2).sum(axis=1) / weights.sum())
+    similarity = 100 * (1 - distance)
 
     result = candidates[["player_id", "season", "Player", "Squad", "Age", "Min"]].copy()
     result["similarity"] = similarity.round(1)
     metric_names = [c.removeprefix("pct_") for c in cols]
     result["closest_metrics"] = [
-        ", ".join(metric_names[j] for j in np.argsort(row)[:CLOSEST_SHOWN]) for row in diffs
+        ", ".join(metric_names[j] for j in np.argsort(np.where(weights < 1, row + 1, row))[:CLOSEST_SHOWN])
+        for row in diffs
     ]
     result = result.sort_values("similarity", ascending=False).drop_duplicates("player_id")
     return result.head(n).reset_index(drop=True)
