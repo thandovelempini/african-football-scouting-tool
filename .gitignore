@@ -1,7 +1,17 @@
+# Python
 .venv/
 __pycache__/
-.DS_Store
+*.pyc
 
+# Mac / editor
+.DS_Store
+.vscode/
+
+# Raw FBref exports: not redistributed
 data/raw/
+
+# Private validation file
 data/manual/forward_validation.csv
-outputs/
+
+# Club crests: kept locally, not published
+static/crests/

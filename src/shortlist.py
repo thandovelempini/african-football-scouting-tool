@@ -76,7 +76,7 @@ def explain(row: pd.Series, role: str, priorities: dict[str, float]) -> str:
     if pd.notna(row.get("form_score")):
         parts.append(f"current form score {row['form_score']:.0f} (small sample)")
     if row["season"] != max(PROFILE_SEASONS):
-        parts.append(f"last qualifying season {row['season']}: check current status")
+        parts.append(f"last qualifying season {row['season']}: Check current status")
     if pd.notna(row.get("Age")):
         parts.append(f"aged {int(row['Age'])}")
     if row.get("role_confidence") == "low":
