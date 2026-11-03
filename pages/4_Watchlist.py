@@ -16,7 +16,7 @@ style()
 EDITABLE = ["status", "value", "contract", "note"]
 
 hero("Watchlist",
-     "Players you're following up, with where they stand and why",
+     "Players you're following up with, where they stand and why",
      kicker=f"Betway Premiership · {min(PROFILE_SEASONS)} to {CURRENT_SEASON}")
 
 wl = load()

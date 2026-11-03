@@ -4,6 +4,8 @@ from pathlib import Path
 from app_data import crest 
 from urllib.parse import quote_plus
 from watchlist import watch_button
+from app_data import (FIT_SCORE_HELP, FORM_HELP, ROLE_LABELS, SHORT_LABELS, crest,  # noqa: E402
+                      footer, hero, load_percentiles, pill, style)
 
 import pandas as pd
 import streamlit as st
@@ -53,6 +55,7 @@ def why_html(text: str) -> str:
             continue
         part = escape(part[0].upper() + part[1:])
         part = re.sub(r"^(Top \d+%)", r"<strong>\1</strong>", part)
+        part = re.sub(r"(check current status)", r"<strong>\1</strong>", part, flags=re.I)
         items.append(f"<li>{part}</li>")
     return f'<ul class="why">{"".join(items)}</ul>'
 
@@ -68,13 +71,13 @@ with st.sidebar:
     min_minutes = st.slider("Minimum minutes", 900, 3000, 900, step=100)
 
     st.divider()
-    st.caption("Priorities (weight) → 0 = ignore, 1 = normal, 3 = most important")
+    st.caption("Weights: 0 = ignore, 1 = normal, 3 = most important")
     priorities = {}
     for metric, weight in default_priorities(role).items():
-        priorities[metric] = st.slider(nice(metric), 0.0, 3.0, float(weight), 0.25,
-                                       key=f"{role}_{metric}")
-    st.caption("Discipline stats default low: Few fouls can mean low involvement "
-               "rather than good defending")
+           priorities[metric] = st.slider(SHORT_LABELS.get(metric, nice(metric)), 0.0, 3.0,
+                                  float(weight), 0.25, key=f"{role}_{metric}")
+    st.caption("Discipline statistics receive a lower default weight because fewer fouls do not "
+    "necessarily indicate better defending; they can also reflect lower involvement")
 
     with st.expander("More filters"):
         include_unknown_age = st.checkbox("Include players with unknown age", value=True)
@@ -114,7 +117,7 @@ result["recent"] = result["season"] == latest_season
 picks = []
 for _, r in result.head(3).iterrows():
     first = r["Rank"] == 1
-    status = pill("Recent", "ok") if r["recent"] else pill(f"{r['season']} only: check status", "warn")
+    status = pill("Recent", "ok") if r["recent"] else pill(f"{r['season']} only", "warn")
     one_season = pill("One full season", "warn") if pd.isna(r["other_score"]) else ""
     form = pill(f"Form {r['form_score']:.0f}", "muted") if pd.notna(r["form_score"]) else ""
     one_season = pill("One full season", "warn") if pd.isna(r["other_score"]) else ""
@@ -161,6 +164,11 @@ with st.container(border=True):
     bar_metrics = [(m, f"pct_{m}") for m in ranked[:3]]
 
     table = result.copy()
+    keys = ["Player", "Squad", "season"]
+    ids = pct[keys + ["player_id"]].drop_duplicates(subset=keys)
+    table = table.merge(ids, on=keys, how="left")
+    table["Link"] = ("Player_Profile?player=" + table["player_id"] + "&season="
+                     + table["season"] + "#" + table["Player"])
     missing = [c for _, c in bar_metrics if c not in table.columns and c in pct.columns]
     if missing:
         keys = ["Player", "Squad", "season"]
@@ -173,7 +181,7 @@ with st.container(border=True):
 
     column_config = {
         "Rank": st.column_config.NumberColumn("#", width=45),
-        "Player": st.column_config.TextColumn("Player", width=170),
+        "Link": st.column_config.LinkColumn("Player", display_text=r"#(.+)$", width=170),
         "Squad": st.column_config.TextColumn("Club", width=140),
         "Age": st.column_config.NumberColumn("Age", format="%d", width=50,
                                              help="Approximate current age. Blank = not listed"),
@@ -185,11 +193,12 @@ with st.container(border=True):
     }
     for m, c in bar_metrics:
         column_config[c] = st.column_config.ProgressColumn(
-            nice(m).replace(" per 90", ""), min_value=0, max_value=100, format="%.0f",
-            width=110, help=f"{nice(m)}: percentile among {ROLE_LABELS[role].lower()}s")
+            SHORT_LABELS.get(m, nice(m).replace(" per 90", "")),
+            min_value=0, max_value=100, format="%.0f", width=110,
+            help=f"{nice(m)}: percentile among {ROLE_LABELS[role].lower()}s")
 
 
-    columns = (["Rank", "Player", "Squad", "Age", "Min"] + [c for _, c in bar_metrics]
+    columns = (["Rank", "Link", "Squad", "Age", "Min"] + [c for _, c in bar_metrics]
                + ["Status", "form_score", "score"])
     st.dataframe(table[columns], hide_index=True, use_container_width=True,
                  height=36 * (len(table) + 1) + 3, column_config=column_config)

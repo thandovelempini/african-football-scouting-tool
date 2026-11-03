@@ -95,9 +95,9 @@ with note_col:
     cards([(s, f"{int(totals[s])}",
             "full season" if s in PROFILE_SEASONS else "current form, small sample")
            for s in seasons])
-    st.caption(f"Minimum minutes: {MIN_MINUTES[seasons[0]]} for full seasons, "
+    st.caption(f"**Minimum minutes:** {MIN_MINUTES[seasons[0]]} for full seasons, "
                f"{MIN_MINUTES[CURRENT_SEASON]} for {CURRENT_SEASON}. "
-               "A dash means the club wasn't in the league that season. "
+               "A dash means the club was not in the league that season. "
                "Royal AM has no 2024-25 data on FBref.")
 
 st.markdown(

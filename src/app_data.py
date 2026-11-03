@@ -249,6 +249,12 @@ a.sim-name:hover {color: #7fb0e8; text-decoration: underline;}
 .step span {display: inline-flex; align-items: center; justify-content: center; width: 22px;
             height: 22px; border-radius: 50%; background: #4c8fd9; color: #0e1218;
             font-size: 0.75rem; font-weight: 700;}
+
+            .p90 thead th {text-align: center; vertical-align: bottom; border-bottom: 1px solid #2a3442;
+               white-space: nowrap;}
+.p90 thead th:first-child {text-align: left;}
+.p90 td {text-align: center; font-family: 'IBM Plex Mono', monospace; color: #e8ecf2;}
+.p90-dot {display: block; margin: 0 auto 6px auto;}
             
 
 </style>
