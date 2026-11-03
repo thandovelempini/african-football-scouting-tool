@@ -3,6 +3,7 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote_plus
 from app_data import crest
+from watchlist import watch_button
 
 import altair as alt
 import pandas as pd
@@ -42,7 +43,8 @@ def per90_text(metric: str, value) -> str:
 
 
 latest = pct.sort_values("season", ascending=False).drop_duplicates("player_id")
-latest["label"] = latest["Player"] + " (" + latest["Squad"] + ", " + latest["role"] + ")"
+dupes = latest["Player"].duplicated(keep=False)
+latest["label"] = latest["Player"].where(~dupes, latest["Player"] + " (" + latest["Squad"] + ")")
 options = latest.sort_values("Player").set_index("player_id")["label"]
 
 hero("Player Profile",
@@ -51,14 +53,17 @@ hero("Player Profile",
 
 pick_col, season_col = st.columns([3, 2])
 with pick_col:
-    player_id = st.selectbox("Player", options.index, format_func=lambda p: options[p])
+    ids = list(options.index)
+    wanted = st.query_params.get("player")
+    player_id = st.selectbox("Player", ids, format_func=lambda p: options[p],
+                             index=ids.index(wanted) if wanted in ids else 0)
 rows = pct[pct["player_id"] == player_id].sort_values("season", ascending=False)
 full_seasons = [s for s in rows["season"] if s in PROFILE_SEASONS]
 with season_col:
-    season = st.segmented_control(
-        "Season", rows["season"].tolist(),
-        default=full_seasons[0] if full_seasons else rows["season"].iloc[0],
-    ) or (full_seasons[0] if full_seasons else rows["season"].iloc[0])
+    fallback = full_seasons[0] if full_seasons else rows["season"].iloc[0]
+    wanted_season = st.query_params.get("season")
+    start = wanted_season if wanted_season in rows["season"].values else fallback
+    season = st.segmented_control("Season", rows["season"].tolist(), default=start) or start
 
 row = rows[rows["season"] == season].iloc[0]
 role = row["role"]
@@ -93,7 +98,8 @@ stats_html = "".join(
 
 st.markdown(
     f'<div class="player-head">'
-    f'<div class="ph-main"><div class="ph-avatar">{escape(initials(row["Player"]))}</div>'
+    f'<div class="ph-main"><div class="ph-avatar{" small" if len(role) > 2 else ""}">'
+    f'{escape(role)}</div>'
     f'<div><div class="ph-kicker">{escape(ROLE_LABELS[role])} · {season}</div>'
     f'<div class="name">{escape(row["Player"])}</div>'
     f'<div class="meta">{crest(row["Squad"])}{escape(row["Squad"])} · {age} · '
@@ -103,10 +109,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+watch_button(player_id, row["Player"], row["Squad"], role, season, key="watch_profile")
 left, right = st.columns([3, 2], gap="large")
 
 with left:
-    # Percentile bars
     st.subheader(f"Percentiles vs other {ROLE_LABELS[role].lower()}s")
     bars = pd.DataFrame({
         "Stat": [SHORT_LABELS.get(m, m) for m in metrics],
@@ -151,12 +157,22 @@ with left:
             sim_rows.append(
                 f'<div class="sim-row">'
                 f'<span class="sim-ini">{escape(initials(m["similar_player"]))}</span>'
-                f'<span><span class="sim-name">{escape(m["similar_player"])}</span><br>'
+                f'<span><a class="sim-name" target="_self" '
+                f'href="Player_Profile?player={m["similar_id"]}&season={m["similar_season"]}">'
+                f'{escape(m["similar_player"])}</a><br>'
                 f'<span class="sim-meta">{escape(m["similar_squad"])} · {m["similar_season"]}</span></span>'
                 f'<span class="sim-close">{escape(closest)}</span>'
                 f'<span class="sim-score{strong}">{m["similarity"]:.0f}</span></div>'
             )
         st.markdown(f'<div class="sim-list">{"".join(sim_rows)}</div>', unsafe_allow_html=True)
+        
+        top = matches.head(2)
+        ids = [player_id] + top["similar_id"].tolist()
+        seasons = [season] + top["similar_season"].tolist()
+        href = (f"Compare?role={quote_plus(role)}&players={','.join(ids)}"
+                f"&seasons={','.join(seasons)}")
+        st.markdown(f'<a class="action-link" href="{href}" target="_self">'
+                    f'Compare with the top 2 matches →</a>', unsafe_allow_html=True)
 
 with right:
     st.subheader("Role history")

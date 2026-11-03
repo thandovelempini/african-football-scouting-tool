@@ -2,6 +2,8 @@ import sys
 from html import escape
 from pathlib import Path
 from app_data import crest 
+from urllib.parse import quote_plus
+from watchlist import watch_button
 
 import pandas as pd
 import streamlit as st
@@ -34,16 +36,20 @@ def pct_col(df: pd.DataFrame, metric: str) -> str | None:
 def initials(name: str) -> str:
     return "".join(w[0] for w in name.split()[:2]).upper()
 
+def player_id_for(r) -> str | None:
+    hit = pct[(pct["Player"] == r["Player"]) & (pct["Squad"] == r["Squad"])
+              & (pct["season"] == r["season"])]
+    return None if hit.empty else hit["player_id"].iloc[0]
 
 def why_html(text: str) -> str:
     items = []
     for part in text.split(";"):
         part = (part.strip().rstrip(".")
-        .replace("the previous season", "last season")
-        .replace("the other year", "in the other season"))
+                .replace("the previous season", "last season")
+                .replace("the other year", "in the other season"))
         if not part:
             continue
-        if part.lower().startswith(("aged ", "current form score")):
+        if part.lower().startswith(("aged ", "current form score", "one qualifying full season")):
             continue
         part = escape(part[0].upper() + part[1:])
         part = re.sub(r"^(Top \d+%)", r"<strong>\1</strong>", part)
@@ -108,20 +114,42 @@ result["recent"] = result["season"] == latest_season
 picks = []
 for _, r in result.head(3).iterrows():
     first = r["Rank"] == 1
-    status = pill("Recent", "ok") if r["recent"] else pill(f"{r['season']} only: Check status", "Warn")
+    status = pill("Recent", "ok") if r["recent"] else pill(f"{r['season']} only: check status", "warn")
+    one_season = pill("One full season", "warn") if pd.isna(r["other_score"]) else ""
     form = pill(f"Form {r['form_score']:.0f}", "muted") if pd.notna(r["form_score"]) else ""
+    one_season = pill("One full season", "warn") if pd.isna(r["other_score"]) else ""
+
+    pid = player_id_for(r)
+    name_html = (f'<a class="name" href="Player_Profile?player={pid}" target="_self">'
+                 f'{escape(r["Player"])}</a>' if pid else
+                 f'<div class="name">{escape(r["Player"])}</div>')
+
     picks.append(
         f'<div class="pick{" first" if first else ""}">'
-        f'<div class="top"><span class="rank">#{r["Rank"]}</span>'
-        f'<span class="avatar">{escape(initials(r["Player"]))}</span></div>'
-        f'<div class="name">{escape(r["Player"])}</div>'
+        f'<div class="top"><span class="rank">{"Top pick" if first else "#" + str(r["Rank"])}</span></div>'
+        f'{name_html}'
         f'<div class="meta">{crest(r["Squad"])}{escape(r["Squad"])} · {age_text(r["Age"])} · '
         f'{int(r["Min"]):,} min</div>'
         f'<div class="score">{r["score"]:.0f}<span> fit</span></div>'
-        f'<div style="margin-top:10px">{status}{form}</div>'
-        f'{why_html(r["why"])}</div>'    
-        )
+        f'<div style="margin-top:10px">{status}{one_season}{form}</div>'
+        f'{why_html(r["why"])}</div>'
+    )
 st.markdown(f'<div class="picks">{"".join(picks)}</div>', unsafe_allow_html=True)
+
+btn_cols = st.columns(3)
+for col, (_, r) in zip(btn_cols, result.head(3).iterrows()):
+    pid = player_id_for(r)
+    if pid:
+        with col:
+            watch_button(pid, r["Player"], r["Squad"], role, r["season"], key=f"watch_pick_{pid}")
+
+top3 = [(player_id_for(r), r["season"]) for _, r in result.head(3).iterrows()]
+top3 = [(p, s) for p, s in top3 if p]
+if len(top3) >= 2:
+    href = (f"Compare?role={quote_plus(role)}&players={','.join(p for p, _ in top3)}"
+            f"&seasons={','.join(s for _, s in top3)}")
+    st.markdown(f'<a class="action-link" href="{href}" target="_self">'
+                f'Compare the top {len(top3)} →</a>', unsafe_allow_html=True)
 
 st.write("")
 with st.container(border=True):

@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PROCESSED = ROOT / "data" / "processed"
 
 ROLE_LABELS = {
-    "ST": "Striker", "W/AM": "Winger / attacking midfielder", "CM": "Central midfielder",
+    "ST": "Striker", "W/AM": "Winger / Attacking midfielder", "CM": "Central midfielder",
     "DM": "Defensive midfielder", "FB": "Full-back", "CB": "Centre-back",
 }
 
@@ -24,7 +24,10 @@ SHORT_LABELS = {
     "Fls_p90": "Few fouls", "CrdY_p90": "Few cards", "+/-90": "Goal difference",
 }
 
-BAND_COLORS = {"Below average": "#d8684f", "Average": "#d9a441", "Strong": "#3fae72"}
+BAND_COLORS = {"Below average (0-33)": "#d9a441",
+               "Average (34-66)": "#5a6778",
+               "Strong (67-100)": "#4c8fd9"}
+
 PLAYER_COLORS = ["#4c8fd9", "#d4b03c", "#c3ccd8"]
 
 FIT_SCORE_HELP = ("Weighted average of the player's percentiles on the stats you prioritise, "
@@ -126,6 +129,7 @@ h1, h2, h3 {letter-spacing: -0.01em; color: #e8ecf2;}
 .ph-avatar {width: 84px; height: 84px; border-radius: 50%; border: 3px solid #d4b03c;
             background: #1f2834; color: #e8ecf2; font-size: 1.6rem; font-weight: 700;
             display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
+.ph-avatar.small {font-size: 1.15rem;}
 .ph-kicker {color: #d4b03c; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em;
             text-transform: uppercase; margin-bottom: 4px;}
 .ph-stats {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); flex: 1 1 380px;
@@ -166,6 +170,7 @@ h1, h2, h3 {letter-spacing: -0.01em; color: #e8ecf2;}
 .cmp-avatar {width: 64px; height: 64px; border-radius: 50%; border: 3px solid #4c8fd9;
              background: #1f2834; color: #e8ecf2; font-size: 1.25rem; font-weight: 700;
              display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
+.cmp-avatar .crest {display: block; margin: 0 !important;}
 .cmp-kicker {font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
              text-transform: uppercase; margin-bottom: 2px;}
 .cmp-name {font-size: 1.45rem; font-weight: 700; color: #e8ecf2; line-height: 1.15;}
@@ -200,6 +205,51 @@ h1, h2, h3 {letter-spacing: -0.01em; color: #e8ecf2;}
 .p90-wrap table {line-height: normal;}
 
 .crest {object-fit: contain; vertical-align: -4px; margin-right: 6px;}
+
+.pick a.name {display: block; color: #e8ecf2; text-decoration: none;}
+.pick a.name:hover {color: #7fb0e8; text-decoration: underline;}
+
+.cmp-summary {background: #161c25; border: 1px solid #232b37; border-radius: 14px;
+              padding: 14px 18px; color: #c3ccd8; font-size: 0.95rem; line-height: 1.55;
+              margin: 0.25rem 0 1.25rem 0;}
+.cmp-summary strong {color: #e8ecf2;}
+
+a.sim-name {color: #e8ecf2; text-decoration: none;}
+a.sim-name:hover {color: #7fb0e8; text-decoration: underline;}
+
+[data-testid="stHeaderActionElements"] {display: none;}
+
+.action-link {display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px;
+              margin: 10px 0 4px 0; border: 1px solid #2a3442; border-radius: 8px;
+              color: #e8ecf2 !important; text-decoration: none !important; font-size: 0.9rem;
+              font-weight: 500; background: #161c25;}
+.action-link:hover {border-color: #4c8fd9; color: #ffffff !important;}
+
+.cmp-text {flex: 1; min-width: 0;}
+.cmp-kicker, .cmp-meta {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+.p90 thead th {text-align: center;}
+.p90-dot {display: block; margin: 0 auto 6px auto;}
+
+.start-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+             gap: 16px; margin-bottom: 1.5rem;}
+.start-card {display: flex; flex-direction: column; gap: 10px; padding: 18px 20px;
+             background: #161c25; border: 1px solid #232b37; border-radius: 14px;
+             text-decoration: none !important;}
+.start-card:hover {border-color: #4c8fd9;}
+.start-title {font-weight: 700; font-size: 1.05rem; color: #e8ecf2;}
+.start-text {font-size: 0.9rem; color: #93a0b2; line-height: 1.5; flex: 1;}
+.start-link {font-size: 0.9rem; font-weight: 600; color: #7fb0e8;}
+
+.steps {display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 1.5rem 0;}
+.step {display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #161c25;
+       border: 1px solid #232b37; border-radius: 999px; font-size: 0.88rem; color: #c3ccd8 !important;
+       text-decoration: none !important;}
+.step:hover {border-color: #4c8fd9;}
+.step span {display: inline-flex; align-items: center; justify-content: center; width: 22px;
+            height: 22px; border-radius: 50%; background: #4c8fd9; color: #0e1218;
+            font-size: 0.75rem; font-weight: 700;}
+            
 
 </style>
 """

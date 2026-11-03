@@ -2,6 +2,7 @@ import sys
 from html import escape
 from pathlib import Path
 from app_data import crest
+from watchlist import watch_button
 
 import altair as alt
 import pandas as pd
@@ -39,15 +40,25 @@ hero("Compare Players",
      kicker=f"Betway Premiership · {min(PROFILE_SEASONS)} to {CURRENT_SEASON}")
 
 role_col, players_col = st.columns([1, 3])
+roles = list(ROLE_LABELS)
+link_role = st.query_params.get("role")
+link_players = [p for p in st.query_params.get("players", "").split(",") if p]
+link_seasons = dict(zip(link_players, st.query_params.get("seasons", "").split(",")))
+
 with role_col:
-    role = st.selectbox("Role", list(ROLE_LABELS), format_func=lambda r: ROLE_LABELS[r])
+    role = st.selectbox("Role", roles, format_func=lambda r: ROLE_LABELS[r],
+                        index=roles.index(link_role) if link_role in roles else 0)
+
 in_role = pct[pct["role"] == role]
 latest = in_role.sort_values("season", ascending=False).drop_duplicates("player_id")
-options = (latest.assign(label=latest["Player"] + " (" + latest["Squad"] + ")")
-           .sort_values("Player").set_index("player_id")["label"])
+dupes = latest["Player"].duplicated(keep=False)
+latest = latest.assign(label=latest["Player"].where(
+    ~dupes, latest["Player"] + " (" + latest["Squad"] + ")"))
+options = latest.sort_values("Player").set_index("player_id")["label"]
 with players_col:
     selected = st.multiselect("Players", options.index, format_func=lambda p: options[p],
-                              max_selections=3, placeholder="Pick two or three players")
+                              max_selections=3, placeholder="Pick two or three players",
+                              default=[p for p in link_players if p in options.index][:3])
 
 if len(selected) < 2:
     st.info(f"Pick at least two {ROLE_LABELS[role].lower()}s to compare.")
@@ -62,7 +73,8 @@ for i, (col, pid) in enumerate(zip(cols, selected)):
     seasons = in_role[in_role["player_id"] == pid].sort_values("season", ascending=False)
     season_list = seasons["season"].tolist()
     full = [s for s in season_list if s in PROFILE_SEASONS]
-    default = full[0] if full else season_list[0]
+    default = link_seasons.get(pid) if link_seasons.get(pid) in season_list else (
+        full[0] if full else season_list[0])
     with col:
         card_slot = st.empty()            
         season = default
@@ -71,7 +83,10 @@ for i, (col, pid) in enumerate(zip(cols, selected)):
                 season = st.segmented_control(
                     "Season", season_list, default=default, key=f"season_{pid}",
                     label_visibility="collapsed") or default
-    chosen.append((i, card_slot, seasons[seasons["season"] == season].iloc[0]))
+        row = seasons[seasons["season"] == season].iloc[0]
+        watch_button(pid, row["Player"], row["Squad"], role, season, key=f"watch_cmp_{pid}")
+    chosen.append((i, card_slot, row))
+    
 
 lead_metrics = [m for m in metrics if m != "+/-90"]
 leads = [0] * len(chosen)
@@ -81,21 +96,49 @@ for m in lead_metrics:
     if valid and values.count(max(valid)) == 1:
         leads[values.index(max(valid))] += 1
 
+def join_words(words: list[str]) -> str:
+    return words[0] if len(words) == 1 else ", ".join(words[:-1]) + " and " + words[-1]
+
+
+def comparison_summary(chosen, lead_metrics) -> str:
+    clauses = []
+    for i, _, r in chosen:
+        others = [o for j, _, o in chosen if j != i]
+        wins = []
+        for m in lead_metrics:
+            v = r[f"pct_{m}"]
+            ov = [o[f"pct_{m}"] for o in others]
+            if pd.notna(v) and all(pd.notna(x) and v > x for x in ov):
+                wins.append((v - max(ov), SHORT_LABELS.get(m, m).replace(" (%)", "").lower()))
+        wins.sort(reverse=True)
+        if wins:
+            surname = escape(r["Player"].split()[-1])
+            clauses.append(f"<strong>{surname}</strong> ranks higher for "
+                           f"{join_words([w for _, w in wins[:3]])}")
+    text = (", while ".join(clauses) if len(clauses) == 2 else ". ".join(clauses)) + "."
+
+    small = [escape(r["Player"].split()[-1]) for _, _, r in chosen if r["season"] == CURRENT_SEASON]
+    if small:
+        text += (f" {join_words(small)}'s figures are from {CURRENT_SEASON}, a small sample, "
+                 "so treat the comparison with caution.")
+    if len({r["season"] for _, _, r in chosen}) > 1:
+        text += " The players are compared across different seasons."
+    return text
+
 for (i, card_slot, r), n in zip(chosen, leads):
     color = PLAYER_COLORS[i]
-    age = "age unknown" if pd.isna(r["Age"]) else f"Age {int(r['Age'])}"
+    age = "Age unknown" if pd.isna(r["Age"]) else f"Age {int(r['Age'])}"
     tags = pill("Current form: small sample", "warn") if r["season"] == CURRENT_SEASON else ""
     if r["role_confidence"] == "low":
         tags += pill(f"Borderline {r['role_alt']}", "warn")
     card_slot.markdown(
         f'<div class="cmp-card" style="border-top-color:{color}">'
         f'<div class="cmp-main">'
-        f'<div class="cmp-avatar" style="border-color:{color}">{escape(initials(r["Player"]))}</div>'
-        f'<div style="min-width:0">'
-        f'<div class="cmp-kicker" style="color:{color}">{escape(ROLE_LABELS[role])} · {r["season"]}</div>'
+        f'<div class="cmp-avatar" style="border-color:{color}">{crest(r["Squad"], 34)}</div>'
+        f'<div class="cmp-text">'
+        f'<div class="cmp-kicker" style="color:{color}">{escape(role)} · {r["season"]}</div>'
         f'<div class="cmp-name">{escape(r["Player"])}</div>'
-        f'<div class="cmp-meta">{crest(r["Squad"])}{escape(r["Squad"])} · {age} · '
-        f'{int(r["Min"]):,} min</div>'
+        f'<div class="cmp-meta">{escape(r["Squad"])} · {age} · {int(r["Min"]):,} min</div>'
         f'{tags}</div></div>'
         f'<div class="cmp-stat"><div class="cmp-stat-value">{n}<span>/{len(lead_metrics)}</span></div>'
         f'<div class="cmp-stat-label">key stats ahead</div></div>'
@@ -104,6 +147,8 @@ for (i, card_slot, r), n in zip(chosen, leads):
     )
 
 labels = [f'{r["Player"]} ({r["season"]})' for _, _, r in chosen]
+st.markdown(f'<div class="cmp-summary">{comparison_summary(chosen, lead_metrics)}</div>',
+            unsafe_allow_html=True)
 chart_col, table_col = st.columns([3, 2], gap="large")
 
 with chart_col:

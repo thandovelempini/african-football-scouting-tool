@@ -15,3 +15,5 @@ data/manual/forward_validation.csv
 
 # Club crests: kept locally, not published
 static/crests/
+
+data/watchlist.csv
