@@ -136,6 +136,7 @@ The **fit score** is the weighted average of a player's percentiles on the stats
 - **Roles are inferred** from stats, not from watching matches. Borderline cases are flagged rather than hidden.
 - **Ages are approximate** (current year minus birth year).
 - **The watchlist is stored in a file on the machine running the app.** On the public demo it is shared and resets when the app restarts, so it can be downloaded as CSV.
+- **No market value or contract data.** Transfermarkt's terms do not allow reuse, so the watchlist has Value and Contract columns for scouts to fill in themselves after checking.
 - **Goalkeepers are not yet included.**
 
 The numbers are a starting point for scouting, not a replacement for watching players.

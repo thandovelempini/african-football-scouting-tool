@@ -1,5 +1,12 @@
 """
-Scouting watchlist: players a scout wants to follow up, with a status and a note
+Scouting watchlist: players a scout wants to follow up, with a status and a note.
+
+Stored in data/watchlist.csv so it survives page reloads and restarts.
+Keep that file out of Git (it's personal working data).
+
+On a shared deployment (e.g. Streamlit Community Cloud) everyone using the app
+shares this one file, and it resets when the app restarts. Use the Download /
+Load buttons on the Watchlist page to keep a copy.
 """
 
 from datetime import date
@@ -11,18 +18,20 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parent.parent
 WATCHLIST = ROOT / "data" / "watchlist.csv"
 
-COLUMNS = ["player_id", "Player", "Squad", "role", "season", "status", "note", "added"]
+COLUMNS = ["player_id", "Player", "Squad", "role", "season", "status",
+           "value", "contract", "note", "added"]
 STATUSES = ["To watch", "Watch live", "Shortlisted", "Rejected"]
+TEXT_FIELDS = ["value", "contract", "note"]   # typed in by the scout
 
 
 def load() -> pd.DataFrame:
     if not WATCHLIST.exists():
         return pd.DataFrame(columns=COLUMNS)
-    df = pd.read_csv(WATCHLIST, dtype={"player_id": str, "note": str})
+    df = pd.read_csv(WATCHLIST, dtype={c: str for c in ["player_id"] + TEXT_FIELDS})
     for col in COLUMNS:
         if col not in df:
             df[col] = ""
-    df["note"] = df["note"].fillna("")
+    df[TEXT_FIELDS] = df[TEXT_FIELDS].fillna("")
     df["status"] = df["status"].where(df["status"].isin(STATUSES), STATUSES[0])
     return df[COLUMNS]
 
@@ -42,7 +51,8 @@ def add(player_id: str, player: str, squad: str, role: str, season: str) -> None
         return
     new = pd.DataFrame([{
         "player_id": player_id, "Player": player, "Squad": squad, "role": role,
-        "season": season, "status": STATUSES[0], "note": "", "added": date.today().isoformat(),
+        "season": season, "status": STATUSES[0], "value": "", "contract": "", "note": "",
+        "added": date.today().isoformat(),
     }])
     save(pd.concat([df, new], ignore_index=True))
 
@@ -53,6 +63,7 @@ def remove(player_id: str) -> None:
 
 
 def merge(other: pd.DataFrame) -> int:
+    """Add players from an uploaded watchlist that aren't already on it. Returns how many."""
     df = load()
     other = other.copy()
     other["player_id"] = other["player_id"].astype(str)
@@ -67,6 +78,7 @@ def merge(other: pd.DataFrame) -> int:
 
 def watch_button(player_id: str, player: str, squad: str, role: str, season: str,
                  key: str) -> None:
+    """Add/remove toggle. Use one per player wherever a player is shown."""
     if contains(player_id):
         st.button("On watchlist", icon=":material/bookmark_added:", key=key,
                   on_click=remove, args=(player_id,), help="Click to remove from the watchlist")
