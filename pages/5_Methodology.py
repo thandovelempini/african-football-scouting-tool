@@ -166,7 +166,7 @@ st.markdown(
     "central set-piece takers look like wide players.\n"
     "- **Roles are estimated from statistics,** not from watching matches.\n"
     "- **Ages are approximate**, calculated using the current year minus birth year.\n"
-    "- **Goalkeepers are not yet included.** FBref's open data has no shot-quality measure (post-shot xG), "
+    "- **Goalkeepers are not included.** FBref's open data has no shot-quality measure (post-shot xG), "
     "and a regular keeper faces only about 30-40 shots on target a season, too few to rank keepers fairly. "
     "Goals against and clean sheets mostly reflect the defence.\n\n"
     "The numbers are a starting point for scouting, not a replacement for watching players."
