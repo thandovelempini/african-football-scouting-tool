@@ -137,13 +137,12 @@ The **fit score** is the weighted average of a player's percentiles on the stats
 - **Ages are approximate** (current year minus birth year).
 - **The watchlist is stored in a file on the machine running the app.** On the public demo it is shared and resets when the app restarts, so it can be downloaded as CSV.
 - **No market value or contract data.** Transfermarkt's terms do not allow reuse, so the watchlist has Value and Contract columns for scouts to fill in themselves after checking.
-- **Goalkeepers are not yet included.**
+- **Goalkeepers are not yet included.** FBref's open data has no shot-quality measure (post-shot xG), and a regular keeper faces only about 30–40 shots on target a season, too few to rank keepers fairly. Goals against and clean sheets mostly reflect the defence.
 
 The numbers are a starting point for scouting, not a replacement for watching players.
 
 ## Future work
 
-- Goalkeeper profiles from FBref's goalkeeping tables
 - Other African leagues, using within-league percentiles (raw stats aren't comparable across leagues of different strength)
 - A partial possession adjustment calibrated for centre-backs only
 - Scout-weighted similarity
