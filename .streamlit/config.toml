@@ -4,5 +4,8 @@ primaryColor = "#4c8fd9"
 backgroundColor = "#0e1218"
 secondaryBackgroundColor = "#161c25"
 textColor = "#e8ecf2"
-linkColor = "#e8ecf2"
+linkColor = "#c9dcf5"
 font = "sans serif"
+
+[server]
+enableStaticServing = true
