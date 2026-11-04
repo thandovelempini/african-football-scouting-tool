@@ -4,7 +4,7 @@ A Streamlit app that helps scouts and recruitment analysts find, profile, compar
 
 **Live app:** 
 
-![Shortlist page](data/images/shortlist.png)
+![Shortlist page](data/images/Shortlist.png)
 
 ---
 
@@ -42,7 +42,7 @@ Example explanation from the Shortlist page (strikers):
 
 | Player profile | Compare |
 |---|---|
-| ![Player profile](data/images/profile.png) | ![Compare](data/images/compare.png) |
+| ![Player profile](data/images/Player_Profile.png) | ![Compare](data/images/Compare.png) |
 
 ---
 
@@ -101,7 +101,7 @@ A standard adjustment (scaling tackles and interceptions to 50% opponent possess
 The adjustment over-corrected every role, creating a link with possession that wasn't there before. Defensive midfielders at dominant clubs actually make *more* defensive actions, consistent with high pressing. **v1 therefore uses unadjusted stats.** The test is kept in `possession.py`.
 
 ### 4. Percentiles (`percentiles.py`)
-Each player is ranked **only against players in the same role**, pooled across both full seasons (pools of 35–94 players). The pool includes the player being ranked, which moves a percentile by at most a few points. Current-season players are ranked against the same full-season pool. For fouls, cards and offsides, lower is better. Shot accuracy and goals per shot are left blank for players with fewer than 10 shots.
+Each player is ranked **only against players in the same role**, pooled across both full seasons (pools of 35-94 players). The pool includes the player being ranked, which moves a percentile by at most a few points. Current-season players are ranked against the same full-season pool. For fouls, cards and offsides, lower is better. Shot accuracy and goals per shot are left blank for players with fewer than 10 shots.
 
 The top-ranked players per role match FBref's own 2025-26 league leaders (e.g. tackles won, interceptions, crosses, assists per 90).
 
