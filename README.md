@@ -193,7 +193,5 @@ streamlit run Home.py
 
 To rebuild the data, export the FBref player tables into `data/raw/fbref/` (see the docstring in `src/one_season.py`), then run the pipeline scripts in order.
 
-Club crests are not included in the repository. To show them locally, add PNGs to `static/crests/` named after each club (e.g. `kaizer-chiefs.png`). The app works without them.
 
-
-Data: [FBref.com](https://fbref.com). Club crests, where shown in screenshots, are the property of their respective clubs and used for identification only. This is a non-commercial portfolio project.
+Data: [FBref.com](https://fbref.com). Club crests via [FootyLogos](https://www.footylogos.com/competition/premier-soccer-league), [Brandfetch](https://brandfetch.com/) and [Orbit College FC](https://www.facebook.com/orbitsoccer/). Crests are the property of their respective clubs and are used for identification only. This is a non-commercial portfolio project.
