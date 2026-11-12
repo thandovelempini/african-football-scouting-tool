@@ -6,11 +6,12 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from app_data import ROLE_LABELS, cards, footer, hero, load_percentiles, style  # noqa: E402
+from app_data import ROLE_LABELS, cards, footer, hero, load_percentiles, style, nav  # noqa: E402
 from config import CURRENT_SEASON, MIN_MINUTES, PROFILE_SEASONS, ROLE_RULES_VERSION  # noqa: E402
 
 st.set_page_config(page_title="Methodology", page_icon=":material/menu_book:", layout="wide")
 style()
+nav("Methodology")
 
 ROOT = Path(__file__).resolve().parent.parent
 OVERRIDES = ROOT / "data" / "manual" / "role_overrides.csv"

@@ -8,12 +8,13 @@ import altair as alt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
-from app_data import cards, footer, hero, load_percentiles, style  # noqa: E402
+from app_data import cards, footer, hero, load_percentiles, style, nav  # noqa: E402
 from config import CURRENT_SEASON, MIN_MINUTES, PROFILE_SEASONS
 
 st.set_page_config(page_title="African Football Scouting Tool", page_icon=":material/sports_soccer:",
                    layout="wide")
 style()
+nav("Home")
 
 hero("African Football Scouting Tool",
      "How can player performance data help identify promising recruitment targets in "

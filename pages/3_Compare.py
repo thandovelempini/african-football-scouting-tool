@@ -11,13 +11,14 @@ import streamlit as st
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from app_data import (PLAYER_COLORS, ROLE_LABELS, SHORT_LABELS, footer, hero,  # noqa: E402
-                      load_percentiles, load_profiles, pill, style)
+                      load_percentiles, load_profiles, pill, style, nav)
 from config import CURRENT_SEASON, PROFILE_SEASONS  # noqa: E402
 from percentiles import METRICS, ROLE_KEY_METRICS  # noqa: E402
 
 st.set_page_config(page_title="Compare Players", page_icon=":material/compare_arrows:",
                    layout="wide")
 style()
+nav("Compare")
 
 pct = load_percentiles()
 profiles = load_profiles()

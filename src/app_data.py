@@ -278,12 +278,61 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 .step:hover {border-color: var(--lime);}
 .step span {display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px;
             border-radius: 3px; background: var(--lime); color: var(--bg); font-size: 0.75rem; font-weight: 800;}
+
+/* ---- Top navigation (replaces the sidebar) ---- */
+[data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"], [data-testid="stSidebarNav"] {display: none !important;}
+.topnav {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+         gap: 10px 24px; padding: 0 0 14px 0; margin: -1.5rem 0 1.4rem 0;
+         border-bottom: 1.5px solid var(--line);}
+.topnav .brand {display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1rem;
+                color: var(--chalk); text-decoration: none !important; letter-spacing: 0.01em;}
+.topnav .links {display: flex; flex-wrap: wrap; gap: 2px;}
+.topnav .links a {padding: 10px 12px; font-weight: 600; font-size: 0.95rem; color: var(--muted) !important;
+                  text-decoration: none !important; border-bottom: 3px solid transparent;}
+.topnav .links a:hover {color: var(--chalk) !important;}
+.topnav .links a.active {color: var(--chalk) !important; border-bottom-color: var(--lime);}
+
+/* ---- Info messages (st.info) ---- */
+[data-testid="stAlertContainer"], [data-testid="stAlert"] > div {
+  background: var(--surface) !important; border: 1.5px solid var(--line) !important;
+  border-left: 4px solid var(--lime) !important; border-radius: var(--radius) !important;}
+[data-testid="stAlertContainer"] p, [data-testid="stAlert"] p,
+[data-testid="stAlertContainer"] [data-testid="stMarkdownContainer"] {color: var(--soft) !important;}
+[data-testid="stAlertContainer"] strong, [data-testid="stAlert"] strong {color: var(--chalk) !important;}
+[data-testid="stAlertContainer"] svg, [data-testid="stAlert"] svg,
+[data-testid="stAlertContainer"] [data-testid="stIconMaterial"] {color: var(--lime) !important;
+                                                                 fill: var(--lime) !important;}
+                                                                
 </style>
 """
 
 
 def style() -> None:
     st.markdown(CSS, unsafe_allow_html=True)
+
+
+NAV = [("Home", ""), ("Shortlist", "Shortlist"), ("Player Profile", "Player_Profile"),
+       ("Compare", "Compare"), ("Watchlist", "Watchlist"), ("Methodology", "Methodology")]
+PITCH_ICON = ('<svg width="30" height="22" viewBox="0 0 34 26" aria-hidden="true">'
+              '<rect x="1" y="1" width="32" height="24" rx="2" fill="none" stroke="#e9f0ea" stroke-width="1.6"/>'
+              '<line x1="17" y1="1" x2="17" y2="25" stroke="#e9f0ea" stroke-width="1.6"/>'
+              '<circle cx="17" cy="13" r="4.5" fill="none" stroke="#d4f05a" stroke-width="1.6"/></svg>')
+
+
+def nav(active: str) -> None:
+    """Top navigation bar. `active` is the page's label in NAV."""
+    links = "".join(
+        f'<a class="{"active" if label == active else ""}" href="/{path}" target="_self"'
+        f'{" aria-current=page" if label == active else ""}>{label}</a>'
+        for label, path in NAV
+    )
+    st.markdown(
+        f'<nav class="topnav" aria-label="Pages">'
+        f'<a class="brand" href="/" target="_self">{PITCH_ICON}African Football Scouting Tool</a>'
+        f'<div class="links">{links}</div></nav>',
+        unsafe_allow_html=True,
+    )
 
 
 def hero(title: str, subtitle: str, kicker: str = "Betway Premiership · recruitment") -> None:

@@ -5,7 +5,7 @@ from app_data import crest
 from urllib.parse import quote_plus
 from watchlist import watch_button
 from app_data import (FIT_SCORE_HELP, FORM_HELP, ROLE_LABELS, SHORT_LABELS, crest,  # noqa: E402
-                      footer, hero, load_percentiles, pill, style)
+                      footer, hero, load_percentiles, pill, style, nav)
 
 import pandas as pd
 import streamlit as st
@@ -20,6 +20,7 @@ from shortlist import DISCIPLINE, METRIC_LABELS, build_shortlist, default_priori
 
 st.set_page_config(page_title="Shortlist", page_icon=":material/format_list_numbered:", layout="wide")
 style()
+nav("Shortlist")
 
 pct = load_percentiles()
 latest_season = max(PROFILE_SEASONS)
@@ -63,32 +64,41 @@ def age_text(a) -> str:
     return "Age unknown" if pd.isna(a) else f"Age {int(a)}"
 
 
-with st.sidebar:
-    st.subheader("Brief")
-    role = st.selectbox("Role", list(ROLE_LABELS), format_func=lambda r: ROLE_LABELS[r])
+hero_slot = st.empty()   # the page header is filled in once the results are known
+
+# Filter bar (replaces the sidebar)
+with st.container(border=True, key="filterbar"):
+    st.markdown("**Brief**")
+    f_role, f_age, f_min, f_weights, f_more = st.columns([2.2, 2, 2, 1.2, 1.2], gap="medium",
+                                                         vertical_alignment="bottom")
+    with f_role:
+        role = st.selectbox("Role", list(ROLE_LABELS), format_func=lambda r: ROLE_LABELS[r])
     ages = pct["Age"].dropna()
-    max_age = st.slider("Maximum age", int(ages.min()), int(ages.max()), int(ages.max()))
-    min_minutes = st.slider("Minimum minutes", 900, 3000, 900, step=100)
-
-    st.divider()
-    st.caption("Weights: 0 = ignore, 1 = normal, 3 = most important")
-    priorities = {}
-    for metric, weight in default_priorities(role).items():
-           priorities[metric] = st.slider(SHORT_LABELS.get(metric, nice(metric)), 0.0, 3.0,
-                                  float(weight), 0.25, key=f"{role}_{metric}")
-    st.caption("Discipline statistics receive a lower default weight because fewer fouls do not "
-    "necessarily indicate better defending; they can also reflect lower involvement")
-
-    with st.expander("More filters"):
-        include_unknown_age = st.checkbox("Include players with unknown age", value=True)
-        exclude = st.multiselect("Exclude clubs", sorted(pct["Squad"].dropna().unique()))
-        recent_only = st.checkbox(f"Only players with a {latest_season} full season", value=False)
-        top_n = st.slider("Players to show", 5, 30, 15)
+    with f_age:
+        max_age = st.slider("Maximum age", int(ages.min()), int(ages.max()), int(ages.max()))
+    with f_min:
+        min_minutes = st.slider("Minimum minutes", 900, 3000, 900, step=100)
+    with f_weights:
+        with st.popover("Weights", use_container_width=True):
+            st.caption("Weights: 0 = ignore, 1 = normal, 3 = most important")
+            priorities = {}
+            for metric, weight in default_priorities(role).items():
+                priorities[metric] = st.slider(SHORT_LABELS.get(metric, nice(metric)), 0.0, 3.0,
+                                               float(weight), 0.25, key=f"{role}_{metric}")
+            st.caption("Discipline statistics receive a lower default weight because fewer fouls do not "
+                       "necessarily indicate better defending; they can also reflect lower involvement")
+    with f_more:
+        with st.popover("More filters", use_container_width=True):
+            include_unknown_age = st.checkbox("Include players with unknown age", value=True)
+            exclude = st.multiselect("Exclude clubs", sorted(pct["Squad"].dropna().unique()))
+            recent_only = st.checkbox(f"Only players with a {latest_season} full season", value=False)
+            top_n = st.slider("Players to show", 5, 30, 15)
 
 priorities = {m: w for m, w in priorities.items() if w > 0}
 if not priorities:
-    hero(f"{ROLE_LABELS[role]}s", "Give at least one stat a weight above 0",
-         kicker="Shortlist")
+    with hero_slot.container():
+        hero(f"{ROLE_LABELS[role]}s", "Give at least one stat a weight above 0",
+             kicker="Shortlist")
     st.stop()
 
 full = build_shortlist(pct, role, priorities=priorities, exclude_clubs=exclude or None,
@@ -102,9 +112,10 @@ if recent_only:
 total = len(result)
 result = result.head(top_n).reset_index(drop=True)
 
-hero(f"{ROLE_LABELS[role]}s",
-     f"{total} players match your brief",
-     kicker=f"Shortlist · full seasons {min(PROFILE_SEASONS)} to {latest_season}")
+with hero_slot.container():
+    hero(f"{ROLE_LABELS[role]}s",
+         f"{total} players match your brief",
+         kicker=f"Shortlist · full seasons {min(PROFILE_SEASONS)} to {latest_season}")
 
 if result.empty:
     st.info("No players match these filters")
@@ -216,9 +227,8 @@ with st.expander("Why each player is on the list"):
         )
     st.markdown("".join(rows), unsafe_allow_html=True)
 
-with st.sidebar:
-    st.download_button("Download CSV", result.drop(columns="recent").to_csv(index=False),
-                       file_name=f"shortlist_{role.replace('/', '-')}.csv", mime="text/csv",
-                       icon=":material/download:", use_container_width=True)
+st.download_button("Download CSV", result.drop(columns="recent").to_csv(index=False),
+                   file_name=f"shortlist_{role.replace('/', '-')}.csv", mime="text/csv",
+                   icon=":material/download:")
 
 footer()

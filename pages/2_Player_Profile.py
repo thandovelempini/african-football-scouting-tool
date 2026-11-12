@@ -14,12 +14,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from app_data import (BAND_COLORS, FORM_HELP, ROLE_LABELS, SHORT_LABELS,  # noqa: E402
                       SIMILARITY_HELP, footer, hero, load_percentiles, load_profiles,
-                      load_similar, pill, role_pitch, style)
+                      load_similar, pill, role_pitch, style, nav)
 from config import CURRENT_SEASON, PROFILE_SEASONS  # noqa: E402
 from percentiles import ROLE_KEY_METRICS  # noqa: E402
 
 st.set_page_config(page_title="Player Profile", page_icon=":material/person:", layout="wide")
 style()
+nav("Player Profile")
 
 pct = load_percentiles()
 profiles = load_profiles()

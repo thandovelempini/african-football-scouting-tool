@@ -6,12 +6,13 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from app_data import cards, footer, hero, load_percentiles, style  # noqa: E402
+from app_data import cards, footer, hero, load_percentiles, style, nav  # noqa: E402
 from config import CURRENT_SEASON, PROFILE_SEASONS  # noqa: E402
 from watchlist import STATUSES, load, merge, save  # noqa: E402
 
 st.set_page_config(page_title="Watchlist", page_icon=":material/bookmarks:", layout="wide")
 style()
+nav("Watchlist")
 
 EDITABLE = ["status", "value", "contract", "note"]
 
