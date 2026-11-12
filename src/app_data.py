@@ -310,7 +310,17 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 div[role="alert"] [data-testid="stIconMaterial"] {
   color: var(--lime) !important;
 }
-                                                                
+
+/* Icon in st.info boxes */
+[data-testid="stAlertDynamicIcon"] {color: var(--lime) !important;}
+
+/* Text and box colour for st.info (takes priority over the blue) */
+[data-testid="stAlertContentInfo"] {color: var(--soft) !important;}
+[data-testid="stAlertContentInfo"] strong {color: var(--chalk) !important;}
+[data-testid="stAlertContainer"] {background: var(--surface) !important;
+  border: 1.5px solid var(--line) !important; border-left: 4px solid var(--lime) !important;
+  border-radius: var(--radius) !important;}
+                                                   
 </style>
 """
 
