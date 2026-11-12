@@ -69,21 +69,21 @@ grid["Label"] = grid["Players"].map(lambda v: "–" if pd.isna(v) else f"{int(v)
 
 base = alt.Chart(grid).encode(
     x=alt.X("season:N", sort=seasons, title=None,
-            axis=alt.Axis(orient="top", labelColor="#e8ecf2", labelFontSize=13,
+            axis=alt.Axis(orient="top", labelColor="#e9f0ea", labelFontSize=13,
                           labelAngle=0, ticks=False, domain=False)),
     y=alt.Y("Club:N", title=None,
-            axis=alt.Axis(labelColor="#e8ecf2", labelFontSize=13, labelLimit=200,
+            axis=alt.Axis(labelColor="#e9f0ea", labelFontSize=13, labelLimit=200,
                           ticks=False, domain=False)),
 )
-heat = base.mark_rect(cornerRadius=4, stroke="#0e1218", strokeWidth=3).encode(
+heat = base.mark_rect(cornerRadius=4, stroke="#0d1a14", strokeWidth=3).encode(
     color=alt.Color("Players:Q", legend=None,
-                    scale=alt.Scale(range=["#1c2b3f", "#4c8fd9"])),
+                    scale=alt.Scale(range=["#163024", "#4f9a63"])),
     tooltip=["Club", alt.Tooltip("season:N", title="Season"),
              alt.Tooltip("Players:Q", title="Qualifying players")],
 )
-labels = base.mark_text(fontSize=13, font="IBM Plex Mono").encode(
+labels = base.mark_text(fontSize=13, font="Archivo").encode(
     text="Label:N",
-    color=alt.condition("datum.Players > 0", alt.value("#e8ecf2"), alt.value("#5a6778")),
+    color=alt.condition("datum.Players > 0", alt.value("#e9f0ea"), alt.value("#5d7366")),
 )
 
 chart_col, note_col = st.columns([3, 2], gap="large")
@@ -101,7 +101,7 @@ with note_col:
                "Royal AM has no 2024-25 data on FBref.")
 
 st.markdown(
-    '<p style="color:#93a0b2">Roles, percentiles and fit scores are built from open FBref data. '
+    '<p style="color:#9fb3a6">Roles, percentiles and fit scores are built from open FBref data. '
     '<a href="Methodology" target="_self" style="font-weight:600">How it works →</a></p>',
     unsafe_allow_html=True,
 )

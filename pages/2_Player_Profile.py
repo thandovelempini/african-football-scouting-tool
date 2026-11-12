@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from app_data import (BAND_COLORS, FORM_HELP, ROLE_LABELS, SHORT_LABELS,  # noqa: E402
                       SIMILARITY_HELP, footer, hero, load_percentiles, load_profiles,
-                      load_similar, pill, style)
+                      load_similar, pill, role_pitch, style)
 from config import CURRENT_SEASON, PROFILE_SEASONS  # noqa: E402
 from percentiles import ROLE_KEY_METRICS  # noqa: E402
 
@@ -105,6 +105,7 @@ st.markdown(
     f'<div class="meta">{crest(row["Squad"])}{escape(row["Squad"])} · {age} · '
     f'{int(row["Min"]):,} minutes</div>'
     f'{pills}</div></div>'
+    f'<div class="ph-pitch">{role_pitch(role)}</div>'
     f'<div class="ph-stats">{stats_html}</div></div>',
     unsafe_allow_html=True,
 )
@@ -124,18 +125,18 @@ with left:
 
     base = alt.Chart(shown).encode(
         y=alt.Y("Stat:N", sort=None, title=None,
-                axis=alt.Axis(labelLimit=220, labelColor="#e8ecf2", labelFontSize=13,
+                axis=alt.Axis(labelLimit=220, labelColor="#e9f0ea", labelFontSize=13,
                               ticks=False, domain=False, labelPadding=10)),
         x=alt.X("Percentile:Q", scale=alt.Scale(domain=[0, 100]), title=None,
-                axis=alt.Axis(values=[0, 25, 50, 75, 100], gridColor="#232b37",
-                              labelColor="#93a0b2", domain=False, ticks=False)),
+                axis=alt.Axis(values=[0, 25, 50, 75, 100], gridColor="#1f3a2c",
+                              labelColor="#9fb3a6", domain=False, ticks=False)),
     )
     chart = base.mark_bar(cornerRadiusEnd=4, height=18).encode(
         color=alt.Color("Band:N", scale=alt.Scale(domain=list(BAND_COLORS),
                                                   range=list(BAND_COLORS.values())),
-                        legend=alt.Legend(orient="bottom", title=None, labelColor="#c3ccd8")),
+                        legend=alt.Legend(orient="bottom", title=None, labelColor="#c5d3c9")),
         tooltip=["Stat", "Percentile", alt.Tooltip("Per 90:Q", format=".2f")],
-    ) + base.mark_text(align="left", dx=6, color="#e8ecf2", fontSize=13).encode(
+    ) + base.mark_text(align="left", dx=6, color="#e9f0ea", fontSize=13).encode(
         text=alt.Text("Percentile:Q", format=".0f"))
     st.altair_chart(chart.properties(height=44 * len(shown)).configure_view(strokeWidth=0),
                     use_container_width=True)

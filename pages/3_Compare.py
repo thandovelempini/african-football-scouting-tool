@@ -162,21 +162,21 @@ with chart_col:
 
     base = alt.Chart(long).encode(
         y=alt.Y("Stat:N", sort=[SHORT_LABELS.get(m, m) for m in metrics], title=None,
-                axis=alt.Axis(labelColor="#e8ecf2", labelFontSize=13, labelLimit=220,
+                axis=alt.Axis(labelColor="#e9f0ea", labelFontSize=13, labelLimit=220,
                               ticks=False, domain=False, labelPadding=10)),
         yOffset=alt.YOffset("Player:N", sort=labels),
         x=alt.X("Percentile:Q", scale=alt.Scale(domain=[0, 100]), title=None,
-                axis=alt.Axis(values=[0, 25, 50, 75, 100], gridColor="#232b37",
-                              labelColor="#93a0b2", domain=False, ticks=False)),
+                axis=alt.Axis(values=[0, 25, 50, 75, 100], gridColor="#1f3a2c",
+                              labelColor="#9fb3a6", domain=False, ticks=False)),
     )
     bars = base.mark_bar(cornerRadiusEnd=3, height=12).encode(
         color=alt.Color("Player:N", sort=labels,
                         scale=alt.Scale(domain=labels, range=PLAYER_COLORS[:len(labels)]),
-                        legend=alt.Legend(orient="top", title=None, labelColor="#e8ecf2",
+                        legend=alt.Legend(orient="top", title=None, labelColor="#e9f0ea",
                                           labelLimit=320, labelFontSize=13)),
         tooltip=["Player", "Stat", alt.Tooltip("Percentile:Q", format=".0f")],
     )
-    text = base.mark_text(align="left", dx=5, color="#c3ccd8", fontSize=11).encode(
+    text = base.mark_text(align="left", dx=5, color="#c5d3c9", fontSize=11).encode(
         text=alt.Text("Percentile:Q", format=".0f"))
     per_stat = 16 * len(chosen) + 18
     st.altair_chart((bars + text).properties(height=per_stat * len(metrics))
