@@ -303,6 +303,13 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 [data-testid="stAlertContainer"] svg, [data-testid="stAlert"] svg,
 [data-testid="stAlertContainer"] [data-testid="stIconMaterial"] {color: var(--lime) !important;
                                                                  fill: var(--lime) !important;}
+/* Icon inside st.info boxes, e.g. :material/fact_check: */
+[data-testid="stAlert"] [data-testid="stIconMaterial"],
+[data-testid="stAlertContainer"] [data-testid="stIconMaterial"],
+[data-testid="stAlertContentInfo"] [data-testid="stIconMaterial"],
+div[role="alert"] [data-testid="stIconMaterial"] {
+  color: var(--lime) !important;
+}
                                                                 
 </style>
 """
