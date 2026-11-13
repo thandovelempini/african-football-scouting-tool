@@ -100,7 +100,7 @@ with st.expander("Load a saved watchlist"):
         except (KeyError, ValueError, pd.errors.ParserError):
             st.error("That file doesn't look like a watchlist export.")
 
-st.caption("The watchlist is saved on the machine running the app. On the public demo it's "
+st.caption("The watchlist is saved on the machine running the app. On the public demo it is "
            "shared and resets when the app restarts, so download a copy to keep it.")
 
 footer()

@@ -28,7 +28,7 @@ BAND_COLORS = {"Below average (0-33)": "#f0a35e",
                "Average (34-66)": "#5d7366",
                "Strong (67-100)": "#d4f05a"}
 
-PLAYER_COLORS = ["#d4f05a", "#5fc4e8", "#f0a35e"]
+PLAYER_COLORS = ["#d4f05a", "#5fc4e8", "#b79cf2"]
 
 FIT_SCORE_HELP = ("Weighted average of the player's percentiles on the stats you prioritise, "
                   "compared with players in the same role. 0-100. Not an overall rating "
@@ -320,6 +320,11 @@ div[role="alert"] [data-testid="stIconMaterial"] {
 [data-testid="stAlertContainer"] {background: var(--surface) !important;
   border: 1.5px solid var(--line) !important; border-left: 4px solid var(--lime) !important;
   border-radius: var(--radius) !important;}
+
+/* Selected-player tags in multiselects */
+[data-baseweb="tag"] {background: #2e6b45 !important; border: 1px solid #3f8a5a !important;}
+[data-baseweb="tag"] span, [data-baseweb="tag"] [role="presentation"] {color: #ffffff !important;}
+[data-baseweb="tag"] svg {fill: #ffffff !important;}
                                                    
 </style>
 """
@@ -338,7 +343,6 @@ PITCH_ICON = ('<svg width="30" height="22" viewBox="0 0 34 26" aria-hidden="true
 
 
 def nav(active: str) -> None:
-    """Top navigation bar. `active` is the page's label in NAV."""
     links = "".join(
         f'<a class="{"active" if label == active else ""}" href="/{path}" target="_self"'
         f'{" aria-current=page" if label == active else ""}>{label}</a>'
@@ -372,7 +376,6 @@ def pill(text: str, kind: str = "muted") -> str:
     return f'<span class="pill {kind}">{escape(text)}</span>'
 
 
-# Zones on a pitch drawn 420 x 280, attacking to the right: (x, y, width, height)
 ROLE_ZONES = {
     "CB": [(18, 92, 90, 96)],
     "FB": [(18, 10, 120, 62), (18, 208, 120, 62)],
@@ -386,7 +389,6 @@ ROLE_LABEL_POS = {"CB": [(63, 145)], "FB": [(78, 46), (78, 244)], "DM": [(154, 1
 
 
 def role_pitch(role: str) -> str:
-    """Small pitch diagram with the player's role zone highlighted."""
     line = 'stroke="#e9f0ea" stroke-opacity="0.45" stroke-width="2" fill="none"'
     zones = "".join(
         f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="5" fill="#d4f05a" '

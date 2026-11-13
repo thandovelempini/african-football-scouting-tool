@@ -80,7 +80,7 @@ with st.container(border=True, key="filterbar"):
         min_minutes = st.slider("Minimum minutes", 900, 3000, 900, step=100)
     with f_weights:
         with st.popover("Weights", use_container_width=True):
-            st.caption("Weights: 0 = ignore, 1 = normal, 3 = most important")
+            st.caption("Weights: 0 = Ignore, 1 = Normal, 3 = Most important")
             priorities = {}
             for metric, weight in default_priorities(role).items():
                 priorities[metric] = st.slider(SHORT_LABELS.get(metric, nice(metric)), 0.0, 3.0,
