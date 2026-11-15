@@ -23,12 +23,12 @@ SHORT_LABELS = {
     "Off_p90": "Offsides", "TklW_p90": "Tackles won", "Int_p90": "Interceptions",
     "Fls_p90": "Few fouls", "CrdY_p90": "Few cards", "+/-90": "Goal difference",
 }
+BAND_COLORS = {"Below average (0-33)": "#9472f0",   
+               "Average (34-66)": "#17b5ee",        
+               "Strong (67-100)": "#c5e145"}       
 
-BAND_COLORS = {"Below average (0-33)": "#f0a35e",
-               "Average (34-66)": "#5d7366",
-               "Strong (67-100)": "#d4f05a"}
-
-PLAYER_COLORS = ["#d4f05a", "#5fc4e8", "#b79cf2"]
+PLAYER_COLORS = ["#d4f05a", "#54c1e9", "#a389f0"]  
+CHART_COLORS = ["#c5e145", "#17b5ee", "#9472f0"]   
 
 FIT_SCORE_HELP = ("Weighted average of the player's percentiles on the stats you prioritise, "
                   "compared with players in the same role. 0-100. Not an overall rating "
@@ -97,7 +97,7 @@ h1, h2, h3 {letter-spacing: -0.01em; color: var(--chalk);}
                padding: 3px 9px; border-radius: 3px; margin-bottom: 12px;}
 .hero h1 {color: var(--chalk); margin: 0 0 0.4rem 0; font-size: 2.6rem; font-weight: 700;
           line-height: 1.05; padding: 0;}
-.hero p {color: var(--soft); margin: 0; font-size: 1rem; line-height: 1.5; max-width: 760px;
+.hero p {color: var(--soft); margin: 0; font-size: 0.93rem; line-height: 1.5; max-width: 760px;
          position: relative;}
 
 /* ---- Stat cards: squad-board numbers ---- */
@@ -169,22 +169,24 @@ h1, h2, h3 {letter-spacing: -0.01em; color: var(--chalk);}
               padding: 26px 28px; margin-bottom: 1rem; display: flex; flex-wrap: wrap;
               gap: 24px; align-items: center; justify-content: space-between;}
 .player-head .name {font-size: 2.4rem; font-weight: 700; color: var(--chalk); line-height: 1.05;}
-.player-head .meta {color: var(--soft); margin: 6px 0 10px 0; font-size: 1rem;}
+.player-head .meta {color: var(--soft); margin: 6px 0 10px 0; font-size: 0.90rem;}
 .ph-main {display: flex; gap: 20px; align-items: center; flex: 1 1 380px;}
 .ph-avatar {width: 72px; height: 72px; border-radius: 4px; background: var(--lime); color: var(--bg);
             font-size: 1.5rem; font-weight: 700; letter-spacing: 0.04em;
             display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
 .ph-avatar.small {font-size: 1.05rem;}
-.ph-kicker {color: var(--muted); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em;
+.ph-kicker {color: var(--muted); font-size: 0.70rem; font-weight: 700; letter-spacing: 0.1em;
             text-transform: uppercase; margin-bottom: 6px;}
 .ph-pitch {flex: 0 1 230px; min-width: 190px;}
 .ph-pitch svg {display: block; width: 100%; height: auto;}
-.ph-stats {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); flex: 1 1 340px;
+.ph-stats {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+           grid-template-rows: auto auto auto; flex: 1 1 340px;
            border-left: 1.5px solid var(--line);}
-.hs {padding: 4px 18px; border-right: 1.5px solid var(--line);}
+.hs {display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 4px;
+     padding: 4px 18px; border-right: 1.5px solid var(--line);}
 .hs:last-child {border-right: 0;}
-.hs-label {font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
-           font-weight: 600;}
+.hs-label {font-size: 0.72rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase;
+           font-weight: 600; align-self: end;}
 .hs-value {font-family: var(--stencil); font-size: 3rem; font-weight: 800; color: var(--lime);
            line-height: 1;}
 .hs-note {font-size: 0.78rem; color: var(--muted);}
@@ -209,9 +211,13 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 .cmp-card {background: var(--surface); border: 1.5px solid var(--line); border-top: 4px solid var(--lime);
            border-radius: var(--radius); padding: 20px 22px; margin-bottom: 1rem;
            display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;}
+.cmp-card {background: var(--surface); border: 1.5px solid var(--line); border-top: 4px solid var(--lime);
+           border-radius: var(--radius); padding: 20px 22px; margin-bottom: 1rem;
+           display: flex; flex-direction: column; gap: 14px;}
+.cmp-tags {min-height: 26px;}
 .cmp-main {display: flex; gap: 16px; align-items: center; min-width: 0; flex: 1 1 260px;}
 .cmp-text {flex: 1; min-width: 0;}
-.cmp-avatar {width: 64px; height: 64px; border-radius: 50%; border: 3px solid var(--lime);
+.cmp-avatar {width: 64px; height: 64px; border-radius: 50%; border: 1.5px solid var(--line-strong);
              background: var(--surface-2); color: var(--chalk); font-size: 1.2rem; font-weight: 700;
              display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
 .cmp-avatar .crest {display: block; margin: 0 !important;}
@@ -220,14 +226,15 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 .cmp-name {font-size: 1.5rem; font-weight: 700; color: var(--chalk); line-height: 1.15;}
 .cmp-meta {font-size: 0.88rem; color: var(--soft); margin: 4px 0 8px 0;}
 .cmp-kicker, .cmp-meta {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-.cmp-stat {padding-left: 18px; border-left: 1.5px solid var(--line);}
+.cmp-stat {display: flex; align-items: baseline; gap: 12px; padding-top: 12px;
+           border-top: 1.5px dashed var(--line);}
 .cmp-stat-value {font-family: var(--stencil); font-size: 2.8rem; font-weight: 800; color: var(--chalk);
                  line-height: 1;}
 .cmp-stat-value span {font-size: 1.4rem; color: var(--muted);}
 .cmp-stat-label {font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase;
                  font-weight: 600;}
 .cmp-summary {background: var(--surface); border: 1.5px solid var(--line); border-left: 4px solid var(--lime);
-              border-radius: var(--radius); padding: 14px 18px; color: var(--soft); font-size: 0.98rem;
+              border-radius: var(--radius); padding: 14px 18px; color: var(--soft); font-size: 0.95rem;
               line-height: 1.55; margin: 0.25rem 0 1.25rem 0;}
 .cmp-summary strong {color: var(--chalk);}
 [class*="st-key-seasonbox"] {margin-top: -0.5rem;}
@@ -279,19 +286,46 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 .step span {display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px;
             border-radius: 3px; background: var(--lime); color: var(--bg); font-size: 0.75rem; font-weight: 800;}
 
-/* ---- Top navigation (replaces the sidebar) ---- */
-[data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"],
-[data-testid="collapsedControl"], [data-testid="stSidebarNav"] {display: none !important;}
-.topnav {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
-         gap: 10px 24px; padding: 0 0 14px 0; margin: -1.5rem 0 1.4rem 0;
-         border-bottom: 1.5px solid var(--line);}
-.topnav .brand {display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1rem;
-                color: var(--chalk); text-decoration: none !important; letter-spacing: 0.01em;}
-.topnav .links {display: flex; flex-wrap: wrap; gap: 2px;}
-.topnav .links a {padding: 10px 12px; font-weight: 600; font-size: 0.95rem; color: var(--muted) !important;
-                  text-decoration: none !important; border-bottom: 3px solid transparent;}
-.topnav .links a:hover {color: var(--chalk) !important;}
-.topnav .links a.active {color: var(--chalk) !important; border-bottom-color: var(--lime);}
+/* ---- Top navigation ---- */
+[data-testid="stHeader"] {background: transparent;}
+/* Equal spacing between tabs: columns shrink to their label, fixed gap between them */
+.st-key-topnav [data-testid="stHorizontalBlock"] {gap: 2.25rem !important; flex-wrap: nowrap;}
+.st-key-topnav [data-testid="stColumn"] {flex: 0 0 auto !important; width: auto !important;
+                                         min-width: 0 !important;}
+.st-key-topnav [data-testid="stColumn"]:first-child {flex: 1 1 auto !important;}
+.st-key-topnav {border: 0; margin: 0; padding: 0;}
+.st-key-topnav [data-testid="stElementContainer"],
+.st-key-topnav [data-testid="stMarkdownContainer"] p {margin: 0 !important;}
+
+/* Centre whatever sits in each nav column in the same 44px band */
+.st-key-topnav [data-testid="stColumn"] [data-testid="stVerticalBlock"] {
+  height: 44px; justify-content: center; gap: 0 !important;}
+
+/* Every item is the same 44px box, so they all line up */
+.st-key-topnav .brand,
+.st-key-topnav [data-testid="stPageLink"] a {
+  height: 44px; display: flex !important; align-items: center; box-sizing: border-box;
+  padding: 0 !important; margin: 0 !important; background: transparent !important;
+  border: 0 !important; border-radius: 0 !important; white-space: nowrap;}
+
+.st-key-topnav .brand {gap: 10px; font-weight: 700; color: var(--chalk);}
+.st-key-topnav [data-testid="stPageLink"] p {color: var(--muted) !important; font-weight: 600;
+  font-size: 0.95rem !important; line-height: 1; margin: 0 !important;}
+.st-key-topnav [data-testid="stPageLink"] a:hover p {color: var(--chalk) !important;}
+
+/* Current page: same link, white text and lime underline, not greyed out */
+.st-key-navactive [data-testid="stPageLink"] a {
+  opacity: 1 !important; cursor: default; width: fit-content;
+  box-shadow: inset 0 -3px 0 var(--lime);}
+.st-key-navactive [data-testid="stPageLink"] a p,
+.st-key-navactive [data-testid="stPageLink"] a span {
+  color: var(--chalk) !important; font-weight: 700 !important;}
+
+/* The dividing line under the bar */
+.nav-rule {height: 1.5px; background: var(--line); margin: -0.9rem 0 1.4rem 0;}
+
+/* The dividing line under the bar */
+.nav-rule {height: 1.5px; background: var(--line); margin: -0.9rem 0 1.4rem 0;}
 
 /* ---- Info messages (st.info) ---- */
 [data-testid="stAlertContainer"], [data-testid="stAlert"] > div {
@@ -321,10 +355,46 @@ div[role="alert"] [data-testid="stIconMaterial"] {
   border: 1.5px solid var(--line) !important; border-left: 4px solid var(--lime) !important;
   border-radius: var(--radius) !important;}
 
-/* Selected-player tags in multiselects */
-[data-baseweb="tag"] {background: #2e6b45 !important; border: 1px solid #3f8a5a !important;}
-[data-baseweb="tag"] span, [data-baseweb="tag"] [role="presentation"] {color: #ffffff !important;}
-[data-baseweb="tag"] svg {fill: #ffffff !important;}
+/* Selected-player tags in multiselects: dark green with white text */
+[data-testid="stMultiSelect"] [data-tag] {
+  background-color: #2e6b45 !important; border: 1px solid #3f8a5a !important;
+  color: #ffffff !important;}
+[data-testid="stMultiSelect"] [data-tag] span {color: #ffffff !important;}
+[data-testid="stMultiSelect"] [data-tag] button svg,
+[data-testid="stMultiSelect"] [data-tag] button path {fill: #ffffff !important; color: #ffffff !important;}
+
+.season-spacer {height: 40px; margin-top: -0.5rem;}
+
+/* Smaller, muted labels for all inputs (Player, Season, Role, Players, Show...) */
+[data-testid="stWidgetLabel"] p {font-size: 0.8rem !important; color: var(--muted) !important;}
+
+/* Compare cards: final layout (overrides older rules) */
+.cmp-card {display: flex !important; flex-direction: column !important; flex-wrap: nowrap !important;
+           align-items: stretch !important; justify-content: flex-start !important;
+           align-content: normal !important; min-height: 0 !important; gap: 14px;}
+.cmp-main {flex: 0 0 auto !important;}
+.cmp-stat {border-left: 0 !important; padding-left: 0 !important; padding-top: 12px;
+           border-top: 1.5px dashed var(--line); display: flex; align-items: baseline; gap: 12px;}
+.cmp-meta {white-space: normal !important; overflow: visible !important; text-overflow: clip !important;}
+
+/* ---- More breathing room on Compare ---- */
+.hero {margin-bottom: 2rem;}                   
+.cmp-card {margin-top: 1.25rem !important;}     
+.cmp-summary {margin: 2rem 0 2.5rem 0 !important;}   
+[class*="st-key-seasonbox"] {margin-top: 0 !important;}  
+
+/* Heading in the top bar: white, bold, with the pitch icon */
+.st-key-navbrand a,
+.st-key-navbrand [data-testid="stPageLink-NavLink"] {
+  display: flex !important; align-items: center; gap: 10px;}
+.st-key-navbrand a p, .st-key-navbrand a span,
+.st-key-navbrand [data-testid="stPageLink-NavLink"] p {
+  color: var(--chalk) !important; font-weight: 700 !important; font-size: 1rem !important;}
+.st-key-navbrand a::before,
+.st-key-navbrand [data-testid="stPageLink-NavLink"]::before {
+  content: ""; display: inline-block; flex-shrink: 0; width: 30px; height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 26'%3E%3Crect x='1' y='1' width='32' height='24' rx='2' fill='none' stroke='%23e9f0ea' stroke-width='1.6'/%3E%3Cline x1='17' y1='1' x2='17' y2='25' stroke='%23e9f0ea' stroke-width='1.6'/%3E%3Ccircle cx='17' cy='13' r='4.5' fill='none' stroke='%23d4f05a' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center; background-size: contain;}
                                                    
 </style>
 """
@@ -334,8 +404,11 @@ def style() -> None:
     st.markdown(CSS, unsafe_allow_html=True)
 
 
-NAV = [("Home", ""), ("Shortlist", "Shortlist"), ("Player Profile", "Player_Profile"),
-       ("Compare", "Compare"), ("Watchlist", "Watchlist"), ("Methodology", "Methodology")]
+NAV = [("Home", "Home.py"), ("Shortlist", "pages/1_Shortlist.py"),
+       ("Player Profile", "pages/2_Player_Profile.py"), ("Compare", "pages/3_Compare.py"),
+       ("Watchlist", "pages/4_Watchlist.py"), ("Methodology", "pages/5_Methodology.py")]
+
+
 PITCH_ICON = ('<svg width="30" height="22" viewBox="0 0 34 26" aria-hidden="true">'
               '<rect x="1" y="1" width="32" height="24" rx="2" fill="none" stroke="#e9f0ea" stroke-width="1.6"/>'
               '<line x1="17" y1="1" x2="17" y2="25" stroke="#e9f0ea" stroke-width="1.6"/>'
@@ -343,17 +416,23 @@ PITCH_ICON = ('<svg width="30" height="22" viewBox="0 0 34 26" aria-hidden="true
 
 
 def nav(active: str) -> None:
-    links = "".join(
-        f'<a class="{"active" if label == active else ""}" href="/{path}" target="_self"'
-        f'{" aria-current=page" if label == active else ""}>{label}</a>'
-        for label, path in NAV
-    )
-    st.markdown(
-        f'<nav class="topnav" aria-label="Pages">'
-        f'<a class="brand" href="/" target="_self">{PITCH_ICON}African Football Scouting Tool</a>'
-        f'<div class="links">{links}</div></nav>',
-        unsafe_allow_html=True,
-    )
+    for k in list(st.session_state):
+        if k.startswith(("cmp_", "season_")):
+            st.session_state[k] = st.session_state[k]
+
+    with st.container(key="topnav"):
+        cols = st.columns([3.2] + [1] * len(NAV), vertical_alignment="center")
+        with cols[0]:
+            with st.container(key="navbrand"):
+                st.page_link("Home.py", label="African Football Scouting Tool")
+        for col, (label, file) in zip(cols[1:], NAV):
+            with col:
+                if label == active:
+                    with st.container(key="navactive"):
+                        st.page_link(file, label=label, disabled=True)
+                else:
+                    st.page_link(file, label=label)
+    st.markdown('<div class="nav-rule"></div>', unsafe_allow_html=True)
 
 
 def hero(title: str, subtitle: str, kicker: str = "Betway Premiership · recruitment") -> None:
@@ -384,8 +463,8 @@ ROLE_ZONES = {
     "W/AM": [(268, 10, 130, 62), (268, 208, 130, 62), (272, 96, 60, 88)],
     "ST": [(334, 92, 76, 96)],
 }
-ROLE_LABEL_POS = {"CB": [(63, 145)], "FB": [(78, 46), (78, 244)], "DM": [(154, 145)],
-                  "CM": [(222, 112)], "W/AM": [(333, 46), (333, 244)], "ST": [(372, 145)]}
+ROLE_LABEL_POS = {"CB": [(92, 146)], "FB": [(78, 46), (78, 244)], "DM": [(156, 146)],
+                  "CM": [(222, 88)], "W/AM": [(333, 46), (333, 244)], "ST": [(374, 146)]}
 
 
 def role_pitch(role: str) -> str:
@@ -397,7 +476,8 @@ def role_pitch(role: str) -> str:
     )
     labels = "".join(
         f'<text x="{x}" y="{y}" fill="{"#d4f05a" if r == role else "#e9f0ea"}" '
-        f'fill-opacity="{1 if r == role else 0.4}" font-size="{26 if r == role else 18}">{r}</text>'
+        f'fill-opacity="{1 if r == role else 0.75}" font-size="{24 if r == role else 17}" '
+        f'stroke="#123024" stroke-width="6" stroke-linejoin="round" paint-order="stroke">{r}</text>'
         for r, spots in ROLE_LABEL_POS.items() for x, y in spots
     )
     return (

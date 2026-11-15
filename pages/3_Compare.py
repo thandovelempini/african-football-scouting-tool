@@ -1,8 +1,6 @@
 import sys
 from html import escape
 from pathlib import Path
-from app_data import crest
-from watchlist import watch_button
 
 import altair as alt
 import pandas as pd
@@ -10,10 +8,11 @@ import streamlit as st
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
-from app_data import (PLAYER_COLORS, ROLE_LABELS, SHORT_LABELS, footer, hero,  # noqa: E402
-                      load_percentiles, load_profiles, pill, style, nav)
+from app_data import (CHART_COLORS, PLAYER_COLORS, ROLE_LABELS, SHORT_LABELS, crest,  # noqa: E402
+                      footer, hero, load_percentiles, load_profiles, nav, pill, style)
 from config import CURRENT_SEASON, PROFILE_SEASONS  # noqa: E402
 from percentiles import METRICS, ROLE_KEY_METRICS  # noqa: E402
+from watchlist import watch_button  # noqa: E402
 
 st.set_page_config(page_title="Compare Players", page_icon=":material/compare_arrows:",
                    layout="wide")
@@ -24,10 +23,6 @@ pct = load_percentiles()
 profiles = load_profiles()
 
 RAW_LABELS = {**SHORT_LABELS, "Fls_p90": "Fouls", "CrdY_p90": "Cards", "Off_p90": "Offsides"}
-
-
-def initials(name: str) -> str:
-    return "".join(w[0] for w in str(name).split()[:2]).upper()
 
 
 def fmt(metric: str, value) -> str:
@@ -47,8 +42,9 @@ link_players = [p for p in st.query_params.get("players", "").split(",") if p]
 link_seasons = dict(zip(link_players, st.query_params.get("seasons", "").split(",")))
 
 with role_col:
-    role = st.selectbox("Role", roles, format_func=lambda r: ROLE_LABELS[r],
-                        index=roles.index(link_role) if link_role in roles else 0)
+    if "cmp_role" not in st.session_state:
+        st.session_state.cmp_role = link_role if link_role in roles else roles[0]
+    role = st.selectbox("**Role**", roles, format_func=lambda r: ROLE_LABELS[r], key="cmp_role")
 
 in_role = pct[pct["role"] == role]
 latest = in_role.sort_values("season", ascending=False).drop_duplicates("player_id")
@@ -56,10 +52,13 @@ dupes = latest["Player"].duplicated(keep=False)
 latest = latest.assign(label=latest["Player"].where(
     ~dupes, latest["Player"] + " (" + latest["Squad"] + ")"))
 options = latest.sort_values("Player").set_index("player_id")["label"]
+
 with players_col:
-    selected = st.multiselect("Players", options.index, format_func=lambda p: options[p],
+    saved = st.session_state.get("cmp_players", link_players)
+    st.session_state.cmp_players = [p for p in saved if p in options.index][:3]
+    selected = st.multiselect("**Players**", options.index, format_func=lambda p: options[p],
                               max_selections=3, placeholder="Pick two or three players",
-                              default=[p for p in link_players if p in options.index][:3])
+                              key="cmp_players")
 
 if len(selected) < 2:
     st.info(f"Pick at least two {ROLE_LABELS[role].lower()}s to compare.")
@@ -77,17 +76,21 @@ for i, (col, pid) in enumerate(zip(cols, selected)):
     default = link_seasons.get(pid) if link_seasons.get(pid) in season_list else (
         full[0] if full else season_list[0])
     with col:
-        card_slot = st.empty()            
+        card_slot = st.empty()
         season = default
         if len(season_list) > 1:
             with st.container(key=f"seasonbox_{i}"):
+                skey = f"season_{pid}"
+                if st.session_state.get(skey) not in season_list:
+                    st.session_state[skey] = default
                 season = st.segmented_control(
-                    "Season", season_list, default=default, key=f"season_{pid}",
+                    "Season", season_list, key=skey,
                     label_visibility="collapsed") or default
+        else:
+            st.markdown('<div class="season-spacer"></div>', unsafe_allow_html=True)
         row = seasons[seasons["season"] == season].iloc[0]
         watch_button(pid, row["Player"], row["Squad"], role, season, key=f"watch_cmp_{pid}")
     chosen.append((i, card_slot, row))
-    
 
 lead_metrics = [m for m in metrics if m != "+/-90"]
 leads = [0] * len(chosen)
@@ -129,18 +132,18 @@ def comparison_summary(chosen, lead_metrics) -> str:
 for (i, card_slot, r), n in zip(chosen, leads):
     color = PLAYER_COLORS[i]
     age = "Age unknown" if pd.isna(r["Age"]) else f"Age {int(r['Age'])}"
-    tags = pill("Current form: small sample", "warn") if r["season"] == CURRENT_SEASON else ""
+    tags = pill("Current form: Small sample", "warn") if r["season"] == CURRENT_SEASON else ""
     if r["role_confidence"] == "low":
         tags += pill(f"Borderline {r['role_alt']}", "warn")
     card_slot.markdown(
         f'<div class="cmp-card" style="border-top-color:{color}">'
         f'<div class="cmp-main">'
-        f'<div class="cmp-avatar" style="border-color:{color}">{crest(r["Squad"], 34)}</div>'
+        f'<div class="cmp-avatar">{crest(r["Squad"], 34)}</div>'
         f'<div class="cmp-text">'
         f'<div class="cmp-kicker" style="color:{color}">{escape(role)} · {r["season"]}</div>'
         f'<div class="cmp-name">{escape(r["Player"])}</div>'
         f'<div class="cmp-meta">{escape(r["Squad"])} · {age} · {int(r["Min"]):,} min</div>'
-        f'{tags}</div></div>'
+        f'<div class="cmp-tags">{tags}</div></div></div>'
         f'<div class="cmp-stat"><div class="cmp-stat-value">{n}<span>/{len(lead_metrics)}</span></div>'
         f'<div class="cmp-stat-label">key stats ahead</div></div>'
         f'</div>',
@@ -172,7 +175,7 @@ with chart_col:
     )
     bars = base.mark_bar(cornerRadiusEnd=3, height=12).encode(
         color=alt.Color("Player:N", sort=labels,
-                        scale=alt.Scale(domain=labels, range=PLAYER_COLORS[:len(labels)]),
+                        scale=alt.Scale(domain=labels, range=CHART_COLORS[:len(labels)]),
                         legend=alt.Legend(orient="top", title=None, labelColor="#e9f0ea",
                                           labelLimit=320, labelFontSize=13)),
         tooltip=["Player", "Stat", alt.Tooltip("Percentile:Q", format=".0f")],
@@ -221,6 +224,7 @@ with table_col:
         f'<tbody>{"".join(body)}</tbody></table></div>',
         unsafe_allow_html=True,
     )
-    st.caption("Green = best of the players shown")
+    st.markdown('<p style="font-size:0.8rem; color:#9fb3a6; margin-top:6px">'
+                'Green = best of the players shown</p>', unsafe_allow_html=True)
 
 footer()

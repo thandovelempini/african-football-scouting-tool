@@ -64,20 +64,21 @@ def age_text(a) -> str:
     return "Age unknown" if pd.isna(a) else f"Age {int(a)}"
 
 
-hero_slot = st.empty()   # the page header is filled in once the results are known
+hero_slot = st.empty()  
 
 # Filter bar (replaces the sidebar)
 with st.container(border=True, key="filterbar"):
-    st.markdown("**Brief**")
+    st.markdown('<div style="color:#d4f05a; font-size:1.3rem; font-weight:700; '
+                'margin-bottom:4px">Brief</div>', unsafe_allow_html=True)
     f_role, f_age, f_min, f_weights, f_more = st.columns([2.2, 2, 2, 1.2, 1.2], gap="medium",
                                                          vertical_alignment="bottom")
     with f_role:
-        role = st.selectbox("Role", list(ROLE_LABELS), format_func=lambda r: ROLE_LABELS[r])
+        role = st.selectbox("**Role**", list(ROLE_LABELS), format_func=lambda r: ROLE_LABELS[r])
     ages = pct["Age"].dropna()
     with f_age:
-        max_age = st.slider("Maximum age", int(ages.min()), int(ages.max()), int(ages.max()))
+        max_age = st.slider("**Maximum age**", int(ages.min()), int(ages.max()), int(ages.max()))
     with f_min:
-        min_minutes = st.slider("Minimum minutes", 900, 3000, 900, step=100)
+        min_minutes = st.slider("**Minimum minutes**", 900, 3000, 900, step=100)
     with f_weights:
         with st.popover("Weights", use_container_width=True):
             st.caption("Weights: 0 = Ignore, 1 = Normal, 3 = Most important")

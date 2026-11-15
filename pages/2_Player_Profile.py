@@ -56,7 +56,7 @@ pick_col, season_col = st.columns([3, 2])
 with pick_col:
     ids = list(options.index)
     wanted = st.query_params.get("player")
-    player_id = st.selectbox("Player", ids, format_func=lambda p: options[p],
+    player_id = st.selectbox("**Player**", ids, format_func=lambda p: options[p],
                              index=ids.index(wanted) if wanted in ids else 0)
 rows = pct[pct["player_id"] == player_id].sort_values("season", ascending=False)
 full_seasons = [s for s in rows["season"] if s in PROFILE_SEASONS]
@@ -64,7 +64,7 @@ with season_col:
     fallback = full_seasons[0] if full_seasons else rows["season"].iloc[0]
     wanted_season = st.query_params.get("season")
     start = wanted_season if wanted_season in rows["season"].values else fallback
-    season = st.segmented_control("Season", rows["season"].tolist(), default=start) or start
+    season = st.segmented_control("**Season**", rows["season"].tolist(), default=start) or start
 
 row = rows[rows["season"] == season].iloc[0]
 role = row["role"]
@@ -78,13 +78,12 @@ def raw_value(metric: str):
     return raw[metric].iloc[0]
 
 
-# Player card: identity on the left, three strongest stats on the right
-age = "age unknown" if pd.isna(row["Age"]) else f"Age {int(row['Age'])}"
+age = "Age unknown" if pd.isna(row["Age"]) else f"Age {int(row['Age'])}"
 pills = pill("Reviewed role", "ok") if row["role_source"] == "override" else pill("Model role", "muted")
 if row["role_confidence"] == "low":
     pills += pill(f"Borderline {row['role_alt']}", "warn")
 if season == CURRENT_SEASON:
-    pills += pill("Current form: small sample", "warn")
+    pills += pill("Current form: Small sample", "warn")
 
 strongest = sorted(
     ((row[f"pct_{m}"], m) for m in metrics if m != "+/-90" and pd.notna(row[f"pct_{m}"])),

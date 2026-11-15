@@ -8,7 +8,7 @@ import altair as alt
 
 sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
 
-from app_data import cards, footer, hero, load_percentiles, style, nav  # noqa: E402
+from app_data import cards, footer, hero, load_percentiles, style, nav 
 from config import CURRENT_SEASON, MIN_MINUTES, PROFILE_SEASONS
 
 st.set_page_config(page_title="African Football Scouting Tool", page_icon=":material/sports_soccer:",
@@ -102,8 +102,9 @@ with note_col:
                "Royal AM has no 2024-25 data on FBref.")
 
 st.markdown(
-    '<p style="color:#9fb3a6">Roles, percentiles and fit scores are built from open FBref data. '
-    '<a href="Methodology" target="_self" style="font-weight:600">How it works →</a></p>',
+    '<p style="color:#9fb3a6; font-size:0.9rem">Roles, percentiles and fit scores are built from open FBref data. '
+    '<a href="Methodology" target="_self" style="font-weight:700; color:#d4f05a; '
+    'text-decoration:none">How it works →</a></p>',
     unsafe_allow_html=True,
 )
 

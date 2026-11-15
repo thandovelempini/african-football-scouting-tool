@@ -127,8 +127,10 @@ st.markdown(
 
 )
 
+st.markdown('<div style="height: 2rem"></div>', unsafe_allow_html=True)
+
 st.subheader("Tested and rejected: Possession adjustment")
-t_left, t_right = st.columns([3, 2], gap="large")
+t_left, t_right = st.columns([3, 2], gap="medium")
 with t_left:
     st.markdown(
         "A common adjustment scales tackles and interceptions to a 50% possession baseline, "
@@ -153,9 +155,11 @@ with t_right:
             "After adjustment": st.column_config.NumberColumn(format="%+.2f"),
         },
     )
-    st.caption("Correlation between team possession and defensive actions per 90. "
-               "Before adjusting, most roles were close to 0, meaning possession barely "
-               "mattered. The adjustment pushed every role further from 0.")
+    st.markdown('<p style="font-size:0.85rem; color:#9fb3a6; margin-top:-0.6rem; line-height:1.5">'
+                "Correlation between team possession and defensive actions per 90. "
+                "Before adjusting, most roles were close to 0, meaning possession barely "
+                "mattered. The adjustment pushed every role further from 0.</p>",
+                unsafe_allow_html=True)
 
 st.subheader("Limitations")
 st.markdown(
