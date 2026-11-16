@@ -2,7 +2,7 @@
 
 A Streamlit app that helps scouts and recruitment analysts find, profile, compare and track players in South Africa's **Betway Premiership**, using open data only.
 
-**Live app:** 
+**Live app:** https://psl-scouting.streamlit.app/
 
 ![Shortlist page](data/images/Shortlist.png)
 
