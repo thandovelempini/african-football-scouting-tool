@@ -45,7 +45,7 @@ else:
     )
 
     st.caption("Value and contract are your own notes. Check them on Transfermarkt or with the "
-               "club, and add the source and date, e.g. \"€350k (TM, Nov 2026)\".")
+               "club, and add the source and date, e.g. \"€350k (TM, Nov 2026)\"")
 
     edited = st.data_editor(
             view[["Link", "Squad", "role", "Age", "season", "status", "value", "contract",

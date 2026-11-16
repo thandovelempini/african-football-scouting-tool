@@ -23,20 +23,20 @@ SHORT_LABELS = {
     "Off_p90": "Offsides", "TklW_p90": "Tackles won", "Int_p90": "Interceptions",
     "Fls_p90": "Few fouls", "CrdY_p90": "Few cards", "+/-90": "Goal difference",
 }
-BAND_COLORS = {"Below average (0-33)": "#9472f0",   
-               "Average (34-66)": "#17b5ee",        
-               "Strong (67-100)": "#c5e145"}       
+BAND_COLORS = {"Below average (0-33)": "#31a354",   
+               "Average (34-66)":"#addd8e",        
+               "Strong (67-100)": "#b5cf3e"}       
 
-PLAYER_COLORS = ["#d4f05a", "#54c1e9", "#a389f0"]  
-CHART_COLORS = ["#c5e145", "#17b5ee", "#9472f0"]   
+PLAYER_COLORS = ["#d4f05a","#addd8e", "#31a354", ]  
+CHART_COLORS = ["#c5e145","#addd8e", "#31a354", ]   
 
 FIT_SCORE_HELP = ("Weighted average of the player's percentiles on the stats you prioritise, "
                   "compared with players in the same role. 0-100. Not an overall rating "
                   "or a probability of success.")
 FORM_HELP = "2026-27 so far. Small sample: treat as an early signal, not a full-season verdict"
-SIMILARITY_HELP = ("Profile similarity score: How close two players' percentile profiles are. "
+SIMILARITY_HELP = ("**Profile similarity score:** How close two players' percentile profiles are. "
                    "Use it to rank matches, not as a percentage of likeness.")
-DATA_CREDIT = "Data: [FBref.com](https://fbref.com) (Betway Premiership player stats)."
+DATA_CREDIT = "**Data**: [FBref.com](https://fbref.com) (Betway Premiership player stats)."
 
 
 CSS = """
@@ -54,7 +54,7 @@ CSS = """
   --soft: #c5d3c9;        /* secondary text */
   --muted: #9fb3a6;       /* labels */
   --lime: #d4f05a;        /* highlight: strong, selected, primary */
-  --amber: #f0a35e;       /* caution */
+  --gold: #d6b45c;       /* caution */
   --radius: 6px;
   --stencil: 'Big Shoulders Stencil Display', sans-serif;
 }
@@ -115,7 +115,7 @@ h1, h2, h3 {letter-spacing: -0.01em; color: var(--chalk);}
 .pill {display: inline-block; padding: 3px 9px; border-radius: 3px; font-size: 0.75rem;
        font-weight: 600; margin-right: 6px; border: 1px solid transparent;}
 .pill.ok {border-color: var(--line-strong); color: var(--chalk);}
-.pill.warn {border: 1px dashed var(--amber); color: var(--amber);}
+.pill.warn {border: 1px dashed var(--gold); color: var(--gold);}
 .pill.muted {background: var(--surface-2); color: var(--soft);}
 
 /* ---- Shortlist pick cards ---- */
@@ -217,12 +217,12 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 .cmp-tags {min-height: 26px;}
 .cmp-main {display: flex; gap: 16px; align-items: center; min-width: 0; flex: 1 1 260px;}
 .cmp-text {flex: 1; min-width: 0;}
-.cmp-avatar {width: 64px; height: 64px; border-radius: 50%; border: 1.5px solid var(--line-strong);
-             background: var(--surface-2); color: var(--chalk); font-size: 1.2rem; font-weight: 700;
+.cmp-avatar {width: 55px; height: 55px; border-radius: 50%; border: 1px solid var(--line);
+             background: var(--surface-2); color: var(--chalk); font-size: 1rem; font-weight: 700;
              display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
 .cmp-avatar .crest {display: block; margin: 0 !important;}
 .cmp-kicker {font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-             margin-bottom: 2px;}
+             margin-bottom: 2px; color: var(--muted);}
 .cmp-name {font-size: 1.5rem; font-weight: 700; color: var(--chalk); line-height: 1.15;}
 .cmp-meta {font-size: 0.88rem; color: var(--soft); margin: 4px 0 8px 0;}
 .cmp-kicker, .cmp-meta {white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
@@ -395,6 +395,15 @@ div[role="alert"] [data-testid="stIconMaterial"] {
   content: ""; display: inline-block; flex-shrink: 0; width: 30px; height: 22px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 26'%3E%3Crect x='1' y='1' width='32' height='24' rx='2' fill='none' stroke='%23e9f0ea' stroke-width='1.6'/%3E%3Cline x1='17' y1='1' x2='17' y2='25' stroke='%23e9f0ea' stroke-width='1.6'/%3E%3Ccircle cx='17' cy='13' r='4.5' fill='none' stroke='%23d4f05a' stroke-width='1.6'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: center; background-size: contain;}
+
+/* Season buttons (st.segmented_control): bold text */
+[data-testid="stButtonGroup"] button p,
+[data-testid="stButtonGroup"] button span,
+[class*="st-key-seasonbox"] button p {font-weight: 700 !important;}
+
+/* Line the crest up with the player's name */
+.cmp-main {align-items: flex-start !important;}
+.cmp-avatar {margin-top: 8px;}
                                                    
 </style>
 """

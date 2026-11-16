@@ -188,7 +188,7 @@ with right:
     if season != CURRENT_SEASON and CURRENT_SEASON in rows["season"].values:
         form = rows[rows["season"] == CURRENT_SEASON].iloc[0]
         st.subheader("This season so far")
-        st.caption(f"{CURRENT_SEASON}: {int(form['Min']):,} minutes. Small sample, "
+        st.caption(f"**{CURRENT_SEASON}:** {int(form['Min']):,} minutes. Small sample, "
                    "so treat it as an early signal.", help=FORM_HELP)
         then = [row[f"pct_{m}"] for m in metrics]
         now = [form[f"pct_{m}"] for m in metrics]

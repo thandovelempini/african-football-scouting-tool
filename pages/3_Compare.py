@@ -138,9 +138,9 @@ for (i, card_slot, r), n in zip(chosen, leads):
     card_slot.markdown(
         f'<div class="cmp-card" style="border-top-color:{color}">'
         f'<div class="cmp-main">'
-        f'<div class="cmp-avatar">{crest(r["Squad"], 34)}</div>'
+        f'<div class="cmp-avatar">{crest(r["Squad"], 40)}</div>'
         f'<div class="cmp-text">'
-        f'<div class="cmp-kicker" style="color:{color}">{escape(role)} · {r["season"]}</div>'
+        f'<div class="cmp-kicker">{escape(role)} · {r["season"]}</div>'
         f'<div class="cmp-name">{escape(r["Player"])}</div>'
         f'<div class="cmp-meta">{escape(r["Squad"])} · {age} · {int(r["Min"]):,} min</div>'
         f'<div class="cmp-tags">{tags}</div></div></div>'

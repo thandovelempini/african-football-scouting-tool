@@ -85,6 +85,8 @@ heat = base.mark_rect(cornerRadius=4, stroke="#0d1a14", strokeWidth=3).encode(
 labels = base.mark_text(fontSize=13, font="Archivo").encode(
     text="Label:N",
     color=alt.condition("datum.Players > 0", alt.value("#e9f0ea"), alt.value("#5d7366")),
+    tooltip=["Club", alt.Tooltip("season:N", title="Season"),
+             alt.Tooltip("Players:Q", title="Qualifying players")],
 )
 
 chart_col, note_col = st.columns([3, 2], gap="large")
