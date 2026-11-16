@@ -12,3 +12,7 @@ enableStaticServing = true
 
 [client]
 showSidebarNavigation = false
+
+[client]
+showSidebarNavigation = false
+toolbarMode = "minimal"
