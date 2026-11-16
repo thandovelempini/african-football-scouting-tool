@@ -23,12 +23,12 @@ SHORT_LABELS = {
     "Off_p90": "Offsides", "TklW_p90": "Tackles won", "Int_p90": "Interceptions",
     "Fls_p90": "Few fouls", "CrdY_p90": "Few cards", "+/-90": "Goal difference",
 }
-BAND_COLORS = {"Below average (0-33)": "#31a354",   
-               "Average (34-66)":"#addd8e",        
+BAND_COLORS = {"Below average (0-33)": "#3F6A51",   
+               "Average (34-66)":"#31a354",        
                "Strong (67-100)": "#b5cf3e"}       
 
-PLAYER_COLORS = ["#d4f05a","#addd8e", "#31a354", ]  
-CHART_COLORS = ["#c5e145","#addd8e", "#31a354", ]   
+PLAYER_COLORS = ["#d4f05a", "#31a354", "#addd8e",]  
+CHART_COLORS = ["#c5e145", "#31a354","#addd8e",]   
 
 FIT_SCORE_HELP = ("Weighted average of the player's percentiles on the stats you prioritise, "
                   "compared with players in the same role. 0-100. Not an overall rating "
@@ -288,6 +288,9 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 
 /* ---- Top navigation ---- */
 [data-testid="stHeader"] {background: transparent;}
+/* Hide Streamlit's sidebar and its open/close button */
+[data-testid="stSidebar"], [data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"], [data-testid="stSidebarNav"] {display: none !important;}
 /* Equal spacing between tabs: columns shrink to their label, fixed gap between them */
 .st-key-topnav [data-testid="stHorizontalBlock"] {gap: 2.25rem !important; flex-wrap: nowrap;}
 .st-key-topnav [data-testid="stColumn"] {flex: 0 0 auto !important; width: auto !important;
@@ -320,9 +323,6 @@ a.sim-name:hover {color: var(--lime); text-decoration: underline;}
 .st-key-navactive [data-testid="stPageLink"] a p,
 .st-key-navactive [data-testid="stPageLink"] a span {
   color: var(--chalk) !important; font-weight: 700 !important;}
-
-/* The dividing line under the bar */
-.nav-rule {height: 1.5px; background: var(--line); margin: -0.9rem 0 1.4rem 0;}
 
 /* The dividing line under the bar */
 .nav-rule {height: 1.5px; background: var(--line); margin: -0.9rem 0 1.4rem 0;}
