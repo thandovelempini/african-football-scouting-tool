@@ -557,7 +557,7 @@ CREST_CREDIT = ("**Club crests:** [FootyLogos](https://www.footylogos.com/compet
 def footer() -> None:
     st.divider()
     st.caption(
-        DATA_CREDIT + "**Ages** are approximate."
-        + CREST_CREDIT + "Non-commercial portfolio project.  \n"
+        DATA_CREDIT + " **Ages** are approximate. "
+        + CREST_CREDIT + " Non-commercial portfolio project.  \n"
         "**Built by Thando Velempini**"
     )
