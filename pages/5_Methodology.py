@@ -47,7 +47,7 @@ st.markdown(
     "won, interceptions, fouls committed and drawn, offsides, cards and on-pitch goal difference.\n"
     "- **Not available in open data:** Passing, dribbling, duels, clearances and expected goals (xG).\n"
     "- **Why only FBref:** Richer sources such as Sofascore, FotMob and Transfermarkt were not used as "
-    " statistical data sources because I did not have permission to extract and reuse their data."
+    "statistical data sources because I did not have permission to extract and reuse their data. "
     "Sofascore was contacted directly and declined to provide data. "
     "These platforms were used only for manual reference checks of individual players.\n"
     "- **Data checks:** Each season's row counts, goal totals and spot-checked player records match "
@@ -68,7 +68,7 @@ st.markdown(
     "- **Borderline assignments are flagged**. This means the second-highest role "
     "score was close to the highest. These cases are shown on the player's profile rather than hidden.\n"
     f"- **{n_overrides} documented manual corrections** address clear classification errors, each "
-    "supported by evidence, mostly from a player's positions during that season."
+    "supported by evidence, mostly from a player's position during that season."
 )
 st.info("**Validation:** The forward classifier was checked against independently sourced "
         "main positions for 28 regular forwards. The model agreed in **24 of 28 cases (86%)**. "
@@ -83,7 +83,7 @@ with p_left:
         f"Players are ranked only against others in the same scouting role. The two full "
         "seasons are pooled to provide a larger comparison group.\n"
         f"\n**{CURRENT_SEASON}** players are ranked against that same full-season reference group. Their "
-        "percentiles therefore show how their current performance compares with players"
+        "percentiles, therefore, show how their current performance compares with players "
         "across the two completed seasons.\n"
         "- Lower is better for fouls, cards and offsides, so those percentiles are reversed.\n"
         "- **Shot accuracy and finishing statistics** require at least 10 shots; otherwise, they are left blank.\n"
@@ -109,7 +109,7 @@ st.markdown(
     "individual ability. Including it caused players from stronger clubs to be matched "
     "disproportionately with one another.\n"
     "- **Discipline statistics receive a quarter of the usual weight** so two centre-backs "
-    "aren't matched mainly because they are rarely booked.\n"
+    "are not matched mainly because they are rarely booked.\n"
     "- **Each similar player appears once** using their closest-matching season."
 )
 
@@ -139,7 +139,7 @@ with t_left:
         "\nIn this league, team possession had little relationship with defensive output to "
         "begin with. Applying the adjustment therefore over-corrected every role.\n"
         "\nDefensive midfielders at dominant clubs actually recorded *more* defensive actions, "
-        "which is consistent with high pressing. The app therefore uses unadjusted statistics."
+        "which is consistent with high pressing. The app, therefore, uses unadjusted statistics."
     )
 with t_right:
     st.dataframe(
