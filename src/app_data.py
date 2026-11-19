@@ -558,6 +558,6 @@ def footer() -> None:
     st.divider()
     st.caption(
         DATA_CREDIT + " **Ages** are approximate. "
-        + CREST_CREDIT + " Non-commercial portfolio project.  \n"
+        + CREST_CREDIT + " Non-commercial portfolio project.  \n\n"
         "**Built by Thando Velempini**"
     )
