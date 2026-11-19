@@ -548,7 +548,7 @@ def load_similar() -> pd.DataFrame:
                        dtype={"player_id": str, "similar_id": str})
 
 
-CREST_CREDIT = ("Club crests via [FootyLogos](https://www.footylogos.com/competition/premier-soccer-league), "
+CREST_CREDIT = ("**Club crests:** [FootyLogos](https://www.footylogos.com/competition/premier-soccer-league), "
                 "[Brandfetch](https://brandfetch.com/) and "
                 "[Orbit College FC](https://www.facebook.com/orbitsoccer/). Crests are the property of "
                 "their respective clubs and are used for identification only.")
@@ -556,8 +556,10 @@ CREST_CREDIT = ("Club crests via [FootyLogos](https://www.footylogos.com/competi
 
 def footer() -> None:
     st.divider()
-    st.caption(DATA_CREDIT + " \n" 
-               "Ages are approximate. \n" + 
-               CREST_CREDIT + " \n"
-               "Non-commercial portfolio project. \n" +
-               "Built by Thando Velempini.")
+    st.caption(
+        DATA_CREDIT + "  \n"
+        "**Ages** are approximate.  \n"
+        + CREST_CREDIT + "  \n"
+        "Non-commercial portfolio project.  \n"
+        "**Built by Thando Velempini**"
+    )
